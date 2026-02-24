@@ -14,7 +14,7 @@ export default function Header() {
     { label: "About Us", href: "/about-us" },
     { label: "Anodes", href: "/anodes" },
     { label: "Services", href: "/services" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Contact Us", href: "/contact-us" },
   ];
 
   useEffect(() => {
