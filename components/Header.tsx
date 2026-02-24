@@ -7,6 +7,7 @@ export default function Header() {
   const pathname = usePathname();
   const navRef = useRef<HTMLElement | null>(null);
   const [indicator, setIndicator] = useState<{ left: number; width: number } | null>(null);
+  const [hoverIndicator, setHoverIndicator] = useState<{ left: number; width: number } | null>(null);
 
   const links = [
     { label: "Home", href: "/" },
@@ -37,6 +38,18 @@ export default function Header() {
     return () => window.removeEventListener('resize', updateIndicator);
   }, [pathname]);
 
+  function handleHover(el: HTMLElement | null) {
+    const nav = navRef.current;
+    if (!nav || !el) return setHoverIndicator(null);
+    const navRect = nav.getBoundingClientRect();
+    const rect = el.getBoundingClientRect();
+    setHoverIndicator({ left: rect.left - navRect.left, width: rect.width });
+  }
+
+  function clearHover() {
+    setHoverIndicator(null);
+  }
+
   return (
     <nav ref={navRef} className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 md:px-12 bg-white/10 backdrop-blur-lg shadow-lg text-white">
       <div className="flex items-center space-x-2 text-white">
@@ -52,6 +65,8 @@ export default function Header() {
               key={l.href}
               href={l.href}
               aria-current={isActive ? "page" : undefined}
+              onMouseEnter={(e) => handleHover(e.currentTarget as HTMLElement)}
+              onMouseLeave={clearHover}
               className={`flex items-center h-full transition-colors ${isActive ? "text-white" : "hover:text-white"}`}>
               {l.label}
             </a>
@@ -69,6 +84,13 @@ export default function Header() {
           aria-hidden="true"
           style={{ left: indicator.left, width: indicator.width }}
           className="pointer-events-none absolute bottom-0 h-[3px] bg-white"
+        />
+      )}
+      {hoverIndicator && (
+        <span
+          aria-hidden="true"
+          style={{ left: hoverIndicator.left, width: hoverIndicator.width }}
+          className="pointer-events-none absolute bottom-0 h-[3px] bg-white opacity-60"
         />
       )}
     </nav>

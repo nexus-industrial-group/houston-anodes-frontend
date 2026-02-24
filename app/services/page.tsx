@@ -88,7 +88,7 @@ export default function ServicesPage() {
       <section className="py-20 px-6 bg-gray-100 overflow-hidden relative">
         <div className="max-w-6xl mx-auto text-center mb-12">
           <h2 className="text-2xl font-bold tracking-widest text-gray-900 uppercase">
-            Mobile Laboratories
+            Coating Inspection Services
           </h2>
         </div>
 
@@ -98,15 +98,15 @@ export default function ServicesPage() {
           <div className="flex flex-col gap-12 text-left lg:text-right lg:w-1/4 z-10 order-2 lg:order-1">
             <div>
               <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
-                On-site Testing
+                Certified Inspection
               </h4>
-              <p className="text-sm text-gray-600">State-of-the-art mobile testing unit and lab vision.</p>
+              <p className="text-sm text-gray-600">Professional coating evaluation and quality control.</p>
             </div>
             <div>
               <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
-                Certified Coating Inspection
+                Asset Protection
               </h4>
-              <p className="text-sm text-gray-600">Expert inspection and quality assurance.</p>
+              <p className="text-sm text-gray-600">Protection for pipelines, tanks, marine, and industrial facilities.</p>
             </div>
           </div>
 
@@ -124,15 +124,15 @@ export default function ServicesPage() {
           <div className="flex flex-col gap-12 text-left lg:w-1/4 z-10 order-3">
              <div>
               <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                Real-time Data Analysis
+                Advanced Field Technology
               </h4>
-              <p className="text-sm text-gray-600">State-of-the-art mobile testing unit vmit the lab van.</p>
+              <p className="text-sm text-gray-600">Mobile labs with modern testing equipment.</p>
             </div>
             <div>
               <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
                 NACE-certified Experts
               </h4>
-              <p className="text-sm text-gray-600">Advanced problem-solving and consultation.</p>
+              <p className="text-sm text-gray-600">Qualified corrosion control specialists.</p>
             </div>
           </div>
         </div>
