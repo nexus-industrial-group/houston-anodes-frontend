@@ -20,20 +20,20 @@ export default function ServicesPage() {
         
         <div className="relative z-10 max-w-4xl px-4 mx-auto text-center mt-12">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-lg">
-            PRECISION ENGINEERING.<br className="hidden md:block" /> CERTIFIED PROTECTION.
+            SERVICES, QUALITY <br className="hidden md:block" />& FOOTPRINT.
           </h1>
           {/* Divider 80% width and subtitle */}
           <div className="mt-3 flex justify-center">
             <div className="h-0.5 bg-white w-4/5 rounded-full opacity-90" aria-hidden="true"></div>
           </div>
-          <p className="mt-4 font-bold tracking-tight text-3xl text-white">MEET OUR SERVICES</p>
+          <p className="mt-4 font-bold tracking-tight text-3xl text-white">ENGINEERING & CONSULTING SERVICES</p>
         </div>
       </header>
 
       {/* Competencias Principales */}
       <section className="py-20 px-6 md:px-12 bg-white text-center">
         <h2 className="text-2xl font-bold tracking-widest text-gray-900 uppercase mb-12">
-          Core Competencies
+          Certified Coating Inspection & Supervision
         </h2>
         
         <div className="grid grid-cols-1 gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-4">
@@ -41,10 +41,10 @@ export default function ServicesPage() {
           <div className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
             <Settings size={48} strokeWidth={1.5} className="mb-6 text-gray-700" />
             <h3 className="mb-3 text-lg font-semibold leading-tight text-gray-900">
-              Cathodic Protection Design & Engineering
+              Coating Design Review
             </h3>
             <p className="text-sm text-gray-600">
-              Customized solutions for optimal asset longevity.
+              Optimized specification and material selection.
             </p>
           </div>
 
@@ -52,10 +52,10 @@ export default function ServicesPage() {
           <div className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
             <Map size={48} strokeWidth={1.5} className="mb-6 text-gray-700" />
             <h3 className="mb-3 text-lg font-semibold leading-tight text-gray-900">
-              Cathodic Protection CP-1 to CP-4
+              Surface Preparation Supervision
             </h3>
             <p className="text-sm text-gray-600">
-              NACE certified specialists for all levels.
+              Surface preparation quality oversight.
             </p>
           </div>
 
@@ -63,10 +63,10 @@ export default function ServicesPage() {
           <div className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
             <Search size={48} strokeWidth={1.5} className="mb-6 text-gray-700" />
             <h3 className="mb-3 text-lg font-semibold leading-tight text-gray-900">
-              NACE Coating Inspector Level 1 & 2
+              Coating Application Supervision
             </h3>
             <p className="text-sm text-gray-600">
-              Expert inspection and quality assurance.
+              Application parameter inspection control.
             </p>
           </div>
 
@@ -74,10 +74,10 @@ export default function ServicesPage() {
           <div className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
             <Gauge size={48} strokeWidth={1.5} className="mb-6 text-gray-700" />
             <h3 className="mb-3 text-lg font-semibold leading-tight text-gray-900">
-              Specialist CP-4 Services
+              Post-Application Verification
             </h3>
             <p className="text-sm text-gray-600">
-              Advanced problem-solving and consultation.
+              Final inspection and compliance testing.
             </p>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function ServicesPage() {
       <section className="py-20 px-6 bg-gray-100 overflow-hidden relative">
         <div className="max-w-6xl mx-auto text-center mb-12">
           <h2 className="text-2xl font-bold tracking-widest text-gray-900 uppercase">
-            Coating Inspection Services
+            Cathodic Protection System Diagnostics
           </h2>
         </div>
 
@@ -97,41 +97,65 @@ export default function ServicesPage() {
           <div className="flex flex-col gap-12 text-left lg:text-right lg:w-1/4 z-10 order-2 lg:order-1">
             <div>
               <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
-                Certified Inspection
+                CIS-DCVG Inspection
               </h4>
-              <p className="text-sm text-gray-600">Professional coating evaluation and quality control.</p>
+              <p className="text-sm text-gray-600">Protection coverage and anode performance mapping.</p>
             </div>
             <div>
               <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
-                Asset Protection
+                CP Interference Diagnostics
               </h4>
-              <p className="text-sm text-gray-600">Protection for pipelines, tanks, marine, and industrial facilities.</p>
+              <p className="text-sm text-gray-600">Detection and mitigation of electrical interference.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
+                ECDA Assessment
+              </h4>
+              <p className="text-sm text-gray-600">External corrosion risk assessment per NACE.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
+                PCM Current Mapping
+              </h4>
+              <p className="text-sm text-gray-600">Current distribution verification across protected areas.</p>
             </div>
           </div>
 
           {/* Imagen Central */}
-          <div className="w-full lg:w-2/4 flex justify-center order-1 lg:order-2">
-             <img 
-                src="https://images.unsplash.com/photo-1516733968668-dbdce39c4651?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Vehículos de laboratorio móvil" 
-                className="max-w-full h-auto drop-shadow-2xl rounded-lg object-cover"
-                style={{ mixBlendMode: 'multiply' }}
+           <div className="w-full lg:w-2/4 flex justify-center order-1 lg:order-2">
+             <img
+               src="/images/services/chatgpt-flow.png"
+               alt="Flow visualization (ChatGPT image)"
+               className="max-w-full h-auto drop-shadow-2xl rounded-lg object-cover"
+               style={{ mixBlendMode: 'multiply' }}
              />
-          </div>
+           </div>
 
           {/* Textos Derecha (Desktop) */}
           <div className="flex flex-col gap-12 text-left lg:w-1/4 z-10 order-3">
              <div>
               <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                Advanced Field Technology
+                Soil Resistivity Studies
               </h4>
-              <p className="text-sm text-gray-600">Mobile labs with modern testing equipment.</p>
+              <p className="text-sm text-gray-600">Soil conductivity analysis for anode design.</p>
             </div>
             <div>
               <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                NACE-certified Experts
+                ACVG Pipeline Inspection:
               </h4>
-              <p className="text-sm text-gray-600">Qualified corrosion control specialists.</p>
+              <p className="text-sm text-gray-600">Coating defect and corrosion detection survey.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
+                GPS Pipeline Location & Documentation
+              </h4>
+              <p className="text-sm text-gray-600">Precision mapping for compliance and management.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
+                Electrical Continuity & Interconnection Analysis
+              </h4>
+              <p className="text-sm text-gray-600">Identification of electrical continuity and grounding issues.</p>
             </div>
           </div>
         </div>
@@ -140,7 +164,7 @@ export default function ServicesPage() {
       {/* El Compromiso */}
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl font-bold tracking-widest text-gray-500 uppercase mb-16">
+          <h2 className="text-2xl font-bold tracking-widest text-gray-500 uppercase mb-16">
             The Houston Commitment
           </h2>
           
@@ -148,24 +172,30 @@ export default function ServicesPage() {
             
             {/* Cuadrante Superior Izquierdo */}
             <div className="pb-12 border-b-2 border-gray-200 md:border-r-2 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
-              RIGHT CHEMICAL<br/> COMPOSITION
+              Individual Verification
             </div>
             
             {/* Cuadrante Superior Derecho */}
             <div className="py-12 md:py-0 md:pb-12 border-b-2 border-gray-200 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left">
-              ELECTROCHEMICAL<br/> PROPERTIES
+              Raw Material<br/> Integrity
             </div>
             
             {/* Cuadrante Inferior Izquierdo */}
             <div className="py-12 md:pt-12 md:pb-0 md:border-r-2 border-gray-200 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
-              RIGHT WEIGHT
+              Chemical Analysis
             </div>
             
             {/* Cuadrante Inferior Derecho */}
             <div className="pt-12 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left border-t-2 md:border-t-0 border-gray-200 md:border-none">
-              RIGHT FIT
+              Process Control
             </div>
           </div>
+        </div>
+        <div className="max-w-3xl mx-auto text-center mt-16">
+            <h2 className="text-xl font-bold tracking-widest text-gray-500 uppercase">
+                The result: zero product failures in 40 years. Not luck.
+              Consistency.
+          </h2>
         </div>
       </section>
     </div>

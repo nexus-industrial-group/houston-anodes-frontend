@@ -17,10 +17,10 @@ export default function ContactUsPage() {
         <div className="absolute inset-0 bg-black/35"></div>
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-lg">
-            Contact Houston Anodes
+            TECHNICAL CONSULTATION <br />& QUOTATION
           </h1>
-          <p className="mt-4 text-lg font-semibold text-white/90">
-            We'd love to hear from you
+          <p className="mt-4 text-lg font-semibold text-white/90 w-3/4 mx-auto">
+            Ready to specify Houston Anodes for your project?
           </p>
         </div>
       </header>
