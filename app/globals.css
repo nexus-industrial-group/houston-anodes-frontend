@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #ffffff;
+  --color-foreground: #111827;
+
+  /* Primary palette */
+  --color-white: #ffffff;
+  --color-light-gray: #f3f4f6;
+  --color-silver: #c4c9d0;
+  --color-silver-light: #d9dde3;
+  --color-navy: #1a2438;
+  --color-navy-light: #243049;
+  --color-charcoal: #2c3444;
+
+  /* Accent colors */
+  --color-electric-blue: #0070f3;
+  --color-electric-orange: #f97316;
+
+  /* Text */
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #9ca3af;
+  --color-text-on-dark: #e5e7eb;
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Placeholder image pattern */
+.placeholder-image {
+  background:
+    linear-gradient(135deg, #374151 25%, transparent 25%),
+    linear-gradient(225deg, #374151 25%, transparent 25%),
+    linear-gradient(45deg, #374151 25%, transparent 25%),
+    linear-gradient(315deg, #374151 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, 20px 0;
+  background-color: #1f2937;
+}
+
+/* Map dot pulse animation */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
 }
