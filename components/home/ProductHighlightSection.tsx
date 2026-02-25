@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function ProductHighlightSection() {
   return (
     <section className="relative bg-white py-20 lg:py-32">
@@ -5,37 +7,16 @@ export default function ProductHighlightSection() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           {/* Big zoom product image */}
           <div className="relative order-2 lg:order-1">
-            <div className="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl">
+            <div className="aspect-square overflow-hidden rounded-2xl">
               <div className="flex h-full w-full items-center justify-center">
-                {/* Anode silhouette with shadow - big zoom */}
-                <svg
-                  viewBox="0 0 400 200"
-                  className="h-auto w-full scale-125 drop-shadow-2xl"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Main anode body */}
-                  <path
-                    d="M40,100 Q40,60 80,60 L320,60 Q360,60 370,85 L380,100 L370,115 Q360,140 320,140 L80,140 Q40,140 40,100Z"
-                    fill="url(#productGradient)"
-                    stroke="#6b7280"
-                    strokeWidth="2"
-                  />
-                  {/* Mounting hole */}
-                  <circle cx="340" cy="100" r="12" fill="#4b5563" stroke="#374151" strokeWidth="1" />
-                  {/* Detail lines */}
-                  <line x1="80" y1="70" x2="310" y2="70" stroke="#9ca3af" strokeWidth="1" opacity="0.5" />
-                  <line x1="80" y1="130" x2="310" y2="130" stroke="#9ca3af" strokeWidth="1" opacity="0.5" />
-                  
-                  <defs>
-                    <linearGradient id="productGradient" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="#f3f4f6" />
-                      <stop offset="30%" stopColor="#e5e7eb" />
-                      <stop offset="70%" stopColor="#d1d5db" />
-                      <stop offset="100%" stopColor="#9ca3af" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+                {/* Anode product image */}
+                <Image
+                  src="/images/homepage/anode.webp"
+                  alt="Sacrificial Anode Product"
+                  width={400}
+                  height={200}
+                  className="h-auto w-full scale-125"
+                />
               </div>
             </div>
             
@@ -53,10 +34,10 @@ export default function ProductHighlightSection() {
               Premium Sacrificial Anodes
             </p>
             <h2 className="mt-4 text-4xl font-extrabold uppercase leading-tight tracking-tight text-navy sm:text-5xl lg:text-6xl">
-              Engineered for Maximum Protection
+              THE HIDDEN COST OF ANODE INCONSISTENCY
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-text-secondary">
-              Our anodes are precision-manufactured using high-purity aluminum, zinc, and magnesium alloys. Each product undergoes rigorous quality control to ensure optimal electrochemical performance and extended service life.
+              Corrosion doesn't wait. It happens continuously—24/7—wherever steel meets saltwater or oxygen-rich soil. Your cathodic protection system is designed to stop it. But only if your sacrificial anodes perform exactly as specified.
             </p>
 
             {/* Features list */}

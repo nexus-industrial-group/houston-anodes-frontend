@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Header from '../../components/Header';
 
 export default function AboutUsPage() {
@@ -9,21 +10,13 @@ export default function AboutUsPage() {
       {/* Hero Section - Gallery Style */}
       <header className="relative flex items-center justify-center h-screen overflow-hidden bg-gray-100">
         {/* Main Image */}
-        <div className="absolute inset-0 grid grid-cols-3 gap-1">
-          <img 
-            src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            alt="Industrial manufacturing" 
-            className="object-cover w-full h-full"
-          />
-          <img 
-            src="https://images.unsplash.com/photo-1581092918484-8313e1f6f53e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            alt="Metal fabrication" 
-            className="object-cover w-full h-full"
-          />
-          <img 
-            src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            alt="Quality control" 
-            className="object-cover w-full h-full"
+        <div className="absolute inset-0">
+          <Image
+            src="/images/about-us/about-us.webp"
+            alt="About Houston Anodes"
+            fill
+            className="object-cover"
+            priority
           />
         </div>
         {/* Dark overlay */}
@@ -68,10 +61,10 @@ export default function AboutUsPage() {
                 Barrier Technology
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Our advanced barrier technology provides unparalleled corrosion protection through precisely engineered sacrificial anodes. Each anode is designed to create an effective electrochemical barrier that shields critical infrastructure from corrosive environments.
+                Houston Anodes manufactures sacrificial anodes that protect critical energy infrastructure from corrosion. We make aluminum, zinc, and magnesium anodes for offshore platforms, subsea pipelines, wind turbines, and marine vessels.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Using high-purity aluminum, zinc, and magnesium alloys, our barrier technology ensures optimal current distribution and extended service life, making it the preferred choice for demanding applications worldwide.
+                We manufacture with electromagnetic induction furnaces—not gas combustion. This is not a feature. It's a structural advantage.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">

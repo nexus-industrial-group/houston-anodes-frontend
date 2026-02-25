@@ -21,10 +21,10 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center w-full px-6">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wide text-center drop-shadow-lg">
-          Houston Anodes Website
+          Cathodic Protection That Performs as Engineered
         </h1>
         <p className="mt-4 text-xl md:text-2xl text-white/90 text-center drop-shadow-md">
-          Homepage
+          Why asset owners in energy infrastructure bet their downtime—and their capital—on the consistency Houston Anodes guarantees.
         </p>
       </div>
     </section>
