@@ -10,31 +10,28 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h5 className="font-bold text-white mb-4">Catalog</h5>
+            <h5 className="font-bold text-white mb-4">Company</h5>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+              <li><a href="/about-us" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/services" className="hover:text-white transition-colors">Services</a></li>
             </ul>
           </div>
           <div>
-            <h5 className="font-bold text-white mb-4">Contact Info</h5>
+            <h5 className="font-bold text-white mb-4">Products</h5>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Local Information</a></li>
+              <li><a href="/anodes" className="hover:text-white transition-colors">Anodes</a></li>
             </ul>
           </div>
           <div>
-            <h5 className="font-bold text-white mb-4">Anodes</h5>
+            <h5 className="font-bold text-white mb-4">Support</h5>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Anodes</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Certifications</a></li>
+              <li><a href="/contact-us" className="hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
           <div>
-            <h5 className="font-bold text-white mb-4">Certifications</h5>
+            <h5 className="font-bold text-white mb-4">Resources</h5>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
+              <li><a href="/services" className="hover:text-white transition-colors">Certifications</a></li>
             </ul>
           </div>
         </div>

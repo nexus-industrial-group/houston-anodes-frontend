@@ -4,7 +4,7 @@ const FOOTER_COLUMNS = [
   {
     title: "Company",
     links: [
-      { label: "About Us", href: "/about" },
+      { label: "About Us", href: "/about-us" },
       { label: "Services", href: "/services" },
     ],
   },
@@ -17,7 +17,7 @@ const FOOTER_COLUMNS = [
   {
     title: "Support",
     links: [
-      { label: "Contact Us", href: "/contact" },
+      { label: "Contact Us", href: "/contact-us" },
     ],
   },
 ] as const;

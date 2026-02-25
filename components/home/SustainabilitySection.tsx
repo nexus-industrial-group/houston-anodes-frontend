@@ -5,12 +5,12 @@ export default function SustainabilitySection() {
         {/* Text content */}
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-text-secondary">
-            Engineered in the USA
+            Sustainability
           </p>
           <h2 className="mt-4 text-3xl font-extrabold uppercase leading-tight tracking-tight text-navy sm:text-4xl lg:text-5xl">
-            Superior Material Purity.
+            Eco-Friendly Footprint.
             <br />
-            Unmatched Performance.
+            Responsible Manufacturing.
           </h2>
 
           {/* US Flag placeholder */}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Settings, Map, Search, Gauge } from 'lucide-react';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 
 export default function ServicesPage() {
   return (
@@ -169,8 +168,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

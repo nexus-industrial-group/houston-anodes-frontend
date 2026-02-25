@@ -20,7 +20,7 @@ export default function QualitySection() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
         <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue">
-          Uncompromising Standards
+          Quality Control
         </p>
         <h2 className="mt-4 text-4xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
           Built to Protect.

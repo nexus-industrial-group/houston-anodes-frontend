@@ -22,9 +22,12 @@ export default function CertificationsSection() {
     <section className="bg-gray-50 py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section heading */}
-        <h2 className="text-center text-3xl font-bold uppercase tracking-tight text-gray-800 sm:text-4xl mb-16 lg:mb-20">
-          The Houston Standard
+        <h2 className="text-center text-3xl font-bold uppercase tracking-tight text-gray-800 sm:text-4xl mb-4 lg:mb-6">
+          Certifications & History
         </h2>
+        <p className="text-center text-text-secondary mb-16 lg:mb-20 max-w-3xl mx-auto">
+          Since 1977, Houston Anodes has been a trusted leader in cathodic protection, combining decades of experience with ISO 9001 certified quality standards.
+        </p>
 
         {/* Cards grid */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
