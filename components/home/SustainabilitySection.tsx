@@ -1,84 +1,114 @@
+import Image from "next/image";
+
+const CHANGES = [
+  {
+    title: "Predictable Asset Life",
+    body: "Your design assumptions hold. Cathodic protection works as engineered across the full asset lifespan.",
+  },
+  {
+    title: "Lower Reserve Costs",
+    body: "No mystery degradation. No need for excessive safety margins on anode sizing.",
+  },
+  {
+    title: "Reduced Downtime Risk",
+    body: "No mid-life corrosion surprises. Your asset protects when it matters.",
+  },
+  {
+    title: "Regulatory Confidence",
+    body: "DNV-certified manufacturing. Approved by Ørsted, FMC Global, and the energy industry's most demanding players.",
+  },
+];
+
+const TRACK_RECORD = [
+  "Zero product claims in 40 years of operation.",
+  "Supplier of 80% of sacrificial anodes installed on PEMEX projects — over 35 years.",
+  "Approved FMC Global Supplier. Ørsted-certified.",
+  "Every anode individually weighed and documented before shipment.",
+  "Every heat chemically analyzed. Electrochemical properties tested per NACE TM-0190.",
+  "Raw materials verified against mill test reports. Specification compliance is not assumed — it is documented.",
+  "Recent wins: Ocean Wind 1 (New Jersey), Revolution Wind (Rhode Island).",
+];
+
 export default function SustainabilitySection() {
   return (
-    <section className="bg-light-gray py-20 lg:py-28">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
-        {/* Text content */}
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-widest text-text-secondary">
-            Sustainability
-          </p>
-          <h2 className="mt-4 text-3xl font-extrabold uppercase leading-tight tracking-tight text-navy sm:text-4xl lg:text-5xl">
-            Eco-Friendly Footprint.
-            <br />
-            Responsible Manufacturing.
-          </h2>
+    <section className="bg-navy py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-          {/* US Flag placeholder */}
-          <div className="mt-8 flex items-center gap-1">
-            <div className="flex flex-col">
-              {[...Array(7)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-1.5 w-16 ${i % 2 === 0 ? "bg-red-600" : "bg-white"}`}
-                />
+        {/* ── Top grid: What Changes + image placeholder ── */}
+        <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-2">
+
+          {/* Left — What Changes */}
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-blue">
+              What Changes for You
+            </p>
+            <h2 className="mt-4 text-3xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-4xl">
+              Engineering Results You Can Actually Rely On
+            </h2>
+
+            <ul className="mt-10 space-y-8">
+              {CHANGES.map(({ title, body }) => (
+                <li key={title} className="flex gap-4">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary-blue/20">
+                    <svg className="h-3 w-3 text-primary-blue" fill="currentColor" viewBox="0 0 12 12">
+                      <path d="M10.28 2.28a.75.75 0 0 0-1.06 0L4.5 7 2.78 5.28a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l5.25-5.25a.75.75 0 0 0 0-1.06Z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p className="text-sm font-bold text-white">{title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-light-gray">{body}</p>
+                  </div>
+                </li>
               ))}
-            </div>
-            <div className="ml-0 flex h-[10.5px] w-6 items-center justify-center self-start bg-blue-800">
-              <span className="text-[6px] text-white">★</span>
-            </div>
+            </ul>
           </div>
 
-          {/* CTA */}
-          <div className="mt-10">
-            <a
-              href="/sustainability"
-              className="inline-flex items-center gap-2 rounded-md bg-electric-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-electric-blue/90"
-            >
-              Learn More
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </a>
+          {/* Right — image */}
+          <div className="relative overflow-hidden rounded-xl h-80 lg:h-[26rem]">
+            <Image
+              src="/images/homepage/a1.webp"
+              alt="Houston Anodes manufacturing"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
 
-        {/* Image placeholder — anode close-up */}
-        <div className="relative flex items-center justify-center overflow-hidden rounded-lg">
-          <div className="flex h-80 w-full items-center justify-center bg-gradient-to-br from-gray-300 via-silver to-gray-400 lg:h-[28rem]">
-            {/* Anode shape silhouette */}
-            <svg
-              viewBox="0 0 400 120"
-              className="h-auto w-3/4 drop-shadow-lg"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M20,60 Q20,30 50,30 L350,30 Q380,30 390,50 L395,60 L390,70 Q380,90 350,90 L50,90 Q20,90 20,60Z"
-                fill="url(#anodeGradient)"
-                stroke="#9ca3af"
-                strokeWidth="1"
-              />
-              <ellipse cx="370" cy="60" rx="8" ry="8" fill="#6b7280" />
-              <defs>
-                <linearGradient id="anodeGradient" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#e5e7eb" />
-                  <stop offset="50%" stopColor="#d1d5db" />
-                  <stop offset="100%" stopColor="#9ca3af" />
-                </linearGradient>
-              </defs>
-            </svg>
+        {/* ── Divider ── */}
+        <div className="my-16 h-px w-full bg-white/10" />
+
+        {/* ── Bottom: Track record ── */}
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+
+          {/* Left — image */}
+          <div className="relative overflow-hidden rounded-xl">
+            <Image
+              src="/images/homepage/a2.webp"
+              alt="Houston Anodes quality assurance"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-auto w-full object-contain"
+            />
+          </div>
+
+          {/* Right — stats */}
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-blue">
+              Earned Through 47 Years of Consistency
+            </p>
+
+            <ul className="mt-8 space-y-4">
+              {TRACK_RECORD.map((item) => (
+                <li key={item} className="flex gap-3 text-sm leading-relaxed text-light-gray">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-blue" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
+
       </div>
     </section>
   );

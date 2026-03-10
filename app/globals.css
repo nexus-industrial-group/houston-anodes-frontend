@@ -5,6 +5,7 @@
   --color-foreground: #111827;
 
   /* Primary palette */
+  --color-primary-blue: #2072fb;
   --color-white: #ffffff;
   --color-light-gray: #f3f4f6;
   --color-silver: #c4c9d0;
@@ -16,6 +17,13 @@
   /* Accent colors */
   --color-electric-blue: #0070f3;
   --color-electric-orange: #f97316;
+  --color-accent: #5ecfff;
+
+  /* Secondary colors */
+  --color-black: #242424;
+  --color-gray: #596a76;
+  --color-light-gray: #aebfcd;
+  --color-light-blue: #d8eaff;
 
   /* Text */
   --color-text-primary: #111827;

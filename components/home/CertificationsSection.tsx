@@ -1,73 +1,181 @@
-const CERTIFICATIONS = [
+const COMPARISON_ROWS = [
   {
-    title: "ISO 9001:2015",
-    description: "Quality Management System – DNV",
+    spec: "Indium Homogenization",
+    gas: "Partial — inert pockets remain",
+    houston: "100% at molecular level",
+    gasBad: true,
   },
   {
-    title: "NACE SP-0387, SP-0492",
-    description: "Cathodic Protection Standards",
+    spec: "Contamination Risk",
+    gas: "Hydrogen, carbon & iron present",
+    houston: "Zero external contamination",
+    gasBad: true,
   },
   {
-    title: "DNV RP B401",
-    description: "Submarine Pipeline Systems",
+    spec: "Lifetime Performance",
+    gas: "59% useful material / 41% inert",
+    houston: "100% useful material",
+    gasBad: true,
   },
-  {
-    title: "ISO 15589-2:2012",
-    description: "Cathodic Protection of Pipelines",
-  },
-  {
-    title: "NORSOK M-503",
-    description: "Cathodic Protection",
-  },
-  {
-    title: "Ørsted-Approved Supplier",
-    description: "World's largest offshore wind operator",
-  },
-  {
-    title: "FMC Global-Approved Supplier",
-    description: "Approved supplier for FMC Global",
-  },
+] as const;
+
+const FEATURED_CERTS = [
+  { label: "ISO 9001:2015",    border: "border-electric-blue",   text: "text-electric-blue"   },
+  { label: "DNV RP B401",      border: "border-navy",            text: "text-navy"            },
+  { label: "ISO 15589-2:2012", border: "border-navy",            text: "text-navy"            },
+] as const;
+
+const APPROVED_SUPPLIERS = [
+  "Ørsted — World's largest offshore wind operator",
+  "FMC Global — Approved supplier",
 ] as const;
 
 export default function CertificationsSection() {
   return (
-    <section className="bg-gray-50 py-20 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section heading */}
-        <h2 className="text-center text-3xl font-bold uppercase tracking-tight text-gray-800 sm:text-4xl mb-4 lg:mb-6">
-          Certifications & Standards
-        </h2>
-        <p className="text-center text-text-secondary mb-16 lg:mb-20 max-w-3xl mx-auto">
-          Certified and approved to meet the highest industry standards for cathodic protection and quality management.
-        </p>
+    <> 
+    <section className="bg-gray-100 py-16 lg:py-20">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {CERTIFICATIONS.map(({ title, description }) => (
-            <div
-              key={title}
-              className="flex flex-col w-full overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-lg"
-            >
-              {/* Icon/Badge area */}
-              <div className="flex h-32 items-center justify-center bg-gradient-to-br from-navy to-navy-light">
-                <svg className="h-16 w-16 text-white opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+        {/* ── Section header ── */}
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue">
+            Our Process
+          </p>
+          <h2 className="mt-3 text-4xl font-extrabold uppercase leading-tight tracking-tight text-navy sm:text-5xl">
+            How Houston Anodes Eliminates That Uncertainty
+          </h2>
+          <p className="mt-5 text-lg leading-relaxed text-text-secondary">
+            We use <strong className="font-semibold text-black">electromagnetic induction furnaces</strong>—not gas combustion.
+            Instead of applying external heat, induction generates heat internally within the metal itself.
+            No flame. No contamination. No manual stirring impurities.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-text-secondary">
+            The electromagnetic field creates a continuous <em>'Figure 8'</em> motion in the molten alloy—
+            the only process capable of incorporating indium homogeneously at a molecular level.
+          </p>
+        </div>
+
+        {/* ── Result statement ── */}
+        <div className="mx-auto mt-10 max-w-2xl">
+          <div className="flex flex-wrap justify-center gap-6 text-center">
+            {[
+              { value: "100%", label: "Activation" },
+              { value: "100%", label: "Electrochemical Capacity" },
+              { value: "100%", label: "Predictable Performance" },
+            ].map(({ value, label }) => (
+              <div key={label} className="flex flex-col items-center">
+                <span className="text-4xl font-black text-electric-blue">{value}</span>
+                <span className="mt-1 text-sm font-medium uppercase tracking-wide text-text-secondary">{label}</span>
               </div>
+            ))}
+          </div>
+        </div>
 
-              {/* Card content */}
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-lg font-bold text-navy mb-2">
-                  {title}
-                </h3>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  {description}
-                </p>
+        {/* ── Comparison table (focal point) ── */}
+        <div className="mt-16 overflow-hidden rounded-2xl border border-silver-light shadow-sm">
+          {/* Table header */}
+          <div className="grid grid-cols-3 bg-navy text-sm font-semibold uppercase tracking-wider text-white">
+            <div className="px-6 py-4 text-white/60">Specification</div>
+            <div className="border-l border-white/10 px-6 py-4">
+              <span className="inline-flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-electric-orange" />
+                Gas-Made Anode
+              </span>
+            </div>
+            <div className="border-l border-white/10 bg-electric-blue/20 px-6 py-4">
+              <span className="inline-flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-accent" />
+                Houston Induction Anode
+              </span>
+            </div>
+          </div>
+
+          {/* Table rows */}
+          {COMPARISON_ROWS.map(({ spec, gas, houston }, i) => (
+            <div
+              key={spec}
+              className={`grid grid-cols-3 divide-x divide-silver-light text-sm ${i % 2 === 0 ? "bg-white" : "bg-blue-50/40"}`}
+            >
+              <div className="px-6 py-5 font-semibold text-navy">{spec}</div>
+              <div className="px-6 py-5">
+                <span className="inline-flex items-start gap-2 text-text-secondary">
+                  <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-electric-orange" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  {gas}
+                </span>
+              </div>
+              <div className="bg-light-blue/30 px-6 py-5">
+                <span className="inline-flex items-start gap-2 font-medium text-navy">
+                  <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-electric-blue" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  {houston}
+                </span>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
+
+    <section className="relative overflow-hidden py-24 lg:py-32">
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/videos/anode_cer.webm" type="video/webm" />
+      </video>
+      <div className="absolute inset-0 bg-navy/10" />
+
+      <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+        {/* ── Certifications ── */}
+        <div>
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue">
+              Certifications & Standards
+            </p>
+            <h3 className="mt-3 text-3xl font-extrabold uppercase tracking-tight text-electric-blue sm:text-4xl">
+              Built to the World's Highest Standards
+            </h3>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white">
+              Certified and approved to meet the strictest industry requirements for cathodic protection, quality management, and offshore engineering.
+            </p>
+          </div>
+
+          {/* Certification circles */}
+          <div className="mt-12 flex flex-wrap justify-center gap-8">
+            {FEATURED_CERTS.map(({ label, border, text }) => (
+              <div key={label} className="flex flex-col items-center gap-3">
+                <div className={`flex h-28 w-28 items-center justify-center rounded-xl bg-gray-50/20 border-2 ${border} shadow-sm transition-transform duration-300 hover:scale-105`}>
+                  <span className={`px-3 text-center text-xs font-black uppercase leading-tight tracking-wide ${text}`}>
+                    {label}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Approved suppliers strip */}
+          <div className="mt-8 flex flex-col items-center gap-3 rounded-xl border border-silver-light bg-gray-50/20 px-8 py-5 sm:flex-row sm:justify-center sm:gap-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-electric-blue">Approved Supplier</span>
+            {APPROVED_SUPPLIERS.map((s) => (
+              <span key={s} className="flex items-center gap-2 text-sm font-medium text-navy">
+                <svg className="h-4 w-4 text-electric-blue" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+    </>
   );
 }

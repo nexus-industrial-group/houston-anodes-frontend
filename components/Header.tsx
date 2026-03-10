@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -52,12 +54,19 @@ export default function Header() {
 
   return (
     <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 md:px-12 bg-white/10 backdrop-blur-lg shadow-lg text-white">
-      <div className="flex items-center space-x-2 text-white">
-        <span className="text-xl font-semibold tracking-wide text-white">Houston Anodes</span>
-      </div>
+      <Link href="/" className="flex items-center">
+        <Image
+          src="/images/h_a.webp" ///"/images/Houston_anodes.webp"
+          alt="Houston Anodes"
+          width={160}
+          height={48}
+          className="h-20 w-auto object-contain"
+          priority
+        />
+      </Link>
 
       {/* Enlaces de escritorio */}
-      <div className="hidden space-x-8 text-sm font-bold text-white md:flex h-full">
+      <div className="hidden space-x-8 text-lg font-bold text-white md:flex h-full">
         {links.map((l) => {
           const isActive = pathname === l.href || (l.href !== "/" && pathname?.startsWith(l.href));
           return (
@@ -67,7 +76,7 @@ export default function Header() {
               aria-current={isActive ? "page" : undefined}
               onMouseEnter={(e) => handleHover(e.currentTarget as HTMLElement)}
               onMouseLeave={clearHover}
-              className={`flex items-center h-full transition-colors ${isActive ? "text-white" : "hover:text-white"}`}>
+              className={`flex items-center h-full transition-colors ${isActive ? "text-primary-blue" : "hover:text-primary-blue"}`}>
               {l.label}
             </a>
           );
@@ -83,14 +92,14 @@ export default function Header() {
         <span
           aria-hidden="true"
           style={{ left: indicator.left, width: indicator.width }}
-          className="pointer-events-none absolute bottom-0 h-[3px] bg-white"
+          className="pointer-events-none absolute bottom-0 h-[3px] bg-primary-blue"
         />
       )}
       {hoverIndicator && (
         <span
           aria-hidden="true"
           style={{ left: hoverIndicator.left, width: hoverIndicator.width }}
-          className="pointer-events-none absolute bottom-0 h-[3px] bg-white opacity-60"
+          className="pointer-events-none absolute bottom-0 h-[3px] bg-primary-blue opacity-60"
         />
       )}
     </nav>
