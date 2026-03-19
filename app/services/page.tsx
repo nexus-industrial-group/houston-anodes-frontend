@@ -9,12 +9,19 @@ export default function ServicesPage() {
 
       {/* Sección Hero */}
       <header className="relative flex items-center justify-center h-screen overflow-hidden">
-        {/* Imagen de fondo (Placeholder aproximado a turbinas eólicas/trabajador) */}
-        <img 
-          src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-          alt="Ingeniero en parque eólico" 
+        {/* Video de fondo */}
+        <video
           className="absolute inset-0 object-cover w-full h-full object-center"
-        />
+          src="/videos/services_video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        >
+          <source src="/videos/services_video.mp4" type="video/mp4" />
+          Tu navegador no soporta la etiqueta de video.
+        </video>
         {/* Superposición oscura sutil */}
         <div className="absolute inset-0 bg-black/30"></div>
         
