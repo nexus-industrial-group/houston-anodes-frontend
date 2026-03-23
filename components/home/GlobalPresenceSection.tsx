@@ -1,4 +1,4 @@
-import WorldMapSvg from "./WorldMapSvg";
+import DottedWorldMap from "./DottedWorldMap";
 
 const REGIONS = [
   "All Regions",
@@ -23,7 +23,7 @@ export default function GlobalPresenceSection() {
 
       {/* Map — full bleed */}
       <div className="mt-12">
-        <WorldMapSvg />
+        <DottedWorldMap />
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

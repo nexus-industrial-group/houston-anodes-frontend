@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const COMPARISON_ROWS = [
   {
     spec: "Indium Homogenization",
@@ -120,6 +122,82 @@ export default function CertificationsSection() {
       </div>
     </section>
 
+    {/* ── Gas vs Induction comparison cards ── */}
+    <section
+      className="relative overflow-hidden py-24 lg:py-32"
+      style={{ backgroundImage: "url('/images/homepage/gas_ind.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-navy/15" />
+
+      <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-14">
+          <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue">
+            Why It Matters
+          </p>
+          <h2 className="mt-3 text-3xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-4xl">
+            Process Makes the Difference
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {/* Gas Furnace — Competitors */}
+          <div className="rounded-2xl border border-electric-orange/90 bg-white/5 p-8 backdrop-blur-sm">
+            <div className="border-b border-white/20 pb-5 text-center">
+              <p className="text-lg font-extrabold uppercase tracking-widest text-electric-blue">
+                Gas Furnace
+              </p>
+              <p className="mt-1 text-sm font-semibold uppercase tracking-widest text-white/50">
+                (Competitors)
+              </p>
+            </div>
+            <ul className="mt-8 space-y-4">
+              {[
+                "Flame contamination (hydrogen/carbon)",
+                "Manual stirring → heterogeneous mix",
+                "Partial indium activation",
+                "Porosity and bubbles",
+                "Shorter anode life",
+                "Inconsistent quality",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-base text-white/80">
+                  <span className="mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-red-500" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Electromagnetic Induction — Houston Anodes */}
+          <div className="rounded-2xl border border-electric-blue/60 bg-electric-blue/10 p-8 backdrop-blur-sm">
+            <div className="border-b border-electric-blue/30 pb-5 text-center">
+              <p className="text-lg font-extrabold uppercase tracking-widest text-electric-blue">
+                Electromagnetic Induction
+              </p>
+              <p className="mt-1 text-sm font-semibold uppercase tracking-widest text-white/50">
+                (Houston Anodes)
+              </p>
+            </div>
+            <ul className="mt-8 space-y-4">
+              {[
+                "Zero contamination → emissions-free",
+                "Automated stirring → 100% homogeneous",
+                "Complete indium activation at molecular level",
+                "Zero porosity, perfect density",
+                "40% longer service life",
+                "Identical results, batch after batch",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-base text-white/90">
+                  <span className="mt-1.5 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-green-400" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section className="relative overflow-hidden py-24 lg:py-32">
       {/* Background video */}
       <video
@@ -129,7 +207,7 @@ export default function CertificationsSection() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/videos/anode_cer.webm" type="video/webm" />
+        <source src="/videos/cert.webm" type="video/webm" />
       </video>
       <div className="absolute inset-0 bg-navy/10" />
 
@@ -148,24 +226,22 @@ export default function CertificationsSection() {
             </p>
           </div>
 
-          {/* Certification circles */}
-          <div className="mt-12 flex flex-wrap justify-center gap-8">
-            {FEATURED_CERTS.map(({ label, border, text }) => (
-              <div key={label} className="flex flex-col items-center gap-3">
-                <div className={`flex h-28 w-28 items-center justify-center rounded-xl bg-gray-50/20 border-2 ${border} shadow-sm transition-transform duration-300 hover:scale-105`}>
-                  <span className={`px-3 text-center text-xs font-black uppercase leading-tight tracking-wide ${text}`}>
-                    {label}
-                  </span>
-                </div>
-              </div>
-            ))}
+          {/* ISO Certification image */}
+          <div className="mt-12 flex justify-center">
+            <Image
+              src="/images/homepage/iso2.webp"
+              alt="ISO Certifications"
+              width={200}
+              height={200}
+              className="object-contain"
+            />
           </div>
 
           {/* Approved suppliers strip */}
           <div className="mt-8 flex flex-col items-center gap-3 rounded-xl border border-silver-light bg-gray-50/20 px-8 py-5 sm:flex-row sm:justify-center sm:gap-10">
             <span className="text-xs font-bold uppercase tracking-widest text-electric-blue">Approved Supplier</span>
             {APPROVED_SUPPLIERS.map((s) => (
-              <span key={s} className="flex items-center gap-2 text-sm font-medium text-navy">
+              <span key={s} className="flex items-center gap-2 text-sm font-medium text-white">
                 <svg className="h-4 w-4 text-electric-blue" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
