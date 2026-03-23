@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Linkedin, Facebook, Instagram, Globe } from "lucide-react";
 import DownloadForm from "./DownloadForm";
 
 export default function Footer() {
@@ -47,6 +48,23 @@ export default function Footer() {
                 <a href="#" onClick={(e) => openForm(e, 'About Houston Anodes', '03 TRI-FOLD brochure2 -WindFarms.pdf')} className="hover:text-white transition-colors">About Houston Anodes</a>
               </li>
             </ul>
+
+              <div className="mt-6 pt-4 border-t border-gray-700 flex flex-col items-start">
+                <div className="flex space-x-6">
+                  <a href="#" aria-label="LinkedIn" className="text-gray-300 hover:text-white transition-colors">
+                    <Linkedin size={20} />
+                  </a>
+                  <a href="#" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors">
+                    <Facebook size={20} />
+                  </a>
+                  <a href="#" aria-label="Instagram" className="text-gray-300 hover:text-white transition-colors">
+                    <Instagram size={20} />
+                  </a>
+                  <a href="#" aria-label="Collide" className="text-gray-300 hover:text-white transition-colors">
+                    <Globe size={20} />
+                  </a>
+                </div>
+              </div>
           </div>
 
           <div>
@@ -81,9 +99,14 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>© 2026 Houston Anodes, Inc.</p>
-          <div className="mt-2 md:mt-0">
+        <div className="pt-8 border-t border-gray-700 text-xs text-gray-500 grid grid-cols-1 md:grid-cols-3 items-center gap-4">
+          <div className="text-center md:text-left">
+            <p>© 2026 Houston Anodes, Inc.</p>
+          </div>
+
+          <div />
+
+          <div className="mt-2 md:mt-0 flex justify-center md:justify-end">
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/ha.webp"
