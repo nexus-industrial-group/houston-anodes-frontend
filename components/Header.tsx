@@ -56,11 +56,12 @@ export default function Header() {
     <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-2 md:px-12 bg-white/10 backdrop-blur-lg shadow-lg text-white">
       <Link href="/" className="flex items-center">
         <Image
-          src="/images/ha.webp" ///"/images/Houston_anodes.webp"
+          src="/images/ha.webp"
           alt="Houston Anodes"
           width={160}
           height={48}
-          className="h-30 w-auto object-contain"
+          sizes="(max-width: 768px) 120px, 160px"
+          className="h-12 w-auto object-contain"
           priority
         />
       </Link>
