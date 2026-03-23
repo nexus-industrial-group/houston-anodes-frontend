@@ -44,22 +44,28 @@ export default function DownloadForm({ onClose, title = "Download Form", fileNam
             <div className="flex gap-2">
               <div className="w-1/2">
                 <label className="block text-sm mb-2" htmlFor="firstName">First name</label>
-                <input id="firstName" name="firstName" type="text" className="w-full mb-3 p-2 border rounded" required />
+                <input id="firstName" name="firstName" type="text" placeholder="First name" className="w-full mb-3 p-2 border rounded" required />
               </div>
               <div className="w-1/2">
                 <label className="block text-sm mb-2" htmlFor="lastName">Last name</label>
-                <input id="lastName" name="lastName" type="text" className="w-full mb-3 p-2 border rounded" required />
+                <input id="lastName" name="lastName" type="text" placeholder="Last name" className="w-full mb-3 p-2 border rounded" required />
               </div>
             </div>
 
             <label className="block text-sm mb-2" htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" className="w-full mb-3 p-2 border rounded" required />
+            <input id="email" name="email" type="email" placeholder="name@example.com" className="w-full mb-3 p-2 border rounded" required />
 
             <label className="block text-sm mb-2" htmlFor="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" className="w-full mb-3 p-2 border rounded" required />
+            <input id="phone" name="phone" type="tel" placeholder="e.g. +1 555 555 5555" className="w-full mb-3 p-2 border rounded" required />
 
             <label className="block text-sm mb-2" htmlFor="country">Country</label>
-            <input id="country" name="country" type="text" className="w-full mb-4 p-2 border rounded" required />
+            <select id="country" name="country" defaultValue="" className="w-full mb-4 p-2 border rounded" required>
+              <option value="" disabled>Select your country</option>
+              <option>United States</option>
+              <option>Spain</option>
+              <option>Mexico</option>
+              <option>Other</option>
+            </select>
 
             <div className="flex justify-end">
               <button type="submit" className="bg-navy text-white px-4 py-2 rounded">
