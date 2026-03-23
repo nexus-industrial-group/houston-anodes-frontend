@@ -1,11 +1,35 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import DownloadForm from "./DownloadForm";
 
 export default function Footer() {
+  const [showDownloadForm, setShowDownloadForm] = useState(false);
+  const [downloadTitle, setDownloadTitle] = useState<string | undefined>(undefined);
+  const [downloadFileName, setDownloadFileName] = useState<string | undefined>(undefined);
+
+  const openForm = (e?: any, docTitle?: string, fileName?: string) => {
+    e?.preventDefault();
+    setDownloadTitle(docTitle);
+    setDownloadFileName(fileName);
+    setShowDownloadForm(true);
+  };
+
+  const closeForm = () => {
+    setShowDownloadForm(false);
+    setDownloadTitle(undefined);
+    setDownloadFileName(undefined);
+  };
   return (
     <footer className="bg-navy text-sm text-gray-300 relative">
+      {showDownloadForm && (
+        <DownloadForm
+          onClose={closeForm}
+          title={downloadTitle ? `${downloadTitle} Download Form` : undefined}
+          fileName={downloadFileName}
+        />
+      )}
       {/* Borde metálico superior */}
       <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
@@ -13,9 +37,15 @@ export default function Footer() {
             <h5 className="font-bold text-white mb-4">Resources</h5>
             <hr className="border-white my-2" />
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Houston Anodes Catalog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Overview of Houston Anodes</a></li>
-              <li><a href="/about-us" className="hover:text-white transition-colors">About Houston Anodes</a></li>
+              <li>
+                <a href="#" onClick={(e) => openForm(e, 'Houston Anodes Catalog', '01 Houston-Sacrificial-Anodes-Catalog.pdf')} className="hover:text-white transition-colors">Houston Anodes Catalog</a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => openForm(e, 'Overview of Houston Anodes', '02 Manufacturing Anodes with Electromagnetic Induction Technology 3- Windfarms.pdf')} className="hover:text-white transition-colors">Overview of Houston Anodes</a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => openForm(e, 'About Houston Anodes', '03 TRI-FOLD brochure2 -WindFarms.pdf')} className="hover:text-white transition-colors">About Houston Anodes</a>
+              </li>
             </ul>
           </div>
 
