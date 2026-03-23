@@ -24,7 +24,7 @@ export default function DownloadForm({ onClose, title = "Download Form", fileNam
         <button
           onClick={onClose}
           aria-label="Close download form"
-          className="absolute top-3 right-3 text-gray-500"
+          className="absolute top-3 right-3 text-gray-500 hover:text-white cursor-pointer"
         >
           ✕
         </button>

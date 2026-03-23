@@ -127,12 +127,12 @@ export default function CertificationsSection() {
       className="relative overflow-hidden py-24 lg:py-32"
       style={{ backgroundImage: "url('/images/homepage/gas_ind.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-navy/15" />
+      {/* Dark overlay to make text pop */}
+      <div className="absolute inset-0 bg-black/80" />
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-14">
-          <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue">
+          <p className="font-extrabold text-sm uppercase tracking-widest text-electric-blue">
             Why It Matters
           </p>
           <h2 className="mt-3 text-3xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-4xl">
@@ -140,14 +140,14 @@ export default function CertificationsSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 font-extrabold">
           {/* Gas Furnace — Competitors */}
-          <div className="rounded-2xl border border-electric-orange/90 bg-white/5 p-8 backdrop-blur-sm">
-            <div className="border-b border-white/20 pb-5 text-center">
+          <div className="rounded-2xl border border-electric-orange/90 bg-electric-orange/5 p-8 backdrop-blur-sm ">
+            <div className="border-b border-electric-orange/20 pb-5 text-center">
               <p className="text-lg font-extrabold uppercase tracking-widest text-electric-blue">
                 Gas Furnace
               </p>
-              <p className="mt-1 text-sm font-semibold uppercase tracking-widest text-white/50">
+              <p className=" font-extrabold mt-1 text-sm uppercase tracking-widest text-white/50">
                 (Competitors)
               </p>
             </div>
@@ -174,7 +174,7 @@ export default function CertificationsSection() {
               <p className="text-lg font-extrabold uppercase tracking-widest text-electric-blue">
                 Electromagnetic Induction
               </p>
-              <p className="mt-1 text-sm font-semibold uppercase tracking-widest text-white/50">
+              <p className=" font-extrabold mt-1 text-sm uppercase tracking-widest text-white/50">
                 (Houston Anodes)
               </p>
             </div>
@@ -229,11 +229,11 @@ export default function CertificationsSection() {
           {/* ISO Certification image */}
           <div className="mt-12 flex justify-center">
             <Image
-              src="/images/homepage/iso2.webp"
+              src="/images/homepage/iso3.png"
               alt="ISO Certifications"
               width={200}
               height={200}
-              className="object-contain"
+              className="object-contain filter invert brightness-200"
             />
           </div>
 

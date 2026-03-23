@@ -27,7 +27,7 @@ export default function ServicesPage() {
         
         <div className="relative z-10 max-w-4xl px-4 mx-auto text-center mt-12">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-lg">
-            SERVICES, QUALITY <br className="hidden md:block" />& FOOTPRINT.
+            SERVICES, QUALITY <br className="hidden md:block" />& FOOTPRINT
           </h1>
           {/* Divider 80% width and subtitle */}
           <div className="mt-3 flex justify-center">
