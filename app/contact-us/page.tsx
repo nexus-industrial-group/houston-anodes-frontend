@@ -2,6 +2,7 @@ import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Header from "../../components/Header";
 import ContactForm from "./ContactForm";
+import { Linkedin, Facebook, Instagram, Globe } from "lucide-react";
 
 export default function ContactUsPage() {
   return (
@@ -34,7 +35,7 @@ export default function ContactUsPage() {
 
           {/* Contact Info */}
           <aside className="">
-            <div className="bg-gray-50 p-8 rounded-xl ">
+            <div className="bg-gray-50 p-4 rounded-xl ">
               <h3 className="text-xl font-bold mb-6">Contact Info</h3>
 
               <div className="flex items-start gap-3 mb-4">
@@ -73,9 +74,39 @@ export default function ContactUsPage() {
                   </a>
                 </div>
               </div>
+              <div className="mt-4 flex space-x-4">
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="text-gray-700 hover:text-black transition-colors"
+                >
+                  <Linkedin size={20} />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="text-gray-700 hover:text-black transition-colors"
+                >
+                  <Facebook size={20} />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="text-gray-700 hover:text-black transition-colors"
+                >
+                  <Instagram size={20} />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Website"
+                  className="text-gray-700 hover:text-black transition-colors"
+                >
+                  <Globe size={20} />
+                </a>
+              </div>
             </div>
 
-            <div >
+            <div>
               {/* Embedded Google Map */}
               <div className="mt-6">
                 <div className="w-full h-64 rounded-lg overflow-hidden shadow">
