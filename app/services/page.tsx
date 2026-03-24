@@ -27,7 +27,7 @@ export default function ServicesPage() {
         
         <div className="relative z-10 max-w-4xl px-4 mx-auto text-center mt-12">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-lg">
-            SERVICES, QUALITY <br className="hidden md:block" />& FOOTPRINT.
+            SERVICES, QUALITY <br className="hidden md:block" />& FOOTPRINT
           </h1>
           {/* Divider 80% width and subtitle */}
           <div className="mt-3 flex justify-center">
@@ -46,8 +46,8 @@ export default function ServicesPage() {
         <div className="grid grid-cols-1 gap-6 max-w-6xl mx-auto md:grid-cols-2 lg:grid-cols-4">
           {/* Tarjeta 1 */}
           <div className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-            <Settings size={48} strokeWidth={1.5} className="mb-6 text-gray-700" />
-            <h3 className="mb-3 text-lg font-semibold leading-tight text-gray-900">
+            <Settings size={48} strokeWidth={2} className="mb-6 text-electric-blue" />
+            <h3 className="mb-3 text-lg font-extrabold leading-tight text-electric-blue">
               Coating Design Review
             </h3>
             <p className="text-sm text-gray-600">
@@ -57,8 +57,8 @@ export default function ServicesPage() {
 
           {/* Tarjeta 2 */}
           <div className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-            <Map size={48} strokeWidth={1.5} className="mb-6 text-gray-700" />
-            <h3 className="mb-3 text-lg font-semibold leading-tight text-gray-900">
+            <Map size={48} strokeWidth={2} className="mb-6 text-electric-blue" />
+            <h3 className="mb-3 text-lg font-extrabold leading-tight text-electric-blue">
               Surface Preparation Supervision
             </h3>
             <p className="text-sm text-gray-600">
@@ -68,8 +68,8 @@ export default function ServicesPage() {
 
           {/* Tarjeta 3 */}
           <div className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-            <Search size={48} strokeWidth={1.5} className="mb-6 text-gray-700" />
-            <h3 className="mb-3 text-lg font-semibold leading-tight text-gray-900">
+            <Search size={48} strokeWidth={2} className="mb-6 text-electric-blue" />
+            <h3 className="mb-3 text-lg font-extrabold leading-tight text-electric-blue">
               Coating Application Supervision
             </h3>
             <p className="text-sm text-gray-600">
@@ -79,8 +79,8 @@ export default function ServicesPage() {
 
           {/* Tarjeta 4 */}
           <div className="flex flex-col items-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-            <Gauge size={48} strokeWidth={1.5} className="mb-6 text-gray-700" />
-            <h3 className="mb-3 text-lg font-semibold leading-tight text-gray-900">
+            <Gauge size={48} strokeWidth={2} className="mb-6 text-electric-blue" />
+            <h3 className="mb-3 text-lg font-extrabold leading-tight text-electric-blue">
               Post-Application Verification
             </h3>
             <p className="text-sm text-gray-600">

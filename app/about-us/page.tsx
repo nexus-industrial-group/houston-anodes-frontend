@@ -22,14 +22,15 @@ export default function AboutUsPage() {
         </div>
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
-        
+
         <div className="relative z-10 max-w-4xl px-6 mx-auto text-center mt-12">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-lg leading-tight">
-            A Legacy of Purity.<br />
-            A Future of Protection.
+            A Legacy of Purity.
+            <br />A Future of Protection.
           </h1>
           <p className="mt-6 text-lg text-white/90 drop-shadow-md max-w-2xl mx-auto">
-            Founded in 1977, Houston Anodes has been at the forefront of cathodic protection technology for nearly five decades.
+            Founded in 1977, Houston Anodes has been at the forefront of
+            cathodic protection technology for nearly five decades.
           </p>
         </div>
       </header>
@@ -103,22 +104,25 @@ export default function AboutUsPage() {
           <p className="text-center text-text-secondary mb-16 max-w-2xl mx-auto">
             Nearly five decades of innovation, quality, and global expansion
           </p>
-          
+
           {/* Timeline */}
           <div className="relative">
             {/* Timeline line */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 transform -translate-x-1/2"></div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-20 md:gap-y-16">
               {/* 1977 - Founded (Left) */}
               <div className="relative md:text-right">
                 <div className="md:pr-12">
                   <div className="flex items-center md:justify-end mb-2">
                     <div className="w-3 h-3 bg-electric-blue rounded-full mr-3 md:mr-0 md:ml-3 md:order-2"></div>
-                    <span className="text-xl font-bold text-gray-900">1977 - Founded</span>
+                    <span className="text-xl font-bold text-gray-900">
+                      1977 - Founded
+                    </span>
                   </div>
                   <p className="text-gray-600 leading-relaxed">
-                    Established Aluminum & Zinc Anode Manufacturing in Houston, Texas
+                    Established Aluminum & Zinc Anode Manufacturing in Houston,
+                    Texas
                   </p>
                 </div>
               </div>
@@ -128,10 +132,13 @@ export default function AboutUsPage() {
                 <div className="md:pl-12">
                   <div className="flex items-center mb-2">
                     <div className="w-3 h-3 bg-electric-blue rounded-full mr-3"></div>
-                    <span className="text-xl font-bold text-gray-900">1980 - Industry Growth</span>
+                    <span className="text-xl font-bold text-gray-900">
+                      1980 - Industry Growth
+                    </span>
                   </div>
                   <p className="text-gray-600 leading-relaxed">
-                    Expanded operations focusing on aluminum industry advancements
+                    Expanded operations focusing on aluminum industry
+                    advancements
                   </p>
                 </div>
               </div>
@@ -141,10 +148,13 @@ export default function AboutUsPage() {
                 <div className="md:pr-12">
                   <div className="flex items-center md:justify-end mb-2">
                     <div className="w-3 h-3 bg-electric-blue rounded-full mr-3 md:mr-0 md:ml-3 md:order-2"></div>
-                    <span className="text-xl font-bold text-gray-900">1986 - Quality & Innovation</span>
+                    <span className="text-xl font-bold text-gray-900">
+                      1986 - Quality & Innovation
+                    </span>
                   </div>
                   <p className="text-gray-600 leading-relaxed">
-                    Pioneered quality innovation and corrosion protection technology
+                    Pioneered quality innovation and corrosion protection
+                    technology
                   </p>
                 </div>
               </div>
@@ -154,10 +164,13 @@ export default function AboutUsPage() {
                 <div className="md:pl-12">
                   <div className="flex items-center mb-2">
                     <div className="w-3 h-3 bg-electric-blue rounded-full mr-3"></div>
-                    <span className="text-xl font-bold text-gray-900">1995 - ISO Certification</span>
+                    <span className="text-xl font-bold text-gray-900">
+                      1995 - ISO Certification
+                    </span>
                   </div>
                   <p className="text-gray-600 leading-relaxed">
-                    Achieved ISO 9001 certification for quality management systems
+                    Achieved ISO 9001 certification for quality management
+                    systems
                   </p>
                 </div>
               </div>
@@ -167,10 +180,13 @@ export default function AboutUsPage() {
                 <div className="md:pr-12">
                   <div className="flex items-center md:justify-end mb-2">
                     <div className="w-3 h-3 bg-electric-blue rounded-full mr-3 md:mr-0 md:ml-3 md:order-2"></div>
-                    <span className="text-xl font-bold text-gray-900">2022 - Global Reach</span>
+                    <span className="text-xl font-bold text-gray-900">
+                      2022 - Global Reach
+                    </span>
                   </div>
                   <p className="text-gray-600 leading-relaxed">
-                    Expanded international presence with 1000+ projects worldwide
+                    Expanded international presence with 1000+ projects
+                    worldwide
                   </p>
                 </div>
               </div>
@@ -206,6 +222,7 @@ export default function AboutUsPage() {
           <h2 className="text-2xl font-bold tracking-widest uppercase mb-16 text-center">
             What Our Clients Say
           </h2>
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
@@ -309,80 +326,103 @@ export default function AboutUsPage() {
       <section className="py-20 px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold tracking-widest text-gray-900 uppercase mb-4 text-center">
-            Our Facilities
+            Our Quality Control
           </h2>
           <p className="text-center text-text-secondary mb-12 max-w-2xl mx-auto">
             State-of-the-art equipment and quality control laboratories
           </p>
+
           
-          {/* Horizontal Scrolling Gallery */}
-          <div className="overflow-x-auto pb-4 scrollbar-hide">
-            <div className="flex gap-6" style={{ width: 'max-content' }}>
-              <div className="flex-shrink-0 w-80">
-                <div className="h-64 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Quality control lab" 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="mt-4 text-lg font-bold text-gray-900">QB Bruker Spectrometer</h3>
-                <p className="text-sm text-gray-600">Precision material analysis</p>
+          <div className="pb-6">
+            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+              <div className="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+                <h3 className="text-lg font-extrabold uppercase tracking-widest text-electric-blue text-center">
+                  Raw Material Control
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-text-secondary text-justify">
+                  All incoming materials are thoroughly inspected and tested upon arrival to ensure full compliance with specifications before being approved for production use.
+                </p>
+                <ul className="mt-8 space-y-3">
+                  <li className="flex items-center gap-3 text-base text-gray-800">
+                    <svg className="h-5 w-5 flex-shrink-0 text-electric-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                    </svg>
+                    Incoming materials are inspected and tested upon arrival
+                  </li>
+                  <li className="flex items-center gap-3 text-base text-gray-800">
+                    <svg className="h-5 w-5 flex-shrink-0 text-electric-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                    </svg>
+                    Ensures compliance with required specifications
+                  </li>
+                  <li className="flex items-center gap-3 text-base text-gray-800">
+                    <svg className="h-5 w-5 flex-shrink-0 text-electric-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                    </svg>
+                    Approved before release to production
+                  </li>
+                </ul>
               </div>
 
-              <div className="flex-shrink-0 w-80">
-                <div className="h-64 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Laboratory" 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="mt-4 text-lg font-bold text-gray-900">Quality Control Laboratory</h3>
-                <p className="text-sm text-gray-600">State-of-the-art testing facility</p>
+              <div className="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+                <h3 className="text-lg font-extrabold uppercase tracking-widest text-electric-blue text-center">
+                  Per-Heat Chemical Analysis
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-text-secondary text-justify">
+                  Detailed chemical analysis is conducted on every heat to guarantee material composition accuracy, consistency, and adherence to strict quality standards.
+                </p>
+                <ul className="mt-8 space-y-3">
+                  <li className="flex items-center gap-3 text-base text-gray-800">
+                    <svg className="h-5 w-5 flex-shrink-0 text-electric-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                    </svg>
+                    Chemical analysis performed on every heat
+                  </li>
+                  <li className="flex items-center gap-3 text-base text-gray-800">
+                    <svg className="h-5 w-5 flex-shrink-0 text-electric-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                    </svg>
+                    Confirms material composition accuracy
+                  </li>
+                  <li className="flex items-center gap-3 text-base text-gray-800">
+                    <svg className="h-5 w-5 flex-shrink-0 text-electric-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                    </svg>
+                    Maintains consistency across batches
+                  </li>
+                </ul>
               </div>
 
-              <div className="flex-shrink-0 w-80">
-                <div className="h-64 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Spectrometer" 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="mt-4 text-lg font-bold text-gray-900">Precision Spectrometer</h3>
-                <p className="text-sm text-gray-600">Advanced chemical analysis</p>
-              </div>
-
-              <div className="flex-shrink-0 w-80">
-                <div className="h-64 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581092918484-8313e1f6f53e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Testing facility" 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="mt-4 text-lg font-bold text-gray-900">Final Testing</h3>
-                <p className="text-sm text-gray-600">Finished anodes inspection</p>
-              </div>
-
-              <div className="flex-shrink-0 w-80">
-                <div className="h-64 rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Manufacturing" 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="mt-4 text-lg font-bold text-gray-900">Production Floor</h3>
-                <p className="text-sm text-gray-600">Advanced manufacturing systems</p>
+              <div className="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+                <h3 className="text-lg font-extrabold uppercase tracking-widest text-electric-blue text-center">
+                  Standards Compliance (NACE TM-0190)
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-text-secondary text-justify">
+                  Electrochemical testing is performed in accordance with NACE TM-0190 to evaluate corrosion resistance and ensure reliability in demanding environments.
+                </p>
+                <ul className="mt-8 space-y-3">
+                  <li className="flex items-center gap-3 text-base text-gray-800">
+                    <svg className="h-5 w-5 flex-shrink-0 text-electric-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                    </svg>
+                    Electrochemical testing per NACE TM-0190
+                  </li>
+                  <li className="flex items-center gap-3 text-base text-gray-800">
+                    <svg className="h-5 w-5 flex-shrink-0 text-electric-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                    </svg>
+                    Evaluates corrosion resistance
+                  </li>
+                  <li className="flex items-center gap-3 text-base text-gray-800">
+                    <svg className="h-5 w-5 flex-shrink-0 text-electric-blue" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                    </svg>
+                    Ensures performance in demanding environments
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-
-          <p className="text-center text-sm text-gray-500 mt-8">
-            ← Scroll to view more →
-          </p>
         </div>
       </section>
 
@@ -393,10 +433,11 @@ export default function AboutUsPage() {
             Partner With Houston Anodes
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            Join industry leaders worldwide who trust Houston Anodes for superior corrosion protection solutions.
+            Join industry leaders worldwide who trust Houston Anodes for
+            superior corrosion protection solutions.
           </p>
-          <a 
-            href="/contact-us" 
+          <a
+            href="/contact-us"
             className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors"
           >
             Contact Us Today

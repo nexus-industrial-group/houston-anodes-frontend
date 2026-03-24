@@ -10,6 +10,7 @@ export default function Header() {
   const navRef = useRef<HTMLElement | null>(null);
   const [indicator, setIndicator] = useState<{ left: number; width: number } | null>(null);
   const [hoverIndicator, setHoverIndicator] = useState<{ left: number; width: number } | null>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   const links = [
     { label: "Home", href: "/" },
@@ -40,6 +41,16 @@ export default function Header() {
     return () => window.removeEventListener('resize', updateIndicator);
   }, [pathname]);
 
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 10);
+    }
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   function handleHover(el: HTMLElement | null) {
     const nav = navRef.current;
     if (!nav || !el) return setHoverIndicator(null);
@@ -53,14 +64,20 @@ export default function Header() {
   }
 
   return (
-    <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-2 md:px-12 bg-white/10 backdrop-blur-lg shadow-lg text-white">
+    <nav
+      ref={navRef}
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-2 md:px-12 ${
+        scrolled ? 'bg-navy/90 shadow-xl' : 'bg-white/10'
+      } backdrop-blur-lg transition-colors duration-300 text-white`}
+    >
       <Link href="/" className="flex items-center">
         <Image
-          src="/images/ha.webp" ///"/images/Houston_anodes.webp"
+          src="/images/ha.webp"
           alt="Houston Anodes"
           width={160}
           height={48}
-          className="h-30 w-auto object-contain"
+          sizes="(max-width: 768px) 120px, 160px"
+          className="h-12 w-auto object-contain"
           priority
         />
       </Link>
