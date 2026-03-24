@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Header from '../../components/Header';
+import HistoryBgCarousel from '../../components/about/HistoryBgCarousel';
 
 export default function AboutUsPage() {
   return (
@@ -34,73 +35,69 @@ export default function AboutUsPage() {
       </header>
 
       {/* Our Technology - Barrier Technology Section */}
-      <section className="py-20 px-6 md:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            {/* Centered Image */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1581092918484-8313e1f6f53e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Barrier Technology" 
-                  className="rounded-2xl shadow-2xl w-full max-w-md object-cover"
-                />
-                <div className="absolute -bottom-4 -right-4 bg-electric-blue text-white px-6 py-3 rounded-lg shadow-xl">
-                  <p className="font-bold text-sm uppercase">Advanced Protection</p>
-                </div>
-              </div>
-            </div>
+      <section className="relative overflow-hidden bg-white">
 
-            {/* Text on the side */}
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue mb-4">
-                Our Technology
-              </p>
-              <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-navy md:text-4xl lg:text-5xl mb-6">
-                Barrier Technology
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Houston Anodes manufactures sacrificial anodes that protect critical energy infrastructure from corrosion. We make aluminum, zinc, and magnesium anodes for offshore platforms, subsea pipelines, wind turbines, and marine vessels.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                We manufacture with electromagnetic induction furnaces—not gas combustion. This is not a feature. It's a structural advantage.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
-                    <svg className="h-4 w-4 text-electric-blue" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <span className="text-gray-700">Superior electrochemical performance</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
-                    <svg className="h-4 w-4 text-electric-blue" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <span className="text-gray-700">Extended operational lifespan</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
-                    <svg className="h-4 w-4 text-electric-blue" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <span className="text-gray-700">Cost-effective protection solutions</span>
-                </li>
-              </ul>
-            </div>
+        {/* Anode close-up — massive background piece, bleeds behind everything */}
+        <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-180 -translate-y-1/2 flex items-center justify-center w-[900px] rotate-[-15deg]">
+          <Image
+            src="/images/about-us/anode.webp"
+            alt="Houston Anode"
+            width={0}
+            height={0}
+            sizes="1100px"
+            className="h-auto w-full"
+          />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="ml-auto max-w-lg py-20 lg:py-28">
+            <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue mb-4">
+              Our Technology
+            </p>
+            <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-navy md:text-4xl lg:text-5xl mb-6">
+              Barrier Technology
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Houston Anodes manufactures sacrificial anodes that protect critical energy infrastructure from corrosion. We make aluminum, zinc, and magnesium anodes for offshore platforms, subsea pipelines, wind turbines, and marine vessels.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              We manufacture with electromagnetic induction furnaces—not gas combustion. This is not a feature. It&apos;s a structural advantage.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
+                  <svg className="h-4 w-4 text-electric-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </span>
+                <span className="text-gray-700">Superior electrochemical performance</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
+                  <svg className="h-4 w-4 text-electric-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </span>
+                <span className="text-gray-700">Extended operational lifespan</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
+                  <svg className="h-4 w-4 text-electric-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </span>
+                <span className="text-gray-700">Cost-effective protection solutions</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
       {/* History Timeline Section */}
-      <section className="py-20 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold tracking-widest text-gray-900 uppercase mb-4 text-center">
+      <section className="relative overflow-hidden py-20 px-6 md:px-12 bg-gray-50">
+        <HistoryBgCarousel />
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold tracking-widest text-electric-blue uppercase mb-4 text-center">
             Our History
           </h2>
           <p className="text-center text-text-secondary mb-16 max-w-2xl mx-auto">
@@ -182,42 +179,24 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Two Images with Text in Middle Section */}
-      <section className="py-20 px-6 md:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            
-            {/* Left Image */}
-            <div className="h-96 lg:h-[500px]">
-              <img 
-                src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Manufacturing process" 
-                className="rounded-2xl shadow-xl w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Text in Middle */}
-            <div className="px-4">
-              <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-navy md:text-4xl mb-6">
-                Manufacturing Excellence
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Our state-of-the-art manufacturing facilities utilize advanced induction furnace technology to produce high-purity anodes with precise chemical compositions.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Every step of our production process is carefully monitored and controlled to ensure consistent quality and performance, meeting the most stringent industry standards.
-              </p>
-            </div>
-
-            {/* Right Image */}
-            <div className="h-96 lg:h-[500px]">
-              <img 
-                src="https://images.unsplash.com/photo-1581092918484-8313e1f6f53e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Quality inspection" 
-                className="rounded-2xl shadow-xl w-full h-full object-cover"
-              />
-            </div>
-          </div>
+      {/* Manufacturing excellence section */}
+      <section className="relative overflow-hidden py-20 px-6 md:px-12 min-h-[500px] flex items-center">
+        <Image
+          src="/images/about-us/man_exc.webp"
+          alt="Manufacturing Excellence"
+          fill
+          className="object-cover"
+        />
+        <div className="relative z-10 ml-auto mr-12 max-w-lg text-right">
+          <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-4xl mb-6">
+            Manufacturing Excellence
+          </h2>
+          <p className="text-white/90 leading-relaxed mb-4">
+            Our state-of-the-art manufacturing facilities utilize advanced induction furnace technology to produce high-purity anodes with precise chemical compositions.
+          </p>
+          <p className="text-white/90 leading-relaxed">
+            Every step of our production process is carefully monitored and controlled to ensure consistent quality and performance, meeting the most stringent industry standards.
+          </p>
         </div>
       </section>
 
@@ -227,83 +206,101 @@ export default function AboutUsPage() {
           <h2 className="text-2xl font-bold tracking-widest uppercase mb-16 text-center">
             What Our Clients Say
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
             {/* Quote 1 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <svg className="w-12 h-12 text-electric-blue mb-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-              </svg>
-              <p className="text-lg leading-relaxed mb-6 italic">
-                "Houston Anodes has been our trusted partner for over 15 years. Their commitment to quality and technical expertise is unmatched in the industry."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-electric-blue/20 rounded-full flex items-center justify-center">
-                  <span className="text-electric-blue font-bold">JM</span>
+            <div className="group h-72 [perspective:1000px]">
+              <div className="relative h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front */}
+                <div className="absolute inset-0 [backface-visibility:hidden] bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center justify-center text-center">
+                  <div className="w-16 h-16 bg-electric-blue/20 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-electric-blue font-bold text-xl">JM</span>
+                  </div>
+                  <p className="font-bold text-lg">John Mitchell</p>
+                  <p className="text-sm text-white/70 mt-1">Engineering Director, Maritime Solutions Corp</p>
                 </div>
-                <div>
-                  <p className="font-bold">John Mitchell</p>
-                  <p className="text-sm text-white/70">Engineering Director, Maritime Solutions Corp</p>
+                {/* Back */}
+                <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col justify-center">
+                  <svg className="w-10 h-10 text-electric-blue mb-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p className="text-base leading-relaxed italic">
+                    &ldquo;Houston Anodes has been our trusted partner for over 15 years. Their commitment to quality and technical expertise is unmatched in the industry.&rdquo;
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Quote 2 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <svg className="w-12 h-12 text-electric-blue mb-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-              </svg>
-              <p className="text-lg leading-relaxed mb-6 italic">
-                "The performance and reliability of Houston Anodes products have significantly reduced our maintenance costs and extended the life of our offshore structures."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-electric-blue/20 rounded-full flex items-center justify-center">
-                  <span className="text-electric-blue font-bold">SR</span>
+            <div className="group h-72 [perspective:1000px]">
+              <div className="relative h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front */}
+                <div className="absolute inset-0 [backface-visibility:hidden] bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center justify-center text-center">
+                  <div className="w-16 h-16 bg-electric-blue/20 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-electric-blue font-bold text-xl">SR</span>
+                  </div>
+                  <p className="font-bold text-lg">Sarah Rodriguez</p>
+                  <p className="text-sm text-white/70 mt-1">VP Operations, Global Energy Partners</p>
                 </div>
-                <div>
-                  <p className="font-bold">Sarah Rodriguez</p>
-                  <p className="text-sm text-white/70">VP Operations, Global Energy Partners</p>
+                {/* Back */}
+                <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col justify-center">
+                  <svg className="w-10 h-10 text-electric-blue mb-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p className="text-base leading-relaxed italic">
+                    &ldquo;The performance and reliability of Houston Anodes products have significantly reduced our maintenance costs and extended the life of our offshore structures.&rdquo;
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Quote 3 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <svg className="w-12 h-12 text-electric-blue mb-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-              </svg>
-              <p className="text-lg leading-relaxed mb-6 italic">
-                "Houston Anodes delivers consistent quality and exceptional customer service. They understand our technical requirements and always exceed expectations."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-electric-blue/20 rounded-full flex items-center justify-center">
-                  <span className="text-electric-blue font-bold">DK</span>
+            <div className="group h-72 [perspective:1000px]">
+              <div className="relative h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front */}
+                <div className="absolute inset-0 [backface-visibility:hidden] bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center justify-center text-center">
+                  <div className="w-16 h-16 bg-electric-blue/20 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-electric-blue font-bold text-xl">DK</span>
+                  </div>
+                  <p className="font-bold text-lg">David Kim</p>
+                  <p className="text-sm text-white/70 mt-1">Lead Engineer, Infrastructure Solutions Inc</p>
                 </div>
-                <div>
-                  <p className="font-bold">David Kim</p>
-                  <p className="text-sm text-white/70">Lead Engineer, Infrastructure Solutions Inc</p>
+                {/* Back */}
+                <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col justify-center">
+                  <svg className="w-10 h-10 text-electric-blue mb-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p className="text-base leading-relaxed italic">
+                    &ldquo;Houston Anodes delivers consistent quality and exceptional customer service. They understand our technical requirements and always exceed expectations.&rdquo;
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Quote 4 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <svg className="w-12 h-12 text-electric-blue mb-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-              </svg>
-              <p className="text-lg leading-relaxed mb-6 italic">
-                "We've used Houston Anodes across multiple international projects. Their global reach and local expertise make them an invaluable partner."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-electric-blue/20 rounded-full flex items-center justify-center">
-                  <span className="text-electric-blue font-bold">MT</span>
+            <div className="group h-72 [perspective:1000px]">
+              <div className="relative h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                {/* Front */}
+                <div className="absolute inset-0 [backface-visibility:hidden] bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col items-center justify-center text-center">
+                  <div className="w-16 h-16 bg-electric-blue/20 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-electric-blue font-bold text-xl">MT</span>
+                  </div>
+                  <p className="font-bold text-lg">Maria Torres</p>
+                  <p className="text-sm text-white/70 mt-1">Project Manager, Pacific Marine Systems</p>
                 </div>
-                <div>
-                  <p className="font-bold">Maria Torres</p>
-                  <p className="text-sm text-white/70">Project Manager, Pacific Marine Systems</p>
+                {/* Back */}
+                <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 flex flex-col justify-center">
+                  <svg className="w-10 h-10 text-electric-blue mb-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p className="text-base leading-relaxed italic">
+                    &ldquo;We&apos;ve used Houston Anodes across multiple international projects. Their global reach and local expertise make them an invaluable partner.&rdquo;
+                  </p>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
