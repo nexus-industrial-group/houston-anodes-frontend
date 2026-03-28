@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Facebook, Instagram, Globe } from "lucide-react";
+import { Linkedin, Facebook, Instagram } from "lucide-react";
 import DownloadForm from "./DownloadForm";
 
 export default function Footer() {
@@ -74,17 +74,20 @@ export default function Footer() {
 
               <div className="mt-6 pt-4 border-t border-gray-700 flex flex-col items-start">
                 <div className="flex space-x-6">
-                  <a href="#" aria-label="LinkedIn" className="text-gray-300 hover:text-white transition-colors">
+                  <a href="https://www.linkedin.com/company/houston-anodes/" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white transition-colors">
                     <Linkedin size={20} />
                   </a>
-                  <a href="#" aria-label="Facebook" className="text-gray-300 hover:text-white transition-colors">
+                  <a href="https://www.facebook.com/HoustonAnodes" aria-label="Facebook" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white transition-colors">
                     <Facebook size={20} />
                   </a>
-                  <a href="#" aria-label="Instagram" className="text-gray-300 hover:text-white transition-colors">
+                  <a href="https://www.instagram.com/houston_anodes" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white transition-colors">
                     <Instagram size={20} />
                   </a>
-                  <a href="#" aria-label="Collide" className="text-gray-300 hover:text-white transition-colors">
-                    <Globe size={20} />
+                  <a href="https://x.com/HoustonAnodes" aria-label="X" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true">
+                      <title>X</title>
+                      <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -114,11 +117,6 @@ export default function Footer() {
               <li><a href="/anodes" className="hover:text-white transition-colors">Anodes</a></li>
               <li><a href="/anodes#zinc" className="hover:text-white transition-colors">Zinc Anodes</a></li>
             </ul>
-
-            <div className="mt-6 pt-4 border-t border-gray-700">
-              <h6 className="font-semibold text-white mb-2">Certified By:</h6>
-              <p className="text-gray-300">ISO 9001 Certified</p>
-            </div>
           </div>
         </div>
         
