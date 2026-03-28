@@ -426,24 +426,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 px-6 bg-gray-900 text-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase tracking-wide">
-            Partner With Houston Anodes
-          </h2>
-          <p className="text-lg text-gray-300 mb-8">
-            Join industry leaders worldwide who trust Houston Anodes for
-            superior corrosion protection solutions.
-          </p>
-          <a
-            href="/contact-us"
-            className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-bold uppercase tracking-wide hover:bg-gray-100 transition-colors"
-          >
-            Contact Us Today
-          </a>
-        </div>
-      </section>
+  
     </div>
   );
 }
