@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Facebook, Instagram, Globe } from "lucide-react";
@@ -9,6 +9,21 @@ export default function Footer() {
   const [showDownloadForm, setShowDownloadForm] = useState(false);
   const [downloadTitle, setDownloadTitle] = useState<string | undefined>(undefined);
   const [downloadFileName, setDownloadFileName] = useState<string | undefined>(undefined);
+  const [downloadablesList, setDownloadablesList] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchFiles = async () => {
+      try {
+        const res = await fetch("/api/downloadables");
+        if (!res.ok) return;
+        const data = await res.json();
+        setDownloadablesList(Array.isArray(data.files) ? data.files : []);
+      } catch (err) {
+        // ignore fetch errors
+      }
+    };
+    fetchFiles();
+  }, []);
 
   const openForm = (e?: any, docTitle?: string, fileName?: string) => {
     e?.preventDefault();
@@ -37,17 +52,25 @@ export default function Footer() {
           <div>
             <h5 className="font-bold text-white mb-4">Resources</h5>
             <hr className="border-white my-2" />
-            <ul className="space-y-2">
-              <li>
-                <a href="#" onClick={(e) => openForm(e, 'Houston Anodes Catalog', '01 Houston-Sacrificial-Anodes-Catalog.pdf')} className="hover:text-white transition-colors">Houston Anodes Catalog</a>
-              </li>
-              <li>
-                <a href="#" onClick={(e) => openForm(e, 'Overview of Houston Anodes', '02 Manufacturing Anodes with Electromagnetic Induction Technology 3- Windfarms.pdf')} className="hover:text-white transition-colors">Overview of Houston Anodes</a>
-              </li>
-              <li>
-                <a href="#" onClick={(e) => openForm(e, 'About Houston Anodes', '03 TRI-FOLD brochure2 -WindFarms.pdf')} className="hover:text-white transition-colors">About Houston Anodes</a>
-              </li>
-            </ul>
+              <ul className="space-y-2">
+                {downloadablesList.length > 0 ? (
+                  downloadablesList.map((file) => {
+                    const displayName = file
+                      .replace(/^[0-9]+[\-_.\s]*/i, "")
+                      .replace(/\.pdf$/i, "")
+                      .replace(/[-_]+/g, " ")
+                      .replace(/\s+/g, " ")
+                      .trim();
+                    return (
+                      <li key={file}>
+                        <a href="#" onClick={(e) => openForm(e, displayName, file)} className="hover:text-white transition-colors">{displayName}</a>
+                      </li>
+                    );
+                  })
+                ) : (
+                  <li className="text-gray-400">Loading documents…</li>
+                )}
+              </ul>
 
               <div className="mt-6 pt-4 border-t border-gray-700 flex flex-col items-start">
                 <div className="flex space-x-6">
