@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Header from '../../components/Header';
 import HistoryBgCarousel from '../../components/about/HistoryBgCarousel';
+import CertificationsSection from '@/components/home/CertificationsSection';
 
 export default function AboutUsPage() {
   return (
@@ -425,6 +426,7 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
+      <CertificationsSection />
 
   
     </div>
