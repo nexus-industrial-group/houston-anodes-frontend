@@ -11,12 +11,12 @@ const SPEC_CARDS = [
   },
   {
     title: "Right Weight",
-    description: "Weight ranges from 45 lbs to custom configurations.",
+    description: "Weight ranges from 5 lbs to custom configurations.",
     items: [
       "Light-duty (22 – 99 lbs)",
       "Medium-duty (100 – 400 lbs)",
-      "Heavy-duty (401 – 1,250 lbs)",
-      "Custom weights (+10,000 lbs)",
+      "Heavy-duty (401 – 1,650 lbs)",
+      "Custom weights",
     ],
   },
   {
@@ -59,13 +59,10 @@ export default function ProductHighlightSection() {
             Our Company 
           </p>
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-electric-blue sm:text-5xl">
-            Aluminum and Zinc Anodes Designed for Maximum Protection
+            Zero Claims in 4 Years of protecting Critical Infrastructure
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-text-secondary">
-            Houston Anodes has safeguarded billions of dollars worth of equipment and
-            infrastructure worldwide. Our aluminum and zinc sacrificial anodes prevent
-            catastrophic corrosion failures that threaten safety, production, and the
-            environment. Zero product failures in 45+ years of operation.
+            We design, manufacture, and deliver high-quality aluminum and zinc sacrificial anodes using electromagnetic induction technology — producing anodes that last 40% longer than conventional alternatives
           </p>
         </div>
 
