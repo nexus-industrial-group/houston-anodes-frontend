@@ -8,8 +8,7 @@ import {
   Line,
 } from "react-simple-maps";
 
-const GEO_URL =
-  "https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json";
+const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json";
 
 const MARKERS = [
   { name: "North America", coords: [-98, 34] as [number, number] },
@@ -52,8 +51,6 @@ export default function WorldMapSvg() {
         }
       </Geographies>
 
-
-
       {/* Location markers */}
       {MARKERS.map(({ name, coords }, i) => (
         <Marker key={name} coordinates={coords}>
@@ -72,14 +69,23 @@ export default function WorldMapSvg() {
               <text
                 textAnchor="middle"
                 y={-10}
-                className="fill-white text-md font-bolder"
+                className="fill-white text-md font-bold"
               >
                 {name}
               </text>
             </>
           ) : (
             /* Non-source points: only a single dot in #f97316 */
-            <circle r={4} fill="#f97316" />
+            <>
+              <circle r={4} fill="#f97316" />
+              <text
+                textAnchor="middle"
+                y={-10}
+                className="fill-white text-sm font-bold"
+              >
+                {name}
+              </text>
+            </>
           )}
         </Marker>
       ))}
