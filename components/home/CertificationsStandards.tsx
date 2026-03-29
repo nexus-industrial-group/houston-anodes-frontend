@@ -1,24 +1,31 @@
 import Image from "next/image";
 
 const APPROVED_SUPPLIERS = [
-  "Ørsted — World's largest offshore wind operator",
-  "FMC Global — Approved supplier",
+  { certification: "BP Approved Supplier", type: "Client Vendor Approval", issuedBy: "BP" },
+  { certification: "Bruker-Quantron Magellan Q8", type: "Instrument Calibration Certificate +2", issuedBy: "Bruker Elementar GmbH (Germany) +1" },
+  { certification: "DNV RP B401", type: "Technical Standard", issuedBy: "Det Norske Veritas" },
+  { certification: "DNV Type Approved Product", type: "Product Type Approval", issuedBy: "DNV" },
+  { certification: "FMC/TechnipFMC Approved Global Supplier", type: "Client Vendor Approval", issuedBy: "FMC Technologies / TechnipFMC" },
+  { certification: "HSE Management System", type: "Internal Policy Compliance", issuedBy: "Self-declared / audited by clients" },
+  { certification: "IQNet Certificate", type: "Quality Management Certification", issuedBy: "IQNet / DGS GmbH (Germany)" },
+  { certification: "ISO 15589-2:2012", type: "Technical Standard", issuedBy: "ISO" },
+  { certification: "ISO 17025 (ILAC-MRA)", type: "Laboratory Accreditation +1", issuedBy: "A2LA (American Association for Laboratory Accreditation) +1" },
+  { certification: "ISO 9001:2008", type: "Quality Management Certification", issuedBy: "DNV-GL (prior)" },
+  { certification: "ISO 9001:2015", type: "Quality Management Certification", issuedBy: "DNV (Det Norske Veritas)" },
+  { certification: "NACE SP-0387", type: "Technical Standard +2", issuedBy: "NACE International" },
+  { certification: "NACE SP-0492", type: "Technical Standard +2", issuedBy: "NACE International" },
+  { certification: "NACE TM-0190", type: "Testing Protocol Standard +1", issuedBy: "NACE International" },
+  { certification: "NORSOK M-503", type: "Technical Standard +1", issuedBy: "Norwegian Oil & Gas Association +1" },
+  { certification: "PEMEX Preferred Supplier", type: "Client Vendor Approval +1", issuedBy: "PEMEX (Petróleos Mexicanos)" },
+  { certification: "Ørsted Approved Supplier", type: "Client Vendor Approval +1", issuedBy: "Ørsted (via Smulders Group audit) +1" },
+  { certification: "U.S. Navy Approved Supplier", type: "Government / Defense Approval", issuedBy: "United States Navy" },
 ] as const;
 
 export default function CertificationsStandards() {
   return (
-    <section className="relative overflow-hidden py-24 lg:py-32">
+    <section className="relative overflow-hidden py-24 lg:py-32 ">
       {/* Background video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src="/videos/cert.webm" type="video/webm" />
-      </video>
-      <div className="absolute inset-0 bg-navy/10" />
+      <div className="absolute inset-0 bg-slate-50" />
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
         {/* ── Certifications ── */}
@@ -30,7 +37,7 @@ export default function CertificationsStandards() {
             <h3 className="mt-3 text-3xl font-extrabold uppercase tracking-tight text-electric-blue sm:text-4xl">
               Built to the World's Highest Standards
             </h3>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white">
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray">
               Certified and approved to meet the strictest industry requirements for cathodic protection, quality management, and offshore engineering.
             </p>
           </div>
@@ -42,21 +49,32 @@ export default function CertificationsStandards() {
               alt="ISO Certifications"
               width={200}
               height={200}
-              className="object-contain filter invert brightness-200"
+              className="object-contain filter "
             />
           </div>
 
-          {/* Approved suppliers strip */}
-          <div className="mt-8 flex flex-col items-center gap-3 rounded-xl border border-silver-light bg-gray-50/20 px-8 py-5 sm:flex-row sm:justify-center sm:gap-10">
-            <span className="text-xs font-bold uppercase tracking-widest text-electric-blue">Approved Supplier</span>
-            {APPROVED_SUPPLIERS.map((s) => (
-              <span key={s} className="flex items-center gap-2 text-sm font-medium text-white">
-                <svg className="h-4 w-4 text-electric-blue" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                </svg>
-                {s}
-              </span>
-            ))}
+          {/* Certifications table */}
+          <div className="mt-8 overflow-x-auto">
+            <div className="max-h-48 overflow-y-auto">
+              <table className="w-full table-auto border-collapse">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-electric-blue sticky top-0 z-10 bg-gray-100">Ceritifcation</th>
+                    <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-electric-blue sticky top-0 z-10 bg-gray-100">Type</th>
+                    <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-electric-blue sticky top-0 z-10 bg-gray-100">Issued by</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {APPROVED_SUPPLIERS.map((s) => (
+                    <tr key={s.certification} className="border-t border-gray-200">
+                      <td className="px-4 py-3 text-sm text-navy text-center">{s.certification}</td>
+                      <td className="px-4 py-3 text-sm text-navy text-center">{s.type}</td>
+                      <td className="px-4 py-3 text-sm text-navy text-center">{s.issuedBy}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
