@@ -59,7 +59,7 @@ export default function ProductHighlightSection() {
             Our Company 
           </p>
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-electric-blue sm:text-5xl">
-            Zero Claims in 4 Years of protecting Critical Infrastructure
+            Zero Claims in 49 Years of Protecting Critical Infrastructure
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-text-secondary">
             We design, manufacture, and deliver high-quality aluminum and zinc sacrificial anodes using electromagnetic induction technology — producing anodes that last 40% longer than conventional alternatives

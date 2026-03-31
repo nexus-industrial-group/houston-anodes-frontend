@@ -43,8 +43,8 @@ export default function WorldMapSvg() {
               vectorEffect="non-scaling-stroke"
               style={{
                 default: { outline: "none" },
-                hover: { fill: "none", outline: "none" },
-                pressed: { outline: "none" },
+                hover: { fill: "#2191fb", outline: "none" },
+                pressed: { fill: "#2191fb", outline: "none" },
               }}
             />
           ))
