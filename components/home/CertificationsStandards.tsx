@@ -31,6 +31,7 @@ const INFO_CARDS = [
   { title: "ISO 9001:2015", description: "Certified" },
   { title: "ISO 17025", description: "Lab Accredited" },
   { title: "Global Operations", description: "Worldwide projects & clients" },
+  { title: "47 Years", description: "Operating History" },
 ] as const;
 
 function StatIcon() {
@@ -100,8 +101,8 @@ export default function CertificationsStandards() {
                           <div className="mx-auto">
                             <StatIcon />
                           </div>
-                          <h4 className="text-base font-extrabold text-electric-blue">{c.title}</h4>
-                          <p className="text-sm text-text-secondary">{c.description}</p>
+                          <h4 className="text-base font-extrabold text-electric-blue w-full truncate">{c.title}</h4>
+                          <p className="text-sm text-text-secondary w-full truncate">{c.description}</p>
                         </div>
                       ))}
                     </div>
@@ -111,28 +112,46 @@ export default function CertificationsStandards() {
             </Carousel>
           </div>
 
-          {/* Certifications table */}
-          <div className="mt-8 overflow-x-auto">
-            <div className="max-h-48 overflow-y-auto">
-              <table className="w-full table-auto border-collapse">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-electric-blue sticky top-0 z-10 bg-gray-100">Ceritifcation</th>
-                    <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-electric-blue sticky top-0 z-10 bg-gray-100">Type</th>
-                    <th className="px-4 py-3 text-center text-xs font-bold uppercase tracking-widest text-electric-blue sticky top-0 z-10 bg-gray-100">Issued by</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {APPROVED_SUPPLIERS.map((s) => (
-                    <tr key={s.certification} className="border-t border-gray-200">
-                      <td className="px-4 py-3 text-sm text-navy text-center">{s.certification}</td>
-                      <td className="px-4 py-3 text-sm text-navy text-center">{s.type}</td>
-                      <td className="px-4 py-3 text-sm text-navy text-center">{s.issuedBy}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          {/* Certifications mini cards (only certification names) */}
+          <div className="mt-8">
+            {/* Horizontal infinite marquee: duplicate the items for seamless scroll */}
+            <div className="cert-scroll">
+              <div className="cert-track">
+                {[...APPROVED_SUPPLIERS, ...APPROVED_SUPPLIERS].map((s, idx) => (
+                  <div
+                    key={`${s.certification}-${idx}`}
+                    className="cert-item flex items-center justify-center rounded-lg border border-3 border-primary-blue text-primary-blue bg-transparent px-3 py-2 text-center whitespace-nowrap"
+                  >
+                    <span className="text-sm font-medium truncate max-w-[14rem]">{s.certification}</span>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {/* Marquee styles - scoped to this component */}
+            <style jsx>{`
+              .cert-scroll {
+                overflow: hidden;
+                width: 100%;
+              }
+              .cert-track {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.75rem;
+                will-change: transform;
+                /* adjust duration as needed */
+                animation: scroll-right 28s linear infinite;
+              }
+              .cert-item {
+                flex: 0 0 auto;
+              }
+              @keyframes scroll-right {
+                0% { transform: translateX(-50%); }
+                100% { transform: translateX(0%); }
+              }
+              /* reduce chance of wrapping anywhere inside */
+              .cert-item, .cert-item * { white-space: nowrap; }
+            `}</style>
           </div>
         </div>
       </div>
