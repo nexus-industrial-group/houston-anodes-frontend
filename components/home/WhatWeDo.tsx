@@ -1,3 +1,7 @@
+"use client";
+import React, { useState } from "react";
+import DownloadForm from "../DownloadForm";
+
 const CARDS = [
   {
     title: "Platform Anodes",
@@ -43,8 +47,32 @@ function Tag({ children }: { children: React.ReactNode }) {
 }
 
 export default function WhatWeDo() {
+  const [showDownloadForm, setShowDownloadForm] = useState(false);
+  const [downloadTitle, setDownloadTitle] = useState<string | undefined>(undefined);
+  const [downloadFileName, setDownloadFileName] = useState<string | undefined>(undefined);
+
+  const openForm = (e?: any, docTitle?: string, fileName?: string) => {
+    e?.preventDefault();
+    setDownloadTitle(docTitle);
+    setDownloadFileName(fileName);
+    setShowDownloadForm(true);
+  };
+
+  const closeForm = () => {
+    setShowDownloadForm(false);
+    setDownloadTitle(undefined);
+    setDownloadFileName(undefined);
+  };
+
   return (
     <section className="py-16 lg:py-20">
+      {showDownloadForm && (
+        <DownloadForm
+          onClose={closeForm}
+          title={downloadTitle ? `${downloadTitle} Download Form` : undefined}
+          fileName={downloadFileName}
+        />
+      )}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary-blue">
@@ -83,6 +111,7 @@ export default function WhatWeDo() {
         <div className="mt-10 flex justify-center">
           <button
             type="button"
+            onClick={(e) => openForm(e, "Full Catalog", "07 - Catalog.pdf")}
             className="inline-flex items-center rounded-md bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow hover:bg-primary-blue/90"
           >
             <span>Download Full Catalog</span>
