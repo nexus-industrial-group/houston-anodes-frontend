@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section className="relative flex h-screen w-full items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/homepage/Houston_anodes.webp"
+        src="/images/homepage/home.jpg"
         alt="Houston Anodes background"
         fill
         priority

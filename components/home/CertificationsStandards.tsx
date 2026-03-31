@@ -1,5 +1,6 @@
 'use client';
-import Image from "next/image";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const APPROVED_SUPPLIERS = [
   { certification: "BP Approved Supplier", type: "Client Vendor Approval", issuedBy: "BP" },
@@ -67,21 +68,47 @@ export default function CertificationsStandards() {
             </p>
           </div>
 
-          <div className="mt-12">
-            <div className="mx-auto grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
-              {INFO_CARDS.map((c) => (
-                <div
-                  key={c.title}
-                  className="flex flex-col items-center gap-3 rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm"
-                >
-                  <div className="mx-auto">
-                    <StatIcon />
+          <div className="my-6">
+            {/* Carousel that shows up to 4 info cards per slide */}
+            <Carousel
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop={true}
+              autoPlay={true}
+              interval={10000}
+              transitionTime={600}
+              emulateTouch={true}
+              swipeable={true}
+              showIndicators={true}
+              showArrows={false}
+              ariaLabel="Info cards carousel"
+            >
+              {/** Group INFO_CARDS into chunks of 4 and render each chunk as a slide */}
+              {(() => {
+                const chunks: (typeof INFO_CARDS[number])[][] = [];
+                for (let i = 0; i < INFO_CARDS.length; i += 4) {
+                  chunks.push(INFO_CARDS.slice(i, i + 4));
+                }
+                return chunks.map((group, gi) => (
+                  <div key={gi} className="px-2 mb-12">
+                    <div className="mx-auto grid grid-cols-2 gap-4 md:grid-cols-4 content-center ">
+                      {group.map((c) => (
+                        <div
+                          key={c.title}
+                          className="flex flex-col items-center gap-3 rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm"
+                        >
+                          <div className="mx-auto">
+                            <StatIcon />
+                          </div>
+                          <h4 className="text-base font-extrabold text-electric-blue">{c.title}</h4>
+                          <p className="text-sm text-text-secondary">{c.description}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <h4 className="text-base font-extrabold text-electric-blue">{c.title}</h4>
-                  <p className="text-sm text-text-secondary">{c.description}</p>
-                </div>
-              ))}
-            </div>
+                ));
+              })()}
+            </Carousel>
           </div>
 
           {/* Certifications table */}
