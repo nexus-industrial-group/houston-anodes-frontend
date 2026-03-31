@@ -80,7 +80,7 @@ export default function WorldMapSvg() {
               <text
                 textAnchor="middle"
                 y={-10}
-                className="fill-[#f97316] text-md font-bold"
+                className="fill-[#f97316] text-lg font-bold"
               >
                 {name}
               </text>

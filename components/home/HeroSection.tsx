@@ -12,9 +12,12 @@ export default function HeroSection() {
         className="absolute inset-0 object-cover"
       />
 
+      {/* Dark overlay (in front of image, behind text) */}
+      <div className="absolute inset-0 bg-black/60 z-10" aria-hidden="true" />
+
 
       {/* ISO Badge */}
-      <div className="absolute bottom-6 right-6 z-20">
+      <div className="absolute bottom-6 right-6 z-30">
         <Image
           src="/images/homepage/iso.webp"
           alt="ISO Certification"
@@ -25,9 +28,9 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="absolute top-20 z-10 flex flex-col items-center w-full px-6">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wide text-center drop-shadow-lg">
-          Protecting Global Energy Infrastructure since 1977
+      <div className="z-20 flex flex-col items-center w-full px-6">
+        <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white uppercase tracking-wide text-center drop-shadow-lg">
+          Protecting Global Energy Infrastructure <br /> since 1977
         </h1>
         <p className="mt-4 text-xl md:text-2xl text-white/90 text-center drop-shadow-md">
         </p>

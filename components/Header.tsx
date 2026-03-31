@@ -83,7 +83,7 @@ export default function Header() {
       </Link>
 
       {/* Enlaces de escritorio */}
-      <div className="hidden space-x-8 text-lg font-bold text-white md:flex h-full">
+      <div className="hidden space-x-8 text-lg font-bold text-[#e7e7e7] md:flex h-full">
         {links.map((l) => {
           const isActive = pathname === l.href || (l.href !== "/" && pathname?.startsWith(l.href));
           return (
@@ -93,7 +93,7 @@ export default function Header() {
               aria-current={isActive ? "page" : undefined}
               onMouseEnter={(e) => handleHover(e.currentTarget as HTMLElement)}
               onMouseLeave={clearHover}
-              className={`flex items-center h-full transition-colors ${isActive ? "text-primary-blue" : "hover:text-primary-blue"}`}>
+              className={`flex items-center h-full transition-colors ${isActive ? "text-white font-extrabold" : "hover:text-primary-blue"}`}>
               {l.label}
             </a>
           );
