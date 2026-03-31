@@ -63,6 +63,27 @@ body {
   50%       { box-shadow: 0 0 20px 6px rgba(0, 112, 243, 0.4); background-color: rgb(214 234 255); }
 }
 
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-bg {
+  background: linear-gradient(135deg, #f0f6ff, #e8f0fe, #f5f9ff, #dbeafe, #eff6ff);
+  background-size: 300% 300%;
+  animation: gradient-shift 12s ease infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1a2438, #2072fb, #1a2438, #0070f3);
+  background-size: 300% 300%;
+  animation: gradient-shift 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Placeholder image pattern */
 .placeholder-image {
   background:

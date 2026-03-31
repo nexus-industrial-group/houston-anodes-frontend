@@ -90,119 +90,99 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Laboratorios Móviles */}
-      <section className="py-20 px-6 bg-gray-100 overflow-hidden relative">
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-2xl font-bold tracking-widest text-gray-900 uppercase">
-            Cathodic Protection System Diagnostics
-          </h2>
-        </div>
+      {/* Cathodic Protection System Diagnostics */}
+      <section className="bg-navy py-20 px-6 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
 
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 relative">
-          
-          {/* Textos Izquierda (Desktop) */}
-          <div className="flex flex-col gap-12 text-left lg:text-right lg:w-1/4 z-10 order-2 lg:order-1">
-            <div>
-              <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
-                CIS-DCVG Inspection
-              </h4>
-              <p className="text-sm text-gray-600">Protection coverage and anode performance mapping.</p>
+          {/* Header */}
+          <div className="mb-10">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-blue mb-3">
+              Field Services
+            </p>
+            <h2 className="text-3xl font-extrabold uppercase tracking-tight text-white sm:text-4xl">
+              Cathodic Protection System Diagnostics
+            </h2>
+            <div className="mt-3 h-1 w-16 bg-primary-blue" />
+          </div>
+
+          {/* Cards + image as background */}
+          <div className="relative">
+            {/* Background image layer */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <img
+                src="/images/services/cp.webp"
+                alt=""
+                aria-hidden="true"
+                className="w-3/4 h-auto object-contain opacity-10"
+                style={{
+                }}
+              />
             </div>
-            <div>
-              <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
-                CP Interference Diagnostics
-              </h4>
-              <p className="text-sm text-gray-600">Detection and mitigation of electrical interference.</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
-                ECDA Assessment
-              </h4>
-              <p className="text-sm text-gray-600">External corrosion risk assessment per NACE.</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-900 mb-1 flex items-center lg:justify-end gap-2">
-                PCM Current Mapping
-              </h4>
-              <p className="text-sm text-gray-600">Current distribution verification across protected areas.</p>
+
+            {/* Diagnostic cards grid */}
+            <div className="relative z-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { n: "01", title: "CIS-DCVG Inspection",                    body: "Protection coverage and anode performance mapping." },
+                { n: "02", title: "CP Interference Diagnostics",             body: "Detection and mitigation of electrical interference." },
+                { n: "03", title: "ECDA Assessment",                         body: "External corrosion risk assessment per NACE." },
+                { n: "04", title: "PCM Current Mapping",                     body: "Current distribution verification across protected areas." },
+                { n: "05", title: "Soil Resistivity Studies",                body: "Soil conductivity analysis for anode design." },
+                { n: "06", title: "ACVG Pipeline Inspection",                body: "Coating defect and corrosion detection survey." },
+                { n: "07", title: "GPS Pipeline Location & Documentation",   body: "Precision mapping for compliance and management." },
+                { n: "08", title: "Electrical Continuity & Interconnection", body: "Identification of continuity and grounding issues." },
+              ].map(({ n, title, body }) => (
+                <div
+                  key={n}
+                  className="group rounded-xl border border-white/10 bg-navy/70 backdrop-blur-sm p-6 transition-colors hover:bg-white/10"
+                >
+                  <span className="text-3xl font-black text-primary-blue/40 group-hover:text-primary-blue/60 transition-colors leading-none">
+                    {n}
+                  </span>
+                  <h4 className="mt-3 text-sm font-bold text-white leading-snug">{title}</h4>
+                  <p className="mt-2 text-xs leading-relaxed text-white/60">{body}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Imagen Central */}
-           <div className="w-full lg:w-2/4 flex justify-center order-1 lg:order-2">
-             <img
-               src="/images/services/chatgpt-flow.png"
-               alt="Flow visualization (ChatGPT image)"
-               className="max-w-full h-auto drop-shadow-2xl rounded-lg object-cover"
-               style={{ mixBlendMode: 'multiply' }}
-             />
-           </div>
-
-          {/* Textos Derecha (Desktop) */}
-          <div className="flex flex-col gap-12 text-left lg:w-1/4 z-10 order-3">
-             <div>
-              <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                Soil Resistivity Studies
-              </h4>
-              <p className="text-sm text-gray-600">Soil conductivity analysis for anode design.</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                ACVG Pipeline Inspection:
-              </h4>
-              <p className="text-sm text-gray-600">Coating defect and corrosion detection survey.</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                GPS Pipeline Location & Documentation
-              </h4>
-              <p className="text-sm text-gray-600">Precision mapping for compliance and management.</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-900 mb-1 flex items-center gap-2">
-                Electrical Continuity & Interconnection Analysis
-              </h4>
-              <p className="text-sm text-gray-600">Identification of electrical continuity and grounding issues.</p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* El Compromiso */}
-      <section className="py-24 px-6 md:px-12 bg-white">
+      <section className="animate-gradient-bg py-24 px-6 md:px-12">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl font-bold tracking-widest text-gray-500 uppercase mb-16">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-blue mb-4">Our Standards</p>
+          <h2 className="text-2xl font-bold tracking-widest text-gray-400 uppercase mb-16">
             The Houston Commitment
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 uppercase">
+          <div className="grid grid-cols-1 md:grid-cols-2 text-3xl md:text-4xl lg:text-5xl font-black uppercase">
             
             {/* Cuadrante Superior Izquierdo */}
-            <div className="pb-12 border-b-2 border-gray-200 md:border-r-2 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
-              Individual Verification
+            <div className="pb-12 border-b border-gray-700 md:border-r md:border-gray-700 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
+              <span className="gradient-text">Individual Verification</span>
             </div>
             
             {/* Cuadrante Superior Derecho */}
-            <div className="py-12 md:py-0 md:pb-12 border-b-2 border-gray-200 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left">
-              Raw Material<br/> Integrity
+            <div className="py-12 md:py-0 md:pb-12 border-b border-gray-700 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left">
+              <span className="gradient-text">Raw Material<br/> Integrity</span>
             </div>
             
             {/* Cuadrante Inferior Izquierdo */}
-            <div className="py-12 md:pt-12 md:pb-0 md:border-r-2 border-gray-200 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
-              Chemical Analysis
+            <div className="py-12 md:pt-12 md:pb-0 md:border-r border-gray-700 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
+              <span className="gradient-text">Chemical Analysis</span>
             </div>
             
             {/* Cuadrante Inferior Derecho */}
-            <div className="pt-12 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left border-t-2 md:border-t-0 border-gray-200 md:border-none">
-              Process Control
+            <div className="pt-12 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left border-t border-gray-700 md:border-t-0">
+              <span className="gradient-text">Process Control</span>
             </div>
           </div>
         </div>
         <div className="max-w-3xl mx-auto text-center mt-16">
-            <h2 className="text-xl font-bold tracking-widest text-gray-500 uppercase">
-                The result: zero product failures in 40 years. Not luck.
-              Consistency.
-          </h2>
+          <p className="text-sm font-bold tracking-widest text-gray-400 uppercase">
+            The result: zero product failures in 40 years. Not luck. Consistency.
+          </p>
         </div>
       </section>
             {/* Call to Action */}

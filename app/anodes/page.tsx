@@ -243,32 +243,33 @@ export default function AnodesPage() {
       </section>
 
       {/* Technical Excellence - Similar to "The Houston Commitment" */}
-      <section className="py-24 px-6 md:px-12 bg-white">
+      <section className="animate-gradient-bg py-24 px-6 md:px-12">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-xl font-bold tracking-widest text-gray-500 uppercase mb-16">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-blue mb-4">Our Standards</p>
+          <h2 className="text-2xl font-bold tracking-widest text-gray-400 uppercase mb-16">
             The Houston Advantage
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 uppercase">
-            
+
+          <div className="grid grid-cols-1 md:grid-cols-2 text-3xl md:text-4xl lg:text-5xl font-black uppercase">
+
             {/* Top Left */}
-            <div className="pb-12 border-b-2 border-gray-200 md:border-r-2 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
-              PRECISE<br/> COMPOSITION
+            <div className="pb-12 border-b border-gray-700 md:border-r md:border-gray-700 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
+              <span className="gradient-text">PRECISE<br/> COMPOSITION</span>
             </div>
-            
+
             {/* Top Right */}
-            <div className="py-12 md:py-0 md:pb-12 border-b-2 border-gray-200 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left">
-              MAXIMUM<br/> EFFICIENCY
+            <div className="py-12 md:py-0 md:pb-12 border-b border-gray-700 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left">
+              <span className="gradient-text">MAXIMUM<br/> EFFICIENCY</span>
             </div>
-            
+
             {/* Bottom Left */}
-            <div className="py-12 md:pt-12 md:pb-0 md:border-r-2 border-gray-200 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
-              CERTIFIED<br/> QUALITY
+            <div className="py-12 md:pt-12 md:pb-0 md:border-r border-gray-700 md:pr-8 flex items-center justify-center md:justify-end text-center md:text-right">
+              <span className="gradient-text">CERTIFIED<br/> QUALITY</span>
             </div>
-            
+
             {/* Bottom Right */}
-            <div className="pt-12 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left border-t-2 md:border-t-0 border-gray-200 md:border-none">
-              PROVEN<br/> PERFORMANCE
+            <div className="pt-12 md:pl-8 flex items-center justify-center md:justify-start text-center md:text-left border-t border-gray-700 md:border-t-0">
+              <span className="gradient-text">PROVEN<br/> PERFORMANCE</span>
             </div>
           </div>
         </div>
