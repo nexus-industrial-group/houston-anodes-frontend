@@ -17,7 +17,7 @@ const MARKERS = [
   { name: "Middle East", coords: [45, 25] as [number, number] },
   { name: "Asia Pacific", coords: [105, 22] as [number, number] },
   { name: "Africa", coords: [20, -1] as [number, number] },
-  { name: "Guam", coords: [13.444304, 144.793731] as [number, number] },
+  { name: "Guam", coords: [144, 13.44] as [number, number] },
 ];
 
 const HOUSTON = MARKERS[0].coords;
@@ -26,7 +26,7 @@ export default function WorldMapSvg() {
   return (
     <ComposableMap
       projection="geoMercator"
-      projectionConfig={{ scale: 190, center: [0, 20] }}
+      projectionConfig={{ scale: 160, center: [0, 20] }}
       width={1000}
       height={550}
       className="w-full h-auto"
@@ -40,7 +40,6 @@ export default function WorldMapSvg() {
               fill="#2191fb"
               stroke="#2191fb"
               strokeWidth={3}
-              vectorEffect="non-scaling-stroke"
               style={{
                 default: { outline: "none" },
                 hover: { fill: "#2191fb", outline: "none" },
@@ -69,7 +68,7 @@ export default function WorldMapSvg() {
               <text
                 textAnchor="middle"
                 y={-10}
-                className="fill-white text-md font-bold"
+                className="fill-white text-lg font-bold"
               >
                 {name}
               </text>
@@ -81,7 +80,7 @@ export default function WorldMapSvg() {
               <text
                 textAnchor="middle"
                 y={-10}
-                className="fill-white text-sm font-bold"
+                className="fill-[#f97316] text-md font-bold"
               >
                 {name}
               </text>
