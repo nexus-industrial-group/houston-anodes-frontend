@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 
 const APPROVED_SUPPLIERS = [
@@ -21,6 +22,30 @@ const APPROVED_SUPPLIERS = [
   { certification: "U.S. Navy Approved Supplier", type: "Government / Defense Approval", issuedBy: "United States Navy" },
 ] as const;
 
+const INFO_CARDS = [
+  { title: "47 Years", description: "Operating History" },
+  { title: "Zero Claims", description: "In service History" },
+  { title: "35 Years", description: "U.S. Navy Supplier" },
+  { title: "80%", description: "of PEMEX Anode Supply" },
+  { title: "ISO 9001:2015", description: "Certified" },
+  { title: "ISO 17025", description: "Lab Accredited" },
+  { title: "Global Operations", description: "Worldwide projects & clients" },
+] as const;
+
+function StatIcon() {
+  return (
+    <svg
+      className="h-10 w-10 text-primary-blue"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M8 12.5l2 2 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function CertificationsStandards() {
   return (
     <section className="relative overflow-hidden py-24 lg:py-32 ">
@@ -42,15 +67,21 @@ export default function CertificationsStandards() {
             </p>
           </div>
 
-          {/* ISO Certification image */}
-          <div className="mt-12 flex justify-center">
-            <Image
-              src="/images/homepage/iso3.png"
-              alt="ISO Certifications"
-              width={200}
-              height={200}
-              className="object-contain filter "
-            />
+          <div className="mt-12">
+            <div className="mx-auto grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
+              {INFO_CARDS.map((c) => (
+                <div
+                  key={c.title}
+                  className="flex flex-col items-center gap-3 rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-sm"
+                >
+                  <div className="mx-auto">
+                    <StatIcon />
+                  </div>
+                  <h4 className="text-base font-extrabold text-electric-blue">{c.title}</h4>
+                  <p className="text-sm text-text-secondary">{c.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Certifications table */}
