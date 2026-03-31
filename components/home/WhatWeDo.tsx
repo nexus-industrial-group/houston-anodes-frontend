@@ -1,43 +1,52 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import DownloadForm from "../DownloadForm";
 
 const CARDS = [
   {
     title: "Platform Anodes",
     description:
-      "90°/45°/straight core configurations. Types A & B for welded jacket applications. 180–1,250 lbs.",
-    tags: ["Offshore", "Structural"],
+      "90° / 45° / straight core configurations for offshore jackets and structures. Types A & B available for welded installations. Typical weights from 180–1,250 lbs.",
+    tags: ["Offshore", "Structural", "Jacket"],
+    url: "/products/platform.png",
   },
   {
     title: "Bracelet Anodes",
     description:
-      "10\" - 30\" diameters. Square/tapered, weld-on/bolt-on. 22–265 lbs per unit, retrofit-ready.",
-    tags: ["Pipeline", "Subsea"],
+      "Pipeline bracelet anodes for subsea corrosion protection. Available in 10\"–30\" diameters with square or tapered designs. Weld-on and bolt-on options.",
+    tags: ["Pipeline", "Subsea", "Offshore"],
+    url: "/products/bracelet.png",
   },
   {
-    title: "Pier, Piling & Ballast",
-    description: "Trapezoidal flush, stand-off, and rod core configurations. Ballast protection systems.",
-    tags: ["Infrastructure", "Marine"],
-  },
-  {
-    title: "Tanks & Vessels",
+    title: "Trapezoidal Anodes",
     description:
-      "Heater treater, eyebolt, bowling ball, drum. Internal vessel protection for refining and chemical.",
-    tags: ["Onshore", "Industrial"],
+      "Trapezoidal flush or stand-off anodes used for piers, pilings, and marine ballast systems. Designed for long-term structural corrosion protection.",
+    tags: ["Infrastructure", "Marine", "Piling"],
+    url: "/products/trapezoidal.png",
   },
   {
-    title: "Hull Anodes",
-    description: "Zinc hull protection for marine equipment. Proven 35–year service life in many applications.",
-    tags: ["Defense", "Marine"],
+    title: "Bowling Ball Anodes",
+    description:
+      "Compact spherical anodes used inside tanks and vessels. Designed for internal corrosion protection in refining, chemical, and storage systems.",
+    tags: ["Tank", "Internal Protection", "Industrial"],
+    url: "/products/bowling-ball.png",
   },
   {
-    title: "Custom & Wind",
-    description: "Clamp, mat, link, offshore wind turbines. Any geometry manufactured to exact specification.",
-    tags: ["Wind", "Custom"],
+    title: "Drum Anodes",
+    description:
+      "Drum-style sacrificial anodes for large vessels and storage tanks. Provides consistent current distribution for internal corrosion protection.",
+    tags: ["Tank", "Vessel", "Industrial"],
+    url: "/products/drum.png",
+  },
+  {
+    title: "Heater Treater Anodes",
+    description:
+      "Specialized anodes engineered for heater treaters in oil and gas production. Protects internal steel surfaces from corrosion in harsh environments.",
+    tags: ["Oil & Gas", "Production", "Internal Protection"],
+    url: "/products/heater-treater.png",
   },
 ];
-
 function Tag({ children }: { children: React.ReactNode }) {
   return (
     <span className="inline-flex items-center rounded-full bg-primary-blue/10 px-2 py-0.5 text-xs font-semibold text-primary-blue">
@@ -88,13 +97,15 @@ export default function WhatWeDo() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {CARDS.map(({ title, description, tags }) => (
+          {CARDS.map(({ title, description, tags, url }) => (
             <div
               key={title}
               className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
             >
-              <div className="h-40 bg-slate-100 p-6 text-center text-sm text-slate-400">
-                [Image]
+              <div className="bg-white p-6 text-center text-sm text-slate-400">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image src={url} alt={title} fill style={{ objectFit: "contain" }} />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-base font-extrabold text-gray-900">{title}</h3>
