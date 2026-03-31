@@ -53,6 +53,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@keyframes marquee-ltr {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+
+@keyframes card-glow {
+  0%, 100% { box-shadow: none; background-color: rgb(249 250 251); }
+  50%       { box-shadow: 0 0 20px 6px rgba(0, 112, 243, 0.4); background-color: rgb(214 234 255); }
+}
+
 /* Placeholder image pattern */
 .placeholder-image {
   background:

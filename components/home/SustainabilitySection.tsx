@@ -15,18 +15,8 @@ const CHANGES = [
   },
   {
     title: "Regulatory Confidence",
-    body: "DNV-certified manufacturing. Approved by Ørsted, FMC Global, and the energy industry's most demanding players.",
+    body: "Our quality system is certified ISO 9001:2015 by DNV. Our in-house laboratory holds ISO 17025 accreditation. We are an approved supplier to Ørsted, FMC Global, the U.S. Navy (35 years), and PEMEX (35 years, 80% of project supply) with no product failures or claims across 47 years of continuous operation.",
   },
-];
-
-const TRACK_RECORD = [
-  "Zero product claims in 40 years of operation.",
-  "Supplier of 80% of sacrificial anodes installed on PEMEX projects — over 35 years.",
-  "Approved FMC Global Supplier. Ørsted-certified.",
-  "Every anode individually weighed and documented before shipment.",
-  "Every heat chemically analyzed. Electrochemical properties tested per NACE TM-0190.",
-  "Raw materials verified against mill test reports. Specification compliance is not assumed — it is documented.",
-  "Recent wins: Ocean Wind 1 (New Jersey), Revolution Wind (Rhode Island).",
 ];
 
 export default function SustainabilitySection() {
@@ -74,40 +64,6 @@ export default function SustainabilitySection() {
           </div>
         </div>
 
-        {/* ── Divider ── */}
-        <div className="my-16 h-px w-full bg-white/10" />
-
-        {/* ── Bottom: Track record ── */}
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-
-          {/* Left — image */}
-          <div className="relative overflow-hidden rounded-xl">
-            <Image
-              src="/images/homepage/a2.webp"
-              alt="Houston Anodes quality assurance"
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="h-auto w-full object-contain"
-            />
-          </div>
-
-          {/* Right — stats */}
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-blue">
-              Earned Through 47 Years of Consistency
-            </p>
-
-            <ul className="mt-8 space-y-4">
-              {TRACK_RECORD.map((item) => (
-                <li key={item} className="flex gap-3 text-sm leading-relaxed text-light-gray">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-blue" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
 
       </div>
     </section>
