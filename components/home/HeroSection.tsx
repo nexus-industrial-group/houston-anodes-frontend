@@ -3,22 +3,15 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative flex h-screen w-full items-center justify-center overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source
-          src="/videos/main.webm"
-          type="video/webm"
-        />
-      </video>
+      {/* Background Image */}
+      <Image
+        src="/images/homepage/Houston_anodes.webp"
+        alt="Houston Anodes background"
+        fill
+        priority
+        className="absolute inset-0 object-cover"
+      />
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* ISO Badge */}
       <div className="absolute bottom-6 right-6 z-20">
@@ -32,7 +25,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full px-6">
+      <div className="absolute top-20 z-10 flex flex-col items-center w-full px-6">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wide text-center drop-shadow-lg">
           Protecting Global Energy Infrastructure since 1977
         </h1>
