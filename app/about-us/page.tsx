@@ -321,13 +321,10 @@ export default function AboutUsPage() {
       </section>
 
       {/* Manufacturing excellence section */}
-      <section className="relative overflow-hidden py-20 px-6 md:px-12 min-h-[500px] flex items-center">
-        <Image
-          src="/images/about-us/man_exc.webp"
-          alt="Manufacturing Excellence"
-          fill
-          className="object-cover"
-        />
+      <section className="relative overflow-hidden py-20 px-6 md:px-12 min-h-[500px] flex items-center bg-gradient-to-br from-navy to-navy-light">
+        
+        <img src="/images/about-us/me.webp" alt="Manufacturing excellence" className="absolute left-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-56 h-auto object-cover"/>
+
         <div className="relative z-10 ml-auto mr-12 max-w-lg text-right">
           <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-4xl mb-6">
             Manufacturing Excellence
