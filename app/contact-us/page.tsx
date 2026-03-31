@@ -11,7 +11,7 @@ export default function ContactUsPage() {
 
       <header className="relative flex items-center justify-center h-100 overflow-hidden">
         <img
-          src="https://www.tomorrowsworldtoday.com/wp-content/uploads/2022/10/Image2-49.jpg"
+          src="images/contact-us/contact-us.jpg"
           alt="Houston Anodes contact"
           className="absolute inset-0 object-cover w-full h-full object-center"
         />

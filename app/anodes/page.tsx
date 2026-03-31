@@ -378,15 +378,7 @@ export default function AnodesPage() {
               </div>
             </div>
 
-            {/* Center — image as tall as the 3 cards */}
-            <div className="relative flex-shrink-0 w-full lg:w-80 self-stretch rounded-2xl overflow-hidden">
-              <Image
-                src="/images/anodes/maqueta.webp"
-                alt="Industry Applications"
-                fill
-                className="object-cover object-center"
-              />
-            </div>
+
 
             {/* Right column — 3 cards */}
             <div className="flex flex-col gap-6 flex-1">

@@ -9,21 +9,15 @@ export default function ServicesPage() {
 
       {/* Sección Hero */}
       <header className="relative flex items-center justify-center h-screen overflow-hidden">
-        {/* Video de fondo */}
-        <video
+        {/* Imagen de fondo */}
+        <img
           className="absolute inset-0 object-cover w-full h-full object-center"
-          src="/videos/services_video.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
+          src="/images/services/services.jpg"
+          alt="Servicios"
           aria-hidden="true"
-        >
-          <source src="/videos/services_video.mp4" type="video/mp4" />
-          Tu navegador no soporta la etiqueta de video.
-        </video>
+        />
         {/* Superposición oscura sutil */}
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         
         <div className="relative z-10 max-w-4xl px-4 mx-auto text-center mt-12">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-lg">

@@ -93,7 +93,6 @@ export default function ContactForm() {
           >
             <option>Aluminum</option>
             <option>Zinc</option>
-            <option>Magnesium</option>
             <option>Custom Composition</option>
             <option>TBD</option>
           </select>

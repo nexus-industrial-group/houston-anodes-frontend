@@ -15,7 +15,7 @@ export default function AboutUsPage() {
         {/* Main Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/about-us/about-us.webp"
+            src="/images/about-us/about-us.jpg"
             alt="About Houston Anodes"
             fill
             className="object-cover"
@@ -145,9 +145,9 @@ export default function AboutUsPage() {
       <section className="relative overflow-hidden bg-white">
 
         {/* Anode close-up — massive background piece, bleeds behind everything */}
-        <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-180 -translate-y-1/2 flex items-center justify-center w-[900px] rotate-[-15deg]">
+        <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-180 -translate-y-1/2 flex items-center justify-center w-[700px] ">
           <Image
-            src="/images/about-us/anode.webp"
+            src="/products/platform.png"
             alt="Houston Anode"
             width={0}
             height={0}

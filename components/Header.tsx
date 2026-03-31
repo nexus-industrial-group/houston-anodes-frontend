@@ -11,6 +11,7 @@ export default function Header() {
   const [indicator, setIndicator] = useState<{ left: number; width: number } | null>(null);
   const [hoverIndicator, setHoverIndicator] = useState<{ left: number; width: number } | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const isAnodes = pathname?.startsWith("/anodes");
 
   const links = [
     { label: "Home", href: "/" },
@@ -67,7 +68,7 @@ export default function Header() {
     <nav
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-2 md:px-12 ${
-        scrolled ? 'bg-navy/90 shadow-xl' : 'bg-white/10'
+        isAnodes ? 'bg-navy' : scrolled ? 'bg-navy/90 shadow-xl' : 'bg-white/10'
       } backdrop-blur-lg transition-colors duration-300 text-white`}
     >
       <Link href="/" className="flex items-center">
@@ -93,7 +94,7 @@ export default function Header() {
               aria-current={isActive ? "page" : undefined}
               onMouseEnter={(e) => handleHover(e.currentTarget as HTMLElement)}
               onMouseLeave={clearHover}
-              className={`flex items-center h-full transition-colors ${isActive ? "text-white font-extrabold" : "hover:text-primary-blue"}`}>
+              className={`flex items-center h-full transition-colors ${isActive ? "text-white font-extrabold" : "hover:text-white"}`}>
               {l.label}
             </a>
           );
