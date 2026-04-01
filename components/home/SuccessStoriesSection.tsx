@@ -86,7 +86,7 @@ export default function SuccessStoriesSection() {
           {/* Right — image */}
           <div className="relative overflow-hidden rounded-xl h-80 lg:h-[30rem]">
             <Image
-              src="/images/homepage/a2.webp"
+              src="/products/bracelet.png"
               alt="Houston Anodes manufacturing"
               fill
               className="object-cover"

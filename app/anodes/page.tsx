@@ -172,7 +172,7 @@ export default function AnodesPage() {
               {/* Photo */}
               <div className="relative w-full h-56 bg-gray-50 flex flex-col items-center justify-center">
                 <Image
-                  src="/images/anodes/pall.webp"
+                  src="/products/heater-treater-no-bg.png"
                   alt="Aluminum Anode"
                   fill
                   className="object-contain p-6"
@@ -259,7 +259,7 @@ export default function AnodesPage() {
               {/* Photo */}
               <div className="relative w-full h-56 bg-gray-50 flex flex-col items-center justify-center">
                 <Image
-                  src="/images/anodes/pallet.webp"
+                  src="/products/platform-no-bg.png"
                   alt="Zinc Anode"
                   fill
                   className="object-contain p-6"
