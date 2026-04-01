@@ -24,7 +24,7 @@ const APPROVED_SUPPLIERS = [
 ] as const;
 
 const INFO_CARDS = [
-  { title: "47 Years", description: "Operating History" },
+  { title: "50 Years", description: "Operating History" },
   { title: "Zero Claims", description: "In service History" },
   { title: "35 Years", description: "U.S. Navy Supplier" },
   { title: "80%", description: "of PEMEX Anode Supply" },
@@ -120,9 +120,9 @@ export default function CertificationsStandards() {
                 {[...APPROVED_SUPPLIERS, ...APPROVED_SUPPLIERS].map((s, idx) => (
                   <div
                     key={`${s.certification}-${idx}`}
-                    className="cert-item flex items-center justify-center rounded-lg border border-3 border-primary-blue text-primary-blue bg-transparent px-3 py-2 text-center whitespace-nowrap"
+                    className="cert-item flex shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-white px-5 py-4 text-center text-sm font-medium text-gray-700 whitespace-nowrap"
                   >
-                    <span className="text-sm font-medium truncate max-w-[14rem]">{s.certification}</span>
+                    {s.certification}
                   </div>
                 ))}
               </div>
@@ -140,7 +140,7 @@ export default function CertificationsStandards() {
                 gap: 0.75rem;
                 will-change: transform;
                 /* adjust duration as needed */
-                animation: scroll-right 28s linear infinite;
+                animation: scroll-right 35s linear infinite;
               }
               .cert-item {
                 flex: 0 0 auto;

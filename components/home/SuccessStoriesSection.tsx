@@ -77,7 +77,7 @@ export default function SuccessStoriesSection() {
               <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-5">
                 <p className="text-2xl font-extrabold text-primary-blue">Zero Product Claims</p>
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                  Zero product claims in 40 years of operation — a record built on individual anode documentation, heat analysis, and raw material verification on every order.
+                  Zero product claims in 49 years of operation — a record built on individual anode documentation, heat analysis, and raw material verification on every order.
                 </p>
               </div>
             </div>
