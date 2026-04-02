@@ -20,6 +20,23 @@ export const metadata: Metadata = {
   },
   description:
     "Houston Anodes provides world-class cathodic protection solutions with ISO 9001 certified manufacturing and a global footprint spanning 1000+ projects worldwide.",
+  openGraph: {
+    title: "Houston Anodes",
+    description:
+      "Houston Anodes provides world-class cathodic protection solutions with ISO 9001 certified manufacturing and a global footprint spanning 1000+ projects worldwide.",
+    type: "website",
+    images: [
+      {
+        url: "/images/services/services.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Houston Anodes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

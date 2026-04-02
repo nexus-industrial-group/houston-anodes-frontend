@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://houston-anodes-frontend.vercel.app/
+
+# Sitemaps
+Sitemap: https://houston-anodes-frontend.vercel.app/sitemap.xml
