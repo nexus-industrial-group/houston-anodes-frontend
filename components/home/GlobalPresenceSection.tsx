@@ -32,10 +32,10 @@ export default function GlobalPresenceSection() {
         <div className="mt-12 flex flex-col items-center justify-between gap-8 sm:flex-row sm:items-end">
           {/* Counter */}
           <div>
-            <p className="text-5xl font-extrabold text-electric-orange sm:text-6xl">
+            <p className="text-5xl font-extrabold text-[#be4f00] sm:text-6xl">
               1000+
             </p>
-            <p className="mt-1 text-sm font-semibold uppercase tracking-widest text-electric-orange">
+            <p className="mt-1 text-sm font-semibold uppercase tracking-widest text-[#be4f00]">
               Projects Worldwide
             </p>
           </div>

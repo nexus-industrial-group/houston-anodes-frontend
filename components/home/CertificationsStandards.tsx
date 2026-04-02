@@ -58,7 +58,7 @@ export default function CertificationsStandards() {
         {/* ── Certifications ── */}
         <div>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#006ce9]">
               Certifications & Standards
             </p>
             <h3 className="mt-3 text-3xl font-extrabold uppercase tracking-tight text-electric-blue sm:text-4xl">

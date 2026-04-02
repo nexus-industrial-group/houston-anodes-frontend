@@ -102,7 +102,7 @@ export default function Header() {
       </div>
 
       {/* Menú móvil */}
-      <button className="text-white md:hidden">
+      <button aria-label="Burger Menu" className="text-white md:hidden">
         <Menu size={24} />
       </button>
       {/* Indicator positioned relative to nav bottom */}

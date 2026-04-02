@@ -49,7 +49,7 @@ export default function SuccessStoriesSection() {
           <div>
             {/* Header */}
             <div className="max-w-2xl">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-blue">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#006ce9]">
                 Global Trust, Proven Results
               </p>
               <h2 className="mt-4 text-3xl font-extrabold uppercase leading-tight tracking-tight text-electric-blue sm:text-4xl">

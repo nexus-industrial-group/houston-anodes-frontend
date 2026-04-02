@@ -49,7 +49,7 @@ const CARDS = [
 ];
 function Tag({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full bg-primary-blue/10 px-2 py-0.5 text-xs font-semibold text-primary-blue">
+    <span className="inline-flex items-center rounded-full bg-primary-blue/10 px-2 py-0.5 text-xs font-semibold text-[#1d65dc]">
       {children}
     </span>
   );
@@ -84,7 +84,7 @@ export default function WhatWeDo() {
       )}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary-blue">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#006ce9]">
             Product Portfolio
           </p>
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-electric-blue sm:text-5xl">
@@ -123,7 +123,7 @@ export default function WhatWeDo() {
           <button
             type="button"
             onClick={(e) => openForm(e, "Full Catalog", "07 - Catalog.pdf")}
-            className="inline-flex items-center rounded-md bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow hover:bg-primary-blue/90"
+            className="inline-flex items-center rounded-md bg-[#1963DF] px-6 py-3 text-sm font-semibold text-white shadow hover:bg-primary-blue/90"
           >
             <span>Download Full Catalog</span>
             <svg

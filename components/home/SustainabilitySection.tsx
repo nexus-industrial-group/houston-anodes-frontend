@@ -29,7 +29,7 @@ export default function SustainabilitySection() {
 
           {/* Left — What Changes */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-blue">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white">
               What Changes for You
             </p>
             <h2 className="mt-4 text-3xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-4xl">

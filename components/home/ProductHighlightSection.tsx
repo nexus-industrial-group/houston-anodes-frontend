@@ -55,7 +55,7 @@ export default function ProductHighlightSection() {
 
         {/* Section header */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary-blue">
+          <p className="text-sm font-bold uppercase tracking-widest text-[#006ce9]">
             Our Company 
           </p>
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-electric-blue sm:text-5xl">
