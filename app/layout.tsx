@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Houston Anodes | Precision Protection. Global Strength.",
+  title: {
+    default: "Houston Anodes",
+    template: "Houston Anodes | %s ",
+  },
   description:
     "Houston Anodes provides world-class cathodic protection solutions with ISO 9001 certified manufacturing and a global footprint spanning 1000+ projects worldwide.",
 };

@@ -38,3 +38,5 @@ export default function Home() {
   );
 }
 
+// Root page uses the layout default title (Houston Anodes)
+

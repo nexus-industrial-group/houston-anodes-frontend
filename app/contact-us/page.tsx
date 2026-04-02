@@ -127,3 +127,7 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
+export const metadata = {
+  title: 'Contact Us',
+};

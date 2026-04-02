@@ -2,6 +2,10 @@ import React from 'react';
 import { Settings, Map, Search, Gauge } from 'lucide-react';
 import Header from '../../components/Header';
 
+export const metadata = {
+  title: 'Services',
+};
+
 export default function ServicesPage() {
   return (
     <div className="min-h-screen font-sans text-gray-800 bg-white">

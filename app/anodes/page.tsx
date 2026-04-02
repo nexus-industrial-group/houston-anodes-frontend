@@ -3,6 +3,10 @@ import Image from 'next/image';
 import { Layers, Shield, Zap, Droplet, Ship, Factory } from 'lucide-react';
 import Header from '../../components/Header';
 
+export const metadata = {
+  title: 'Anodes',
+};
+
 export default function AnodesPage() {
   return (
     <div className="min-h-screen font-sans text-gray-800 bg-white">
