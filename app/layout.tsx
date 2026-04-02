@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/services/services.jpg",
+        url: "/images/services/services.webp",
         width: 1200,
         height: 630,
         alt: "Houston Anodes",

@@ -11,7 +11,7 @@ export default function ContactUsPage() {
 
       <header className="relative flex items-center justify-center h-100 overflow-hidden">
         <img
-          src="images/contact-us/contact-us.jpg"
+          src="images/contact-us/contact-us.webp"
           alt="Houston Anodes contact"
           className="absolute inset-0 object-cover w-full h-full object-center"
         />

@@ -9,42 +9,42 @@ const CARDS = [
     description:
       "90° / 45° / straight core configurations for offshore jackets and structures. Types A & B available for welded installations. Typical weights from 180–1,250 lbs.",
     tags: ["Offshore", "Structural", "Jacket"],
-    url: "/products/platform.png",
+    url: "/products/platform.webp",
   },
   {
     title: "Bracelet Anodes",
     description:
       "Pipeline bracelet anodes for subsea corrosion protection. Available in 10\"–30\" diameters with square or tapered designs. Weld-on and bolt-on options.",
     tags: ["Pipeline", "Subsea", "Offshore"],
-    url: "/products/bracelet.png",
+    url: "/products/bracelet.webp",
   },
   {
     title: "Trapezoidal Anodes",
     description:
       "Trapezoidal flush or stand-off anodes used for piers, pilings, and marine ballast systems. Designed for long-term structural corrosion protection.",
     tags: ["Infrastructure", "Marine", "Piling"],
-    url: "/products/trapezoidal.png",
+    url: "/products/trapezoidal.webp",
   },
   {
     title: "Bowling Ball Anodes",
     description:
       "Compact spherical anodes used inside tanks and vessels. Designed for internal corrosion protection in refining, chemical, and storage systems.",
     tags: ["Tank", "Internal Protection", "Industrial"],
-    url: "/products/bowling-ball.png",
+    url: "/products/bowling-ball.webp",
   },
   {
     title: "Drum Anodes",
     description:
       "Drum-style sacrificial anodes for large vessels and storage tanks. Provides consistent current distribution for internal corrosion protection.",
     tags: ["Tank", "Vessel", "Industrial"],
-    url: "/products/drum.png",
+    url: "/products/drum.webp",
   },
   {
     title: "Heater Treater Anodes",
     description:
       "Specialized anodes engineered for heater treaters in oil and gas production. Protects internal steel surfaces from corrosion in harsh environments.",
     tags: ["Oil & Gas", "Production", "Internal Protection"],
-    url: "/products/heater-treater.png",
+    url: "/products/heater-treater.webp",
   },
 ];
 function Tag({ children }: { children: React.ReactNode }) {

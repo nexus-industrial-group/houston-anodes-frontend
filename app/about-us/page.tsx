@@ -18,7 +18,7 @@ export default function AboutUsPage() {
         {/* Main Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/about-us/about-us.jpg"
+            src="/images/about-us/about-us.webp"
             alt="About Houston Anodes"
             fill
             className="object-cover"
@@ -235,7 +235,7 @@ export default function AboutUsPage() {
         {/* Anode close-up — massive background piece, bleeds behind everything */}
         <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-180 -translate-y-1/2 flex items-center justify-center w-[700px] ">
           <Image
-            src="/products/platform.png"
+            src="/products/platform.webp"
             alt="Houston Anode"
             width={0}
             height={0}
@@ -326,7 +326,7 @@ export default function AboutUsPage() {
       {/* Manufacturing excellence section */}
       <section className="relative overflow-hidden py-20 px-6 md:px-12 min-h-[500px] flex items-center bg-gradient-to-br from-navy to-navy-light">
         
-        <img src="/products/bowling-ball-no-bg.png" alt="Manufacturing excellence" className="absolute left-0 top-1/2 translate-x-[20%] -translate-y-1/2 w-[700px] h-auto object-cover"/>
+        <img src="/products/bowling-ball-no-bg.webp" alt="Manufacturing excellence" className="absolute left-0 top-1/2 translate-x-[20%] -translate-y-1/2 w-[700px] h-auto object-cover"/>
 
         <div className="relative z-10 ml-[50%] mr-12 max-w-lg text-left">
           <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-4xl mb-6">

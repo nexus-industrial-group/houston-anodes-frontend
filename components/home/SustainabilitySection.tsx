@@ -56,7 +56,7 @@ export default function SustainabilitySection() {
           {/* Right — image */}
           <div className="relative overflow-hidden rounded-xl h-80 lg:h-[26rem]">
             <Image
-              src="/products/bowling-ball-no-bg.png"
+              src="/products/bowling-ball-no-bg.webp"
               alt="Houston Anodes manufacturing"
               fill
               className="object-cover"

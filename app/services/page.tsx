@@ -16,7 +16,7 @@ export default function ServicesPage() {
         {/* Imagen de fondo */}
         <img
           className="absolute inset-0 object-cover w-full h-full object-center"
-          src="/images/services/services.jpg"
+          src="/images/services/services.webp"
           alt="Servicios"
           aria-hidden="true"
         />
