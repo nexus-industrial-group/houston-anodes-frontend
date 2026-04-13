@@ -229,7 +229,7 @@ export default function AboutUsPage() {
         {/* Anode close-up — massive background piece, bleeds behind everything */}
         <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-180 -translate-y-1/2 flex items-center justify-center w-[700px] ">
           <Image
-            src="/products/platform.webp"
+            src="/images/about-us/platforms.png"
             alt="Houston Anode"
             width={0}
             height={0}

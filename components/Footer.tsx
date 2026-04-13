@@ -114,7 +114,7 @@ export default function Footer() {
             <h3 className="font-bold text-white mb-4">Anodes</h3>
             <hr className="border-white my-2" />
             <ul className="space-y-2">
-              <li><a href="/anodes" className="hover:text-white transition-colors">Anodes</a></li>
+              <li><a href="/anodes" className="hover:text-white transition-colors">Aluminum Anodes</a></li>
               <li><a href="/anodes#zinc" className="hover:text-white transition-colors">Zinc Anodes</a></li>
             </ul>
           </div>
