@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import DownloadForm from "./DownloadForm";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -12,6 +13,10 @@ export default function Header() {
   const [hoverIndicator, setHoverIndicator] = useState<{ left: number; width: number } | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const isAnodes = pathname?.startsWith("/anodes");
+
+  const [showDownloadForm, setShowDownloadForm] = useState(false);
+  const [downloadTitle, setDownloadTitle] = useState<string | undefined>(undefined);
+  const [downloadFileName, setDownloadFileName] = useState<string | undefined>(undefined);
 
   const links = [
     { label: "Home", href: "/" },
@@ -64,6 +69,19 @@ export default function Header() {
     setHoverIndicator(null);
   }
 
+  const openForm = (e?: any, docTitle?: string, fileName?: string) => {
+    e?.preventDefault();
+    setDownloadTitle(docTitle);
+    setDownloadFileName(fileName);
+    setShowDownloadForm(true);
+  };
+
+  const closeForm = () => {
+    setShowDownloadForm(false);
+    setDownloadTitle(undefined);
+    setDownloadFileName(undefined);
+  };
+
   return (
     <nav
       ref={navRef}
@@ -71,6 +89,9 @@ export default function Header() {
         isAnodes ? 'bg-navy' : scrolled ? 'bg-navy/90 shadow-xl' : 'bg-white/10'
       } backdrop-blur-lg transition-colors duration-300 text-white`}
     >
+      {showDownloadForm && (
+        <DownloadForm onClose={closeForm} title={downloadTitle ? `${downloadTitle} Download Form` : undefined} fileName={downloadFileName} />
+      )}
       <Link href="/" className="flex items-center">
         <Image
           src="/images/ha.webp"
@@ -99,6 +120,22 @@ export default function Header() {
             </a>
           );
         })}
+        <div className="flex items-center gap-3">
+          <a
+            href="#"
+            onClick={(e) => openForm(e, "Catalog", "07 - Catalog.pdf")}
+            className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-3 py-2 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
+          >
+            Download Catalog
+          </a>
+          <Image
+            src="/images/made-in.png"
+            alt="Made in"
+            width={90}
+            height={32}
+            className="h-8 w-auto object-contain"
+          />
+        </div>
       </div>
 
       {/* Menú móvil */}

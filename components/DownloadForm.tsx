@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 type Props = {
   onClose: () => void;
@@ -8,17 +9,21 @@ type Props = {
 };
 
 export default function DownloadForm({ onClose, title = "Download Form", fileName }: Props) {
-  return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
+
+  if (!mounted) return null;
+
+  return createPortal(
+    <div className="fixed inset-0 flex items-center justify-center z-[9999]">
       <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="bg-white rounded-lg shadow-lg w-full max-w-md relative">
+      <div className="bg-white rounded-lg shadow-lg w-full max-w-md relative z-[10000]">
         <div className="rounded-t-lg px-6 py-3 bg-navy">
-          <h3
-            className="text-md font-semibold text-white"
-            
-          >
-            {title}
-          </h3>
+          <h3 className="text-md font-semibold text-white">{title}</h3>
         </div>
 
         <button
@@ -75,6 +80,7 @@ export default function DownloadForm({ onClose, title = "Download Form", fileNam
           </form>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
