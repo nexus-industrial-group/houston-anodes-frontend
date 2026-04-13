@@ -34,7 +34,7 @@ export default function AnodesPage() {
             <div>
               <div className="relative w-full h-[420px]">
                 <Image
-                  src="/images/about-us/anode.webp"
+                  src="/images/about-us/aluminum.png"
                   alt="Aluminum Anode"
                   fill
                   className="object-contain rotate-[-20deg]"
@@ -62,7 +62,7 @@ export default function AnodesPage() {
             <div>
               <div className="relative w-full h-[420px]">
                 <Image
-                  src="/images/anodes/zinc.webp"
+                  src="/images/about-us/zinc.png"
                   alt="Zinc Anode"
                   fill
                   className="object-contain rotate-[-20deg]"
@@ -685,6 +685,8 @@ export default function AnodesPage() {
                 </div>
 
                 <div className="flex gap-1.5 mt-auto pt-1">
+                                    <span className="rounded px-2 py-0.5 text-[10px] font-bold bg-primary-blue text-white uppercase">Al</span>
+
                   <span className="rounded px-2 py-0.5 text-[10px] font-bold bg-gray-500 text-white uppercase">Zn</span>
                 </div>
               </div>
@@ -795,7 +797,7 @@ export default function AnodesPage() {
                       family: 'Hull Anodes',
                       configs: ['Trapezoidal Hull', 'Trapezoidal Hull Cast-in Core', 'Hull Tapered', 'Tapered Trapezoidal', 'Teardrop'],
                       range: '23 – 85 lbs (standard)',
-                      materials: 'Zn',
+                      materials: 'Al · Zn',
                       apps: 'Ship hulls, ballast tanks, sea chests, marine vessels',
                     },
                     {
