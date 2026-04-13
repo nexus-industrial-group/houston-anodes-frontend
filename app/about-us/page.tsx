@@ -17,13 +17,7 @@ export default function AboutUsPage() {
       <header className="relative flex items-center justify-center h-screen overflow-hidden bg-gray-100">
         {/* Main Image */}
         <div className="absolute inset-0">
-          <Image
-            src="/images/about-us/about-us.webp"
-            alt="About Houston Anodes"
-            fill
-            className="object-cover"
-            priority
-          />
+          <video src="/videos/au.webm" autoPlay loop muted className="absolute inset-0 w-full h-full object-cover"></video>
         </div>
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50"></div>

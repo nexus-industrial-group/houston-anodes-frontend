@@ -23,6 +23,37 @@ const APPROVED_SUPPLIERS = [
   { certification: "U.S. Navy Approved Supplier", type: "Government / Defense Approval", issuedBy: "United States Navy" },
 ] as const;
 
+const CERT_ROW_1 = [
+  { certification: "BP Approved Supplier", glow: false },
+  { certification: "Bruker-Quantron Magellan Q8", glow: true, glowDelay: "1.5s" },
+  { certification: "DNV RP B401", glow: false },
+  { certification: "DNV Type Approved Product", glow: false },
+  { certification: "FMC/TechnipFMC Approved Global Supplier", glow: true, glowDelay: "5.0s" },
+  { certification: "HSE Management System", glow: false },
+];
+const CERT_ROW_2 = [
+  { certification: "IQNet Certificate", glow: false },
+  { certification: "ISO 15589-2:2012", glow: true, glowDelay: "2.0s" },
+  { certification: "ISO 17025 (ILAC-MRA)", glow: false },
+  { certification: "ISO 9001:2008", glow: false },
+  { certification: "ISO 9001:2015", glow: true, glowDelay: "6.0s" },
+  { certification: "NACE SP-0387", glow: false },
+];
+const CERT_ROW_3 = [
+  { certification: "NACE SP-0492", glow: false },
+  { certification: "NACE TM-0190", glow: true, glowDelay: "0.8s" },
+  { certification: "NORSOK M-503", glow: false },
+  { certification: "PEMEX Preferred Supplier", glow: false },
+  { certification: "Ørsted Approved Supplier", glow: true, glowDelay: "4.0s" },
+  { certification: "U.S. Navy Approved Supplier", glow: false },
+];
+
+const CERT_ROWS = [
+  { items: CERT_ROW_1, duration: "22s", delay: "0s" },
+  { items: CERT_ROW_2, duration: "27s", delay: "-6s" },
+  { items: CERT_ROW_3, duration: "32s", delay: "-12s" },
+];
+
 const INFO_CARDS = [
   { title: "50 Years", description: "Operating History" },
   { title: "Zero Claims", description: "In service History" },
@@ -112,46 +143,31 @@ export default function CertificationsStandards() {
             </Carousel>
           </div>
 
-          {/* Certifications mini cards (only certification names) */}
-          <div className="mt-8">
-            {/* Horizontal infinite marquee: duplicate the items for seamless scroll */}
-            <div className="cert-scroll">
-              <div className="cert-track">
-                {[...APPROVED_SUPPLIERS, ...APPROVED_SUPPLIERS].map((s, idx) => (
-                  <div
-                    key={`${s.certification}-${idx}`}
-                    className="cert-item flex shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-white px-5 py-4 text-center text-sm font-medium text-gray-700 whitespace-nowrap"
-                  >
-                    {s.certification}
-                  </div>
-                ))}
+          {/* Certifications marquee rows (3 rows, scrolling left-to-right) */}
+          <div className="mt-8 space-y-3 overflow-hidden">
+            {CERT_ROWS.map((row, rowIndex) => (
+              <div key={rowIndex} className="overflow-hidden">
+                <div
+                  className="flex gap-3"
+                  style={{
+                    width: "max-content",
+                    animation: `marquee-ltr ${row.duration} linear ${row.delay} infinite`,
+                  }}
+                >
+                  {[...row.items, ...row.items].map((item, i) => (
+                    <div
+                      key={`${item.certification}-${i}`}
+                      className="flex shrink-0 items-center justify-center rounded-lg border border-gray-200 px-5 py-4 text-center text-sm font-medium text-gray-700 whitespace-nowrap"
+                      style={item.glow ? {
+                        animation: `card-glow 4s ease-in-out ${item.glowDelay} infinite`,
+                      } : undefined}
+                    >
+                      {item.certification}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Marquee styles - scoped to this component */}
-            <style jsx>{`
-              .cert-scroll {
-                overflow: hidden;
-                width: 100%;
-              }
-              .cert-track {
-                display: inline-flex;
-                align-items: center;
-                gap: 0.75rem;
-                will-change: transform;
-                /* adjust duration as needed */
-                animation: scroll-right 35s linear infinite;
-              }
-              .cert-item {
-                flex: 0 0 auto;
-              }
-              @keyframes scroll-right {
-                0% { transform: translateX(-50%); }
-                100% { transform: translateX(0%); }
-              }
-              /* reduce chance of wrapping anywhere inside */
-              .cert-item, .cert-item * { white-space: nowrap; }
-            `}</style>
+            ))}
           </div>
         </div>
       </div>

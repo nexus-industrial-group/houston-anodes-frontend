@@ -9,7 +9,7 @@ const CARDS = [
     description:
       "90° / 45° / straight core configurations for offshore jackets and structures. Types A & B available for welded installations. Typical weights from 180–1,250 lbs.",
     tags: ["Offshore", "Structural", "Jacket"],
-    url: "/products/platform.webp",
+    url: "/images/anodes/platforms.webp",
   },
   {
     title: "Bracelet Anodes",

@@ -3,14 +3,8 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative flex h-screen w-full items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <Image
-        src="/images/homepage/home.webp"
-        alt="Houston Anodes background"
-        fill
-        priority
-        className="absolute inset-0 object-cover"
-      />
+      {/* Video Background */}
+      <video src="/videos/hp.webm" autoPlay loop muted className="absolute inset-0 w-full h-full object-cover "></video>
 
       {/* Dark overlay (in front of image, behind text) */}
       <div className="absolute inset-0 bg-black/60 z-10" aria-hidden="true" />
@@ -23,7 +17,7 @@ export default function HeroSection() {
           alt="ISO Certification"
           width={200}
           height={200}
-          className="object-contain"
+          className="object-contain w-32 h-32 md:w-40 md:h-40"
         />
       </div>
 
