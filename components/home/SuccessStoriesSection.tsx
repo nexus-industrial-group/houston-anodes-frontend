@@ -1,34 +1,34 @@
 import Image from "next/image";
 
 const ROW_1 = [
-  { name: "ExxonMobil",       glow: false },
-  { name: "Shell",            glow: true,  glowDelay: "1.2s"  },
-  { name: "BP",               glow: false },
-  { name: "Chevron",          glow: false },
-  { name: "PEMEX",            glow: true,  glowDelay: "4.5s"  },
-  { name: "TechnipFMC",       glow: false },
-  { name: "Subsea 7",         glow: false },
-  { name: "J. Ray McDermott", glow: true,  glowDelay: "7.8s"  },
+  { name: "ExxonMobil",       logo: "/images/homepage/clients/exxon.webp",     glow: false },
+  { name: "Shell",            logo: "/images/homepage/clients/shell.webp",     glow: true,  glowDelay: "1.2s"  },
+  { name: "BP",               logo: "/images/homepage/clients/bp.webp",        glow: false },
+  { name: "Chevron",          logo: "/images/homepage/clients/chevron.webp",   glow: false },
+  { name: "PEMEX",            logo: "/images/homepage/clients/pemex.webp",     glow: true,  glowDelay: "4.5s"  },
+  { name: "TechnipFMC",       logo: "/images/homepage/clients/tech.webp",      glow: false },
+  { name: "Subsea 7",         logo: "/images/homepage/clients/subsea.webp",    glow: false },
+  { name: "J. Ray McDermott", logo: "/images/homepage/clients/jr.webp",        glow: true,  glowDelay: "7.8s"  },
 ];
 const ROW_2 = [
-  { name: "Hess",             glow: true,  glowDelay: "2.3s"  },
-  { name: "Marathon",         glow: false },
-  { name: "Williams",         glow: false },
-  { name: "Anadarko",         glow: true,  glowDelay: "5.9s"  },
-  { name: "Oceaneering",      glow: false },
-  { name: "Bredero Shaw",     glow: false },
-  { name: "FloaTEC",          glow: true,  glowDelay: "9.1s"  },
-  { name: "Oil States",       glow: false },
+  { name: "Hess",             logo: "/images/homepage/clients/hess.webp",      glow: true,  glowDelay: "2.3s"  },
+  { name: "Marathon",         logo: "/images/homepage/clients/marathon.webp",  glow: false },
+  { name: "Williams",         logo: "/images/homepage/clients/williams.webp",  glow: false },
+  { name: "Anadarko",         logo: "/images/homepage/clients/andrako.webp",   glow: true,  glowDelay: "5.9s"  },
+  { name: "Oceaneering",      logo: "/images/homepage/clients/ocean.webp",     glow: false },
+  { name: "Bredero Shaw",     logo: "/images/homepage/clients/bredero.webp",   glow: false },
+  { name: "FloaTEC",          logo: "/images/homepage/clients/floa.webp",      glow: true,  glowDelay: "9.1s"  },
+  { name: "Oil States",       logo: "/images/homepage/clients/oilstates.webp", glow: false },
 ];
 const ROW_3 = [
-  { name: "Sapura Energy",    glow: false },
-  { name: "Ørsted",           glow: true,  glowDelay: "0.7s"  },
-  { name: "Deepwater",        glow: false },
-  { name: "Noble",            glow: false },
-  { name: "ATP Oil & Gas",    glow: true,  glowDelay: "3.4s"  },
-  { name: "LLOG",             glow: false },
-  { name: "Corrpro",          glow: true,  glowDelay: "6.6s"  },
-  { name: "U.S. Navy",        glow: false },
+  { name: "Sapura Energy",    logo: "/images/homepage/clients/sapura.webp",    glow: false },
+  { name: "Ørsted",           logo: "/images/homepage/clients/orsted.webp",    glow: true,  glowDelay: "0.7s"  },
+  { name: "Deepwater",        logo: "/images/homepage/clients/deepwater.webp", glow: false },
+  { name: "Noble",            logo: "/images/homepage/clients/noble.webp",     glow: false },
+  { name: "ATP Oil & Gas",    logo: "/images/homepage/clients/atp.webp",       glow: true,  glowDelay: "3.4s"  },
+  { name: "LLOG",             logo: "/images/homepage/clients/llog.webp",      glow: false },
+  { name: "Corrpro",          logo: "/images/homepage/clients/corrpro.webp",   glow: true,  glowDelay: "6.6s"  },
+  { name: "U.S. Navy",        logo: "/images/homepage/clients/uss.webp",       glow: false },
 ];
 
 const ROWS = [
@@ -114,12 +114,18 @@ export default function SuccessStoriesSection() {
                 {[...row.items, ...row.items].map((item, i) => (
                   <div
                     key={`${item.name}-${i}`}
-                    className="flex w-44 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 px-4 py-4 text-center text-sm font-medium text-gray-700"
+                    className="flex w-44 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 px-4 py-4"
                     style={item.glow ? {
                       animation: `card-glow 4s ease-in-out ${item.glowDelay} infinite`,
                     } : undefined}
                   >
-                    {item.name}
+                    <Image
+                      src={item.logo}
+                      alt={item.name}
+                      width={140}
+                      height={48}
+                      className="h-10 w-auto object-contain"
+                    />
                   </div>
                 ))}
               </div>
