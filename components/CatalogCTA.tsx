@@ -1,0 +1,49 @@
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import DownloadForm from "./DownloadForm";
+
+export default function CatalogCTA() {
+  const [showDownloadForm, setShowDownloadForm] = useState(false);
+
+  const openForm = (e?: any) => {
+    e?.preventDefault();
+    setShowDownloadForm(true);
+  };
+
+  const closeForm = () => {
+    setShowDownloadForm(false);
+  };
+
+  return (
+    <>
+      {showDownloadForm && (
+        <DownloadForm onClose={closeForm} title={"Catalog Download Form"} fileName={"07 - Catalog.pdf"} />
+      )}
+
+      <div className="flex gap-3 shrink-0 items-center">
+        <button
+          onClick={openForm}
+          className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
+        >
+          Download Catalog
+        </button>
+
+        <Image
+          src="/images/made-in.png"
+          alt="Made in"
+          width={90}
+          height={32}
+          className="h-8 w-auto object-contain"
+        />
+
+        <a
+          href="/contact-us"
+          className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+        >
+          Talk to Engineering
+        </a>
+      </div>
+    </>
+  );
+}

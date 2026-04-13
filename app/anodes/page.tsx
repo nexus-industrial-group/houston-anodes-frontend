@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Layers, Shield, Zap, Droplet, Ship, Factory } from 'lucide-react';
 import Header from '../../components/Header';
+import CatalogCTA from '../../components/CatalogCTA';
 
 export const metadata = {
   title: 'Anodes',
@@ -956,20 +957,7 @@ export default function AnodesPage() {
               Or contact our engineering team directly to discuss your project requirements.
             </p>
           </div>
-          <div className="flex gap-3 shrink-0">
-            <a
-              href="/contact-us"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
-            >
-              Download Catalog
-            </a>
-            <a
-              href="/contact-us"
-              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
-            >
-              Talk to Engineering
-            </a>
-          </div>
+          <CatalogCTA />
         </div>
       </section>
     </div>
