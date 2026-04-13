@@ -32,9 +32,9 @@ export default function CatalogCTA() {
         <Image
           src="/images/made-in.png"
           alt="Made in"
-          width={90}
-          height={32}
-          className="h-8 w-auto object-contain"
+          width={160}
+          height={56}
+          className="h-14 w-auto object-contain"
         />
 
         <a
