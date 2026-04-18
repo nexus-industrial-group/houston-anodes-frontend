@@ -9,14 +9,14 @@ const CARDS = [
     description:
       "90° / 45° / straight core configurations for offshore jackets and structures. Types A & B available for welded installations. Typical weights from 180–1,250 lbs.",
     tags: ["Offshore", "Structural", "Jacket"],
-    url: "/images/anodes/platforms.webp",
+    url: "/products/platform.webp",
   },
   {
     title: "Bracelet Anodes",
     description:
       "Pipeline bracelet anodes for subsea corrosion protection. Available in 10\"–30\" diameters with square or tapered designs. Weld-on and bolt-on options.",
     tags: ["Pipeline", "Subsea", "Offshore"],
-    url: "/products/bracelet.webp",
+    url: "/products/pipeline.webp",
   },
   {
     title: "Trapezoidal Anodes",
@@ -30,7 +30,7 @@ const CARDS = [
     description:
       "Compact spherical anodes used inside tanks and vessels. Designed for internal corrosion protection in refining, chemical, and storage systems.",
     tags: ["Tank", "Internal Protection", "Industrial"],
-    url: "/products/bowling-ball.webp",
+    url: "/products/ball.webp",
   },
   {
     title: "Drum Anodes",
@@ -44,7 +44,7 @@ const CARDS = [
     description:
       "Specialized anodes engineered for heater treaters in oil and gas production. Protects internal steel surfaces from corrosion in harsh environments.",
     tags: ["Oil & Gas", "Production", "Internal Protection"],
-    url: "/products/heater-treater.webp",
+    url: "/products/heater.webp",
   },
 ];
 function Tag({ children }: { children: React.ReactNode }) {
