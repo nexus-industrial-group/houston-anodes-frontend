@@ -6,10 +6,6 @@ export default function HeroSection() {
       {/* Video Background */}
       <video src="/videos/hp.webm" autoPlay loop muted className="absolute inset-0 w-full h-full object-cover "></video>
 
-      {/* Dark overlay (in front of image, behind text) */}
-      <div className="absolute inset-0 bg-black/60 z-10" aria-hidden="true" />
-
-
       {/* ISO Badge */}
       <div className="absolute bottom-6 right-6 z-30">
         <Image
