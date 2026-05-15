@@ -96,10 +96,10 @@ export default function Header() {
         <Image
           src="/images/ha.webp"
           alt="Houston Anodes"
-          width={160}
-          height={48}
-          sizes="(max-width: 768px) 120px, 160px"
-          className="h-12 w-auto object-contain"
+          width={230}
+          height={69}
+          sizes="(max-width: 768px) 173px, 230px"
+          className="h-[69px] w-auto object-contain"
           priority
         />
       </Link>
