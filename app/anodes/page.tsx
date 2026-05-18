@@ -35,7 +35,7 @@ export default function AnodesPage() {
             <div>
               <div className="relative w-full h-[420px]">
                 <Image
-                  src="/images/about-us/aluminum.png"
+                  src="/images/about-us/zinc.png"
                   alt="Aluminum Anode"
                   fill
                   className="object-contain rotate-[-20deg]"
@@ -63,7 +63,7 @@ export default function AnodesPage() {
             <div>
               <div className="relative w-full h-[420px]">
                 <Image
-                  src="/images/about-us/zinc.png"
+                  src="/images/ha.webp"
                   alt="Zinc Anode"
                   fill
                   className="object-contain rotate-[-20deg]"
@@ -447,7 +447,7 @@ export default function AnodesPage() {
                 <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-gray-400">Family 01</span>
               </div>
               <div className="relative w-full h-36 bg-gray-50 mt-3">
-                <Image src="/images/anodes/platforms.webp" alt="Platform Anode" fill className="object-contain p-5" />
+                <Image src="/images/anodes/platform.webp" alt="Platform Anode" fill className="object-contain p-5" />
               </div>
               <div className="px-5 py-4 flex flex-col gap-4 flex-1">
                 <div>
