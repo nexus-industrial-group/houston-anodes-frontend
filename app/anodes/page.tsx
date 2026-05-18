@@ -198,7 +198,7 @@ export default function AnodesPage() {
                   ))}
                 </div>
                 <p className="text-xs text-gray-500 leading-relaxed pt-1">
-                  Primary aluminum at 99.9% purity. Traces of indium (100% pure), zinc, and silicon. Never
+                  Primary aluminum at 99.9% purity. Traces of indium (99.9% pure), zinc, and silicon. Never
                   melted from scrap or recycled anodic material.
                 </p>
               </div>
@@ -471,7 +471,7 @@ export default function AnodesPage() {
                 <div className="grid grid-cols-2 gap-2 border-t border-gray-100 pt-3">
                   <div>
                     <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">Weight Range</p>
-                    <p className="text-xs font-semibold text-gray-700">180 – 1,250 lbs</p>
+                    <p className="text-xs font-semibold text-gray-700">5 – 1,650 lbs</p>
                   </div>
                   <div>
                     <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">Core Pipe</p>
@@ -521,7 +521,7 @@ export default function AnodesPage() {
                 <div className="grid grid-cols-2 gap-2 border-t border-gray-100 pt-3">
                   <div>
                     <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">Diameter Range</p>
-                    <p className="text-xs font-semibold text-gray-700">4½″ – 48″</p>
+                    <p className="text-xs font-semibold text-gray-700">1/2″ – 48″</p>
                   </div>
                   <div>
                     <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">Custom Sizes</p>
@@ -570,7 +570,7 @@ export default function AnodesPage() {
                 <div className="grid grid-cols-2 gap-2 border-t border-gray-100 pt-3">
                   <div>
                     <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">Weight Range</p>
-                    <p className="text-xs font-semibold text-gray-700">0.5 – 304 lbs (std)</p>
+                    <p className="text-xs font-semibold text-gray-700">0.5 – 1,650 lbs (std)</p>
                   </div>
                   <div>
                     <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">Mounting</p>
@@ -623,7 +623,7 @@ export default function AnodesPage() {
                 <div className="grid grid-cols-2 gap-2 border-t border-gray-100 pt-3">
                   <div>
                     <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">Weight Range</p>
-                    <p className="text-xs font-semibold text-gray-700">18.5 – 46 lbs (std)</p>
+                    <p className="text-xs font-semibold text-gray-700">8.5 – 46 lbs (std)</p>
                   </div>
                   <div>
                     <p className="text-[9px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">Core Type</p>
@@ -769,28 +769,28 @@ export default function AnodesPage() {
                     {
                       family: 'Platform Anodes',
                       configs: ['90° Core — Type A & B', '45° Core — Type A & B', 'Straight Core — Type A & B'],
-                      range: '180 – 1,250 lbs',
+                      range: '5 – 1,650 lbs',
                       materials: 'Al · Zn',
                       apps: 'Offshore platforms, structural members, new construction & retrofit',
                     },
                     {
                       family: 'Bracelet Anodes',
                       configs: ['Square Weld-on', 'Square Bolt-on', 'Tapered Weld-on', 'Tapered Bolt-on'],
-                      range: '4½″ – 48″ diameter',
+                      range: '1/2″ – 48″ diameter',
                       materials: 'Al · Zn',
                       apps: 'Subsea pipelines, Gulf of Mexico, offshore pipelines',
                     },
                     {
                       family: 'Pier, Piling & Ballast',
                       configs: ['Trapezoidal Flush Core', 'Stand-off Core — Type A & B', 'Rod Core', 'Rod Stand-off Core'],
-                      range: '0.5 – 304 lbs (standard)',
+                      range: '0.5 – 1,650 lbs (standard)',
                       materials: 'Al · Zn',
                       apps: 'Piers, jetties, pilings, ballast, harbor structures',
                     },
                     {
                       family: 'Tanks & Vessels',
                       configs: ['Heater Treater', 'Heater Treater Eyebolt', 'Bowling Ball', 'Drum'],
-                      range: '18.5 – 46 lbs (standard)',
+                      range: '8.5 – 46 lbs (standard)',
                       materials: 'Al · Zn',
                       apps: 'Tank bottoms, vessel interiors, heater treaters, pressure vessels',
                     },

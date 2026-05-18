@@ -62,7 +62,7 @@ const INFO_CARDS = [
   { title: "ISO 9001:2015", description: "Certified" },
   { title: "ISO 17025", description: "Lab Accredited" },
   { title: "Global Operations", description: "Worldwide projects & clients" },
-  { title: "47 Years", description: "Operating History" },
+  { title: "50 Years", description: "Operating History" },
 ] as const;
 
 function StatIcon() {

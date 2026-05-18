@@ -69,7 +69,7 @@ export default function SuccessStoriesSection() {
             {/* Fact stats */}
             <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-5">
-                <p className="text-2xl font-extrabold text-primary-blue">49 Years of Consistency</p>
+                <p className="text-2xl font-extrabold text-primary-blue">50 Years of Consistency</p>
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">
                   Earned through uninterrupted delivery of compliant, documented, high-performance cathodic protection products since 1977.
                 </p>
@@ -77,7 +77,7 @@ export default function SuccessStoriesSection() {
               <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-5">
                 <p className="text-2xl font-extrabold text-primary-blue">Zero Product Claims</p>
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                  Zero product claims in 49 years of operation — a record built on individual anode documentation, heat analysis, and raw material verification on every order.
+                  Zero product claims in 50 years of operation — a record built on individual anode documentation, heat analysis, and raw material verification on every order.
                 </p>
               </div>
             </div>

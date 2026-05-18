@@ -41,7 +41,7 @@ export default function CatalogCTA() {
           href="/contact-us"
           className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
         >
-          Talk to Engineering
+          CONTACT US
         </a>
       </div>
     </>

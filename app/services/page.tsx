@@ -356,7 +356,7 @@ export default function ServicesPage() {
               <table className="w-full text-sm">
                 <tbody className="divide-y divide-gray-100">
                   {[
-                    ["Alloy Density", "0.098 lb/in3 (2.71 gm/cm3)"],
+                    ["Alloy Density", "0.098 lb/in3 (2.91 gm/cm3)"],
                     ["Cost Ratio", "Normal Grade Al Sows"],
                     ["Raw Material & Convesion", "1.00"],
                   ].map(([k, v]) => (

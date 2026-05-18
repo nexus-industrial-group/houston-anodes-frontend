@@ -15,7 +15,7 @@ const CHANGES = [
   },
   {
     title: "Regulatory Confidence",
-    body: "Our quality system is certified ISO 9001:2015 by DNV. Our in-house laboratory holds ISO 17025 accreditation. We are an approved supplier to Ørsted, FMC Global, the U.S. Navy (35 years), and PEMEX (35 years, 80% of project supply) with no product failures or claims across 47 years of continuous operation.",
+    body: "Our quality system is certified ISO 9001:2015 by DNV. Our in-house laboratory holds ISO 17025 accreditation. We are an approved supplier to Ørsted, FMC Global, the U.S. Navy (35 years), and PEMEX (35 years, 80% of project supply) with no product failures or claims across 50 years of continuous operation.",
   },
 ];
 

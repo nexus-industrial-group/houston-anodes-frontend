@@ -13,7 +13,7 @@ const SPEC_CARDS = [
     title: "Right Weight",
     description: "Weight ranges from 5 lbs to custom configurations.",
     items: [
-      "Light-duty (22 – 99 lbs)",
+      "Light-duty (50 – 99 lbs)",
       "Medium-duty (100 – 400 lbs)",
       "Heavy-duty (401 – 1,650 lbs)",
       "Custom weights",
@@ -59,7 +59,7 @@ export default function ProductHighlightSection() {
             Our Company 
           </p>
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-electric-blue sm:text-5xl">
-            Zero Claims in 49 Years of Protecting Critical Infrastructure
+            Zero Claims in 50 Years of Protecting Critical Infrastructure
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-text-secondary">
             We design, manufacture, and deliver high-quality aluminum and zinc sacrificial anodes using electromagnetic induction technology — producing anodes that last 40% longer than conventional alternatives
