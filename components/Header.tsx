@@ -26,6 +26,7 @@ export default function Header() {
     { label: "Contact Us", href: "/contact-us" },
   ];
 
+/*
   useEffect(() => {
     function updateIndicator() {
       const nav = navRef.current;
@@ -46,6 +47,7 @@ export default function Header() {
     window.addEventListener('resize', updateIndicator);
     return () => window.removeEventListener('resize', updateIndicator);
   }, [pathname]);
+*/
 
   useEffect(() => {
     function onScroll() {
@@ -57,6 +59,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+/*
   function handleHover(el: HTMLElement | null) {
     const nav = navRef.current;
     if (!nav || !el) return setHoverIndicator(null);
@@ -68,6 +71,7 @@ export default function Header() {
   function clearHover() {
     setHoverIndicator(null);
   }
+*/
 
   const openForm = (e?: any, docTitle?: string, fileName?: string) => {
     e?.preventDefault();
@@ -113,8 +117,6 @@ export default function Header() {
               key={l.href}
               href={l.href}
               aria-current={isActive ? "page" : undefined}
-              onMouseEnter={(e) => handleHover(e.currentTarget as HTMLElement)}
-              onMouseLeave={clearHover}
               className={`flex items-center transition-colors ${isActive ? "text-white font-extrabold" : "hover:text-white"}`}>
               {l.label}
             </a>
@@ -133,7 +135,7 @@ export default function Header() {
             alt="Made in"
             width={160}
             height={56}
-            className="h-14 w-auto object-contain"
+            className="h-18 w-18 object-contain"
           />
         </div>
       </div>
