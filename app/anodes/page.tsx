@@ -13,87 +13,75 @@ export default function AnodesPage() {
     <div className="min-h-screen font-sans text-gray-800 bg-white">
       <Header />
 
-      {/* Hero Section - Based on attached image */}
-      <header className="relative flex items-center justify-center h-screen overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200">
-        <div className="relative z-10 max-w-7xl px-6 mx-auto text-center mt-16">
-          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl mb-3">
+      {/* Hero Section */}
+      <header className="h-[100dvh] overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200 flex flex-col">
+
+        {/* Title strip — compact on mobile, spacious on desktop */}
+        <div className="shrink-0 text-center pt-20 md:pt-28 px-4 pb-2 md:pb-4">
+          <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl mb-2 md:mb-3">
             PREMIUM SACRIFICIAL ANODES
           </h1>
-
-          {/* Divider */}
-          <div className="flex justify-center mb-6">
-            <div
-              className="h-0.5 bg-gray-400 w-4/5 rounded-full"
-              aria-hidden="true"
-            ></div>
+          <div className="flex justify-center mb-2 md:mb-4">
+            <div className="h-0.5 bg-gray-400 w-4/5 rounded-full" aria-hidden="true" />
           </div>
-
-          <p className="mt-4 mb-16 font-bold tracking-tight text-2xl md:text-3xl text-gray-700 uppercase">
+          <p className="font-bold tracking-tight text-sm md:text-3xl text-gray-700 uppercase">
             Engineered for Superior Protection
           </p>
+        </div>
 
-          {/* Two Anode Types - Inspired by attached image */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            {/* Aluminum */}
-            <div>
-              <div className="relative w-full h-[420px]">
-                <Image
-                  src="/images/about-us/zinc.png"
-                  alt="Aluminum Anode"
-                  fill
-                  className="object-contain rotate-[-20deg]"
-                />
-              </div>
+        {/* Products — stacked 50/50 on mobile, side-by-side on desktop */}
+        <div className="flex-1 min-h-0 flex flex-col md:flex-row md:max-w-7xl md:mx-auto md:w-full md:px-6 md:gap-8 md:pb-8">
 
-              {/* Floating shadow */}
-              <div className="ml-[25%] w-2/3 h-4 bg-black/40 rounded-[50%] blur-md -mt-4 rotate-[-35deg]" />
-
-              <div className="pt-6 text-center">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">
-                  Aluminum
-                </h3>
-                <a
-                  href="#aluminum-details"
-                  className="inline-flex items-center text-gray-700 font-semibold hover:text-gray-900 transition-colors group"
-                >
-                  Learn More
-                  <span className="ml-2 transform group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
-                </a>
-              </div>
+          {/* Aluminum */}
+          <div className="flex-1 min-h-0 flex flex-col border-b border-gray-300 md:border-0">
+            <div className="relative flex-1 min-h-0 w-full">
+              <Image
+                src="/images/about-us/zinc.png"
+                alt="Aluminum Anode"
+                fill
+                className="object-contain rotate-[-20deg]"
+              />
             </div>
-
-            {/* Zinc */}
-            <div>
-              <div className="relative w-full h-[420px]">
-                <Image
-                  src="/images/ha.webp"
-                  alt="Zinc Anode"
-                  fill
-                  className="object-contain rotate-[-20deg]"
-                />
-              </div>
-
-              {/* Floating shadow */}
-              <div className="ml-[35%] w-2/3 h-4 bg-black/40 rounded-[50%] blur-md -mt-4 rotate-[-35deg]" />
-
-              <div className="pt-6 text-center">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">
-                  Zinc
-                </h3>
-                <a
-                  href="#zinc-details"
-                  className="inline-flex items-center text-gray-700 font-semibold hover:text-gray-900 transition-colors group"
-                >
-                  Learn More
-                  <span className="ml-2 transform group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
-                </a>
-              </div>
+            <div className="shrink-0 ml-[25%] w-2/3 h-3 bg-black/40 rounded-[50%] blur-md -mt-2 rotate-[-35deg]" />
+            <div className="shrink-0 text-center py-3 md:pt-4 md:pb-2">
+              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-4 uppercase tracking-wide">
+                Aluminum
+              </h3>
+              <a
+                href="#aluminum-details"
+                className="inline-flex items-center text-gray-700 font-semibold hover:text-gray-900 transition-colors group text-sm md:text-base"
+              >
+                Learn More
+                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+              </a>
             </div>
           </div>
+
+          {/* Zinc */}
+          <div className="flex-1 min-h-0 flex flex-col">
+            <div className="relative flex-1 min-h-0 w-full">
+              <Image
+                src="/images/ha.webp"
+                alt="Zinc Anode"
+                fill
+                className="object-contain rotate-[-20deg]"
+              />
+            </div>
+            <div className="shrink-0 ml-[35%] w-2/3 h-3 bg-black/40 rounded-[50%] blur-md -mt-2 rotate-[-35deg]" />
+            <div className="shrink-0 text-center py-3 md:pt-4 md:pb-2">
+              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-4 uppercase tracking-wide">
+                Zinc
+              </h3>
+              <a
+                href="#zinc-details"
+                className="inline-flex items-center text-gray-700 font-semibold hover:text-gray-900 transition-colors group text-sm md:text-base"
+              >
+                Learn More
+                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
+
         </div>
       </header>
 

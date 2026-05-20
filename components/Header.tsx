@@ -218,16 +218,16 @@ export default function Header() {
           <Image
             src="/images/iso.png"
             alt="ISO Certification"
-            width={100}
-            height={36}
-            className="h-[36px] w-auto object-contain"
+            width={200}
+            height={72}
+            className="h-[72px] w-auto object-contain"
           />
           <Image
             src="/images/ins.webp"
             alt="INS Certification"
-            width={90}
-            height={28}
-            className="h-[28px] w-auto object-contain"
+            width={180}
+            height={56}
+            className="h-[56px] w-auto object-contain"
           />
         </div>
       </div>
