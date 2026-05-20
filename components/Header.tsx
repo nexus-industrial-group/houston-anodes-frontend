@@ -135,7 +135,7 @@ export default function Header() {
             alt="Made in"
             width={160}
             height={56}
-            className="h-18 w-18 object-contain"
+            className="h-20 w-20 object-contain"
           />
         </div>
       </div>

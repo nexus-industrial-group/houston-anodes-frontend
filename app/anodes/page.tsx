@@ -213,6 +213,81 @@ export default function AnodesPage() {
                 </p>
               </div>
 
+              {/* Chemical Composition Table */}
+              <div className="px-8 py-6 border-t border-gray-100 space-y-3">
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary-blue">
+                  Chemical Composition (% by weight)
+                </p>
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-2 font-bold uppercase tracking-wider text-gray-500">Element</th>
+                      <th className="text-right py-2 font-bold uppercase tracking-wider text-gray-500">Galvalum III</th>
+                      <th className="text-right py-2 font-bold uppercase tracking-wider text-gray-500">Galvalum III DCW</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {[
+                      ['Iron (Fe)', '0.09 max', '0.06 max'],
+                      ['Silicon (Si)', '0.08 – 0.12', '0.08 – 0.12'],
+                      ['Copper (Cu)', '0.006 max', '0.003 max'],
+                      ['Zinc (Zn)', '2.0 – 6.0', '4.75 – 5.25'],
+                      ['Indium (In)', '0.01 – 0.02', '0.016 – 0.025'],
+                      ['Cadmium (Cd)', '0.002 max', '0.002 max'],
+                      ['Others (each)', '0.02 max', '0.02 max'],
+                    ].map(([el, t1, t2]) => (
+                      <tr key={el}>
+                        <td className="py-2 text-gray-600">{el}</td>
+                        <td className="py-2 text-right text-gray-700 font-medium tabular-nums">{t1}</td>
+                        <td className="py-2 text-right text-gray-700 font-medium tabular-nums">{t2}</td>
+                      </tr>
+                    ))}
+                    <tr className="bg-gray-50">
+                      <td className="py-2 font-semibold text-gray-700">Aluminum (Al)</td>
+                      <td className="py-2 text-right font-bold text-gray-900">Remainder</td>
+                      <td className="py-2 text-right font-bold text-gray-900">Remainder</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+              {/* Electrochemical Properties */}
+              <div className="px-8 py-6 border-t border-gray-100 space-y-3">
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary-blue">
+Electrochemical Properties
+
+                </p>
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-2 font-bold uppercase tracking-wider text-gray-500">Property</th>
+                      <th className="text-right py-2 font-bold uppercase tracking-wider text-gray-500">Galvalum III</th>
+                      <th className="text-right py-2 font-bold uppercase tracking-wider text-gray-500">Galvalum III DCW</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {[
+                      ['Open Circuit Potential', '(-) 1.15 V vs Cu/CuS04 sw.', '(-) 1.15 V vs Cu/CuS04 sw.'],
+                      ['Closed Circuit Potential', '(-) 1.05 V vs Ag/AgCl sw,', '(-) 1.05 V vs Ag/AgCl sw,'],
+                      ['Seawater Capacity @25C', '1150 A-Hr/lb. (2530 A-Hr/Kg.)', '1150 A-Hr/lb. (2530 A-Hr/Kg.)'],
+                      ['Seawater Capacity @5C', 'Variable', '1150 A-Hr/lb (2530 A-hr/Kg.)'],
+                      ['Seabed Mud Capacity', '950 A-Hr/lb. (2090 A-hr/Kg.)', '950 A-Hr/lb. (2090 A-hr/Kg.)'],
+                      ['Seabed Mud Capacity @ 5C', 'Variable', '950 A-Hr/lb. (2090 A-hr/Kg.)'],
+                    ].map(([el, t1, t2]) => (
+                      <tr key={el}>
+                        <td className="py-2 lg:max-w-24 text-gray-500">{el}</td>
+                        <td className="py-2 text-right text-gray-700 font-medium tabular-nums">{t1}</td>
+                        <td className="py-2 text-right text-gray-700 font-medium tabular-nums">{t2}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+
+
+
               {/* Typical Applications */}
               <div className="px-8 pb-6 space-y-3 border-t border-gray-100 pt-5">
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary-blue">Typical Applications</p>

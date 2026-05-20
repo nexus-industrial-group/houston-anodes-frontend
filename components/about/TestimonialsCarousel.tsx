@@ -86,7 +86,7 @@ export default function TestimonialsCarousel() {
       onMouseLeave={() => setPaused(false)}
     >
       {/* Card */}
-      <div className="relative w-full max-w-2xl mx-auto overflow-hidden">
+      <div className="relative w-full max-w-2xl sm:max-w-md mx-auto overflow-hidden">
         <div
           className="transition-all duration-400"
           style={{
