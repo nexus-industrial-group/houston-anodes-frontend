@@ -2,14 +2,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import DownloadForm from "./DownloadForm";
+import { downloadFile } from "@/utils/downloadFile";
 
 export default function CatalogCTA() {
   const [showDownloadForm, setShowDownloadForm] = useState(false);
 
-  const openForm = (e?: any) => {
-    e?.preventDefault();
-    setShowDownloadForm(true);
-  };
 
   const closeForm = () => {
     setShowDownloadForm(false);
@@ -23,8 +20,8 @@ export default function CatalogCTA() {
 
       <div className="flex gap-3 shrink-0 items-center">
         <button
-          onClick={openForm}
-          className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
+          onClick={(e) => downloadFile(e, "Catalog", "07 - Catalog.pdf")}
+          className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors cursor-pointer"
         >
           Download Catalog
         </button>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import DownloadForm from "../DownloadForm";
+import { downloadFile } from "../../utils/downloadFile";
 
 const CARDS = [
   {
@@ -122,8 +123,8 @@ export default function WhatWeDo() {
         <div className="mt-10 flex justify-center">
           <button
             type="button"
-            onClick={(e) => openForm(e, "Full Catalog", "07 - Catalog.pdf")}
-            className="inline-flex items-center rounded-md bg-[#1963DF] px-6 py-3 text-sm font-semibold text-white shadow hover:bg-primary-blue/90"
+            onClick={(e) => downloadFile(e, "Full Catalog", "07 - Catalog.pdf")}
+            className="inline-flex items-center rounded-md bg-[#1963DF] px-6 py-3 text-sm font-semibold text-white shadow hover:bg-primary-blue/90 cursor-pointer"
           >
             <span>Download Full Catalog</span>
             <svg
