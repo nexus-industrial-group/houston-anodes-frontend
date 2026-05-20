@@ -3,16 +3,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Facebook, Instagram } from "lucide-react";
-import DownloadForm from "./DownloadForm";
 
 export default function Footer() {
-  const [showDownloadForm, setShowDownloadForm] = useState(false);
-  const [downloadTitle, setDownloadTitle] = useState<string | undefined>(
-    undefined,
-  );
-  const [downloadFileName, setDownloadFileName] = useState<string | undefined>(
-    undefined,
-  );
   const [downloadablesList, setDownloadablesList] = useState<string[]>([]);
 
   useEffect(() => {
@@ -29,53 +21,17 @@ export default function Footer() {
     fetchFiles();
   }, []);
 
-  const handleDownload = (e?: any, docTitle: string = "", fileName?: string) => {
+  const handleDownload = (e?: React.MouseEvent, docTitle: string = "", fileName?: string) => {
     e?.preventDefault();
-
-    const docsWithDirectDownload = ["Brochure", "Catalog"]
-
-    if(docsWithDirectDownload.includes(docTitle))
-    {
-      downloadFile(docTitle, fileName)
-    }
-    else
-    {
-      openForm(docTitle, fileName)
-    }
-
-  }
-
-  const downloadFile = (docTitle?: string, fileName?: string) => {
     const target = fileName ? `/downloadables/${fileName}` : undefined;
-    const displayName = docTitle || "this document"
-    alert(
-      `Thank you — the download for ${displayName} will start shortly.`,
-    );
+    const displayName = docTitle || "this document";
+    alert(`Thank you — the download for ${displayName} will start shortly.`);
     if (target && typeof window !== "undefined") {
       window.open(target, "_blank", "noopener,noreferrer");
     }
   };
-
-  const openForm = (docTitle?: string, fileName?: string) => {
-    setDownloadTitle(docTitle);
-    setDownloadFileName(fileName);
-    setShowDownloadForm(true);
-  };
-
-  const closeForm = () => {
-    setShowDownloadForm(false);
-    setDownloadTitle(undefined);
-    setDownloadFileName(undefined);
-  };
   return (
     <footer className="bg-navy text-sm text-gray-300 relative">
-      {showDownloadForm && (
-        <DownloadForm
-          onClose={closeForm}
-          title={downloadTitle ? `${downloadTitle} Download Form` : undefined}
-          fileName={downloadFileName}
-        />
-      )}
       {/* Borde metálico superior */}
       <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
