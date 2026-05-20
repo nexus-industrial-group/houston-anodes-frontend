@@ -39,7 +39,7 @@ const ROWS = [
 
 export default function SuccessStoriesSection() {
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-white py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Top row: Header + image */}

@@ -227,7 +227,7 @@ export default function AboutUsPage() {
       {/* Our Technology - Barrier Technology Section */}
       <section className="relative overflow-hidden bg-white">
         {/* Anode close-up — massive background piece, bleeds behind everything */}
-        <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-180 -translate-y-1/2 flex items-center justify-center w-[700px] ">
+        <div className="pointer-events-none hidden md:flex absolute left-1/2 top-1/2 -translate-x-180 -translate-y-1/2 items-center justify-center w-[700px]">
           <Image
             src="/images/about-us/platforms.png"
             alt="Houston Anode"
@@ -315,14 +315,28 @@ export default function AboutUsPage() {
             </ul>
           </div>
         </div>
+
+        {/* Mobile-only centered image */}
+        <div className="md:hidden flex justify-center pb-10 px-6">
+          <Image
+            src="/images/about-us/platforms.png"
+            alt="Houston Anode"
+            width={320}
+            height={320}
+            className="w-full max-w-sm h-auto"
+          />
+        </div>
       </section>
 
       {/* Manufacturing excellence section */}
-      <section className="relative overflow-hidden py-20 px-6 md:px-12 min-h-[500px] flex items-center bg-gradient-to-br from-navy to-navy-light">
+      <section className="relative overflow-hidden py-20 px-6 md:px-12 min-h-[500px] flex flex-col md:flex-row items-center bg-gradient-to-br from-navy to-navy-light">
         
-        <img src="/products/bowling-ball-no-bg.webp" alt="Manufacturing excellence" className="absolute left-0 top-1/2 translate-x-[20%] -translate-y-1/2 w-[700px] h-auto object-cover"/>
+        <img src="/products/bowling-ball-no-bg.webp" alt="Manufacturing excellence" className="hidden md:block absolute left-0 top-1/2 translate-x-[20%] -translate-y-1/2 w-[700px] h-auto object-cover"/>
 
-        <div className="relative z-10 ml-[50%] mr-12 max-w-lg text-left">
+        {/* Mobile-only centered image */}
+        <img src="/products/bowling-ball-no-bg.webp" alt="Manufacturing excellence" className="md:hidden w-64 h-auto mx-auto mb-8 flex-shrink-0"/>
+
+        <div className="relative z-10 w-full md:ml-[50%] md:mr-12 max-w-lg text-center md:text-left">
           <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-4xl mb-6">
             Manufacturing Excellence
           </h2>

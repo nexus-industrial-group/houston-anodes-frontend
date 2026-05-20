@@ -71,7 +71,37 @@ export default function CertificationsSection() {
         </div>
 
         {/* ── Comparison table (focal point) ── */}
-        <div className="mt-16 overflow-hidden rounded-2xl border border-silver-light shadow-sm">
+
+        {/* MOBILE: stacked cards — one per spec */}
+        <div className="mt-10 md:hidden space-y-4">
+          {COMPARISON_ROWS.map(({ spec, gas, houston }) => (
+            <div key={spec} className="overflow-hidden rounded-2xl border border-silver-light shadow-sm text-sm">
+              {/* Spec label */}
+              <div className="bg-navy px-4 py-3 font-semibold uppercase tracking-wide text-white text-xs">
+                {spec}
+              </div>
+              {/* Gas row */}
+              <div className="flex items-start gap-3 bg-white px-4 py-4 border-b border-silver-light">
+                <span className="shrink-0 mt-0.5 inline-flex items-center gap-1.5 font-semibold text-electric-orange whitespace-nowrap text-xs">
+                  <span className="h-2 w-2 rounded-full bg-electric-orange" />
+                  Gas Anode
+                </span>
+                <span className="text-text-secondary leading-snug">{gas}</span>
+              </div>
+              {/* Houston row */}
+              <div className="flex items-start gap-3 bg-light-blue/30 px-4 py-4">
+                <span className="shrink-0 mt-0.5 inline-flex items-center gap-1.5 font-semibold text-electric-blue whitespace-nowrap text-xs">
+                  <span className="h-2 w-2 rounded-full bg-accent" />
+                  Houston
+                </span>
+                <span className="font-medium text-navy leading-snug">{houston}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* DESKTOP: original 3-column grid table */}
+        <div className="mt-16 hidden md:block overflow-hidden rounded-2xl border border-silver-light shadow-sm">
           {/* Table header */}
           <div className="grid grid-cols-3 bg-navy text-sm font-semibold uppercase tracking-wider text-white">
             <div className="px-6 py-4 text-white/60">Specification</div>
