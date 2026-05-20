@@ -6,17 +6,6 @@ export default function HeroSection() {
       {/* Video Background */}
       <video src="/videos/hp.webm" autoPlay loop muted className="absolute inset-0 w-full h-full object-cover "></video>
 
-      {/* ISO Badge */}
-      <div className="absolute bottom-6 right-6 z-30">
-        <Image
-          src="/images/homepage/iso.webp"
-          alt="ISO Certification"
-          width={200}
-          height={200}
-          className="object-contain w-32 h-32 md:w-40 md:h-40"
-        />
-      </div>
-
       {/* Content */}
       <div className="z-20 flex flex-col items-center w-full px-6">
         <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white uppercase tracking-wide text-center drop-shadow-lg">

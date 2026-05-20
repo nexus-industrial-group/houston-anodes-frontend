@@ -107,6 +107,24 @@ export default function Header() {
           className="h-[69px] w-auto object-contain"
           priority
         />
+        <Image
+          src="/images/iso.png"
+          alt="ISO Certification"
+          width={250}
+          height={89}
+          sizes="(max-width: 788px) 193px, 250px"
+          className="h-[89px] w-auto object-contain ml-6"
+          priority
+        />
+        <Image
+          src="/images/ins.webp"
+          alt="INS Certification"
+          width={230}
+          height={69}
+          sizes="(max-width: 768px) 173px, 230px"
+          className="h-[69px] w-auto object-contain ml-6"
+          priority
+        />
       </Link>
 
       {/* Enlaces de escritorio */}

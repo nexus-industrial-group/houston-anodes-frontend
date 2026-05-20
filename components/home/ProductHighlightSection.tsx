@@ -13,7 +13,7 @@ const SPEC_CARDS = [
     title: "Right Weight",
     description: "Weight ranges from 5 lbs to custom configurations.",
     items: [
-      "Light-duty (50 – 99 lbs)",
+      "Light-duty (5 – 99 lbs)",
       "Medium-duty (100 – 400 lbs)",
       "Heavy-duty (401 – 1,650 lbs)",
       "Custom weights",
