@@ -12,6 +12,7 @@ const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json";
 
 const MARKERS = [
   { name: "North America", coords: [-98, 34] as [number, number] },
+  { name: "Mexico", coords: [-101, 22] as [number, number] },
   { name: "South America", coords: [-47, -15] as [number, number] },
   { name: "Europe", coords: [10, 50] as [number, number] },
   { name: "Middle East", coords: [45, 25] as [number, number] },
