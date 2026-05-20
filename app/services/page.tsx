@@ -1,9 +1,11 @@
 import React from "react";
+import Image from "next/image";
 import { Settings, Map, Search, Gauge } from "lucide-react";
 import Header from "../../components/Header";
+import GalleryGrid from "../../components/GalleryGrid";
 
 export const metadata = {
-  title: "Services",
+  title: "Gallery",
 };
 
 export default function ServicesPage() {
@@ -25,9 +27,8 @@ export default function ServicesPage() {
 
         <div className="relative z-10 max-w-4xl px-4 mx-auto text-center mt-12">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-lg">
-            SERVICES, QUALITY <br className="hidden md:block" />& FOOTPRINT
+            GALLERY
           </h1>
-          {/* Divider 80% width and subtitle */}
           <div className="mt-3 flex justify-center">
             <div
               className="h-0.5 bg-white w-4/5 rounded-full opacity-90"
@@ -35,10 +36,25 @@ export default function ServicesPage() {
             ></div>
           </div>
           <p className="mt-4 font-bold tracking-tight text-3xl text-white">
-            ENGINEERING & CONSULTING SERVICES
+            A LOOK AT OUR WORK
           </p>
         </div>
       </header>
+
+      {/* Gallery Section */}
+      <section className="py-16 px-4 md:px-10 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-electric-blue mb-2">
+              Our Work
+            </p>
+            <h2 className="text-3xl font-extrabold uppercase tracking-tight text-gray-900">
+              Gallery
+            </h2>
+          </div>
+          <GalleryGrid />
+        </div>
+      </section>
 
       {/* Competencias Principales */}
       <section className="py-20 px-6 md:px-12 bg-white text-center">

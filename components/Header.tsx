@@ -24,7 +24,7 @@ export default function Header() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
     { label: "Anodes", href: "/anodes" },
-    { label: "Services", href: "/services" },
+    { label: "Gallery", href: "/services" },
     { label: "Contact Us", href: "/contact-us" },
   ];
 
