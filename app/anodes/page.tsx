@@ -14,42 +14,36 @@ export default function AnodesPage() {
       <Header />
 
       {/* Hero Section */}
-      <header className="h-[100dvh] overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200 flex flex-col">
+      <header className="h-[100dvh] overflow-hidden relative flex flex-col">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" style={{ backgroundImage: 'url(/images/services/g15.webp)' }} />
+        <div className="absolute inset-0 bg-black/50 z-10" />
 
-        {/* Title strip — compact on mobile, spacious on desktop */}
+        <div className="relative z-20">
+          {/* Title strip — compact on mobile, spacious on desktop */}
         <div className="shrink-0 text-center pt-20 md:pt-28 px-4 pb-2 md:pb-4">
-          <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 md:text-5xl lg:text-6xl mb-2 md:mb-3">
+          <h1 className="text-2xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl mb-2 md:mb-3">
             PREMIUM SACRIFICIAL ANODES
           </h1>
           <div className="flex justify-center mb-2 md:mb-4">
             <div className="h-0.5 bg-gray-400 w-4/5 rounded-full" aria-hidden="true" />
           </div>
-          <p className="font-bold tracking-tight text-sm md:text-3xl text-gray-700 uppercase">
+          <p className="font-bold tracking-tight text-sm md:text-3xl text-electric-blue uppercase">
             Engineered for Superior Protection
           </p>
         </div>
 
         {/* Products — stacked 50/50 on mobile, side-by-side on desktop */}
-        <div className="flex-1 min-h-0 flex flex-col md:flex-row md:max-w-7xl md:mx-auto md:w-full md:px-6 md:gap-8 md:pb-8">
+        <div className="flex-1 h-full min-h-0 flex flex-col md:flex-row md:max-w-7xl md:mx-auto md:w-full md:px-6 md:gap-8 md:pb-8">
 
           {/* Aluminum */}
-          <div className="flex-1 min-h-0 flex flex-col border-b border-gray-300 md:border-0">
-            <div className="relative flex-1 min-h-0 w-full">
-              <Image
-                src="/images/about-us/zinc.png"
-                alt="Aluminum Anode"
-                fill
-                className="object-contain rotate-[-20deg]"
-              />
-            </div>
-            <div className="shrink-0 ml-[25%] w-2/3 h-3 bg-black/40 rounded-[50%] blur-md -mt-2 rotate-[-35deg]" />
+          <div className="flex-1 min-h-0 flex flex-col items-center justify-center border-b border-gray-300 md:border-0">
             <div className="shrink-0 text-center py-3 md:pt-4 md:pb-2">
-              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-4 uppercase tracking-wide">
+              <h3 className="text-xl md:text-5xl font-bold text-white mb-1 md:mb-4 uppercase tracking-wide">
                 Aluminum
               </h3>
               <a
                 href="#aluminum-details"
-                className="inline-flex items-center text-gray-700 font-semibold hover:text-gray-900 transition-colors group text-sm md:text-base"
+                className="inline-flex items-center text-white/80 font-semibold hover:text-electric-blue transition-colors group text-sm md:text-base"
               >
                 Learn More
                 <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
@@ -58,23 +52,15 @@ export default function AnodesPage() {
           </div>
 
           {/* Zinc */}
-          <div className="flex-1 min-h-0 flex flex-col">
-            <div className="relative flex-1 min-h-0 w-full">
-              <Image
-                src="/images/ha.webp"
-                alt="Zinc Anode"
-                fill
-                className="object-contain rotate-[-20deg]"
-              />
-            </div>
-            <div className="shrink-0 ml-[35%] w-2/3 h-3 bg-black/40 rounded-[50%] blur-md -mt-2 rotate-[-35deg]" />
+          <div className="flex-1 min-h-0 flex flex-col items-center justify-center">
+            
             <div className="shrink-0 text-center py-3 md:pt-4 md:pb-2">
-              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-4 uppercase tracking-wide">
+              <h3 className="text-xl md:text-5xl font-bold text-white mb-1 md:mb-4 uppercase tracking-wide">
                 Zinc
               </h3>
               <a
                 href="#zinc-details"
-                className="inline-flex items-center text-gray-700 font-semibold hover:text-gray-900 transition-colors group text-sm md:text-base"
+                className="inline-flex items-center text-white/80 font-semibold hover:text-electric-blue transition-colors group text-sm md:text-base"
               >
                 Learn More
                 <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
@@ -83,7 +69,8 @@ export default function AnodesPage() {
           </div>
 
         </div>
-      </header>
+      </div>
+    </header>
 
       {/* Our Anodes — Overview Section */}
       <section className="relative bg-navy py-24 px-6 md:px-16 overflow-hidden">
@@ -125,7 +112,7 @@ export default function AnodesPage() {
           <div className="flex-1 grid grid-cols-2 gap-4 w-full max-w-md">
             {[
               { value: "5", unit: "lbs", label: "MINIMUM\nANODE WEIGHT" },
-              { value: "1,650", unit: "lbs", label: "MAXIMUM\nANODE WEIGHT" },
+              { value: "2,100", unit: "lbs", label: "MAXIMUM\nANODE WEIGHT" },
               { value: "6", unit: "", label: "PRODUCT\nFAMILIES" },
               { value: "∞", unit: "", label: "CUSTOM SIZES\nON REQUEST" },
             ].map(({ value, unit, label }) => (
@@ -722,7 +709,7 @@ export default function AnodesPage() {
                       Weight Range
                     </p>
                     <p className="text-xs font-semibold text-gray-700">
-                      5 – 1,650 lbs
+                      5 – 2,100 lbs
                     </p>
                   </div>
                   <div>
@@ -913,7 +900,7 @@ export default function AnodesPage() {
                       Weight Range
                     </p>
                     <p className="text-xs font-semibold text-gray-700">
-                      0.5 – 1,650 lbs (std)
+                      0.5 – 2,100 lbs (std)
                     </p>
                   </div>
                   <div>
@@ -1274,7 +1261,7 @@ export default function AnodesPage() {
                         "45° Core — Type A & B",
                         "Straight Core — Type A & B",
                       ],
-                      range: "5 – 1,650 lbs",
+                      range: "5 – 2,100 lbs",
                       materials: "Al · Zn",
                       apps: "Offshore platforms, structural members, new construction & retrofit",
                     },
@@ -1298,7 +1285,7 @@ export default function AnodesPage() {
                         "Rod Core",
                         "Rod Stand-off Core",
                       ],
-                      range: "0.5 – 1,650 lbs (standard)",
+                      range: "0.5 – 2,100 lbs (standard)",
                       materials: "Al · Zn",
                       apps: "Piers, jetties, pilings, ballast, harbor structures",
                     },

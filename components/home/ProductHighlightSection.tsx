@@ -15,7 +15,7 @@ const SPEC_CARDS = [
     items: [
       "Light-duty (5 – 99 lbs)",
       "Medium-duty (100 – 400 lbs)",
-      "Heavy-duty (401 – 1,650 lbs)",
+      "Heavy-duty (401 – 2,100 lbs)",
       "Custom weights",
     ],
   },
