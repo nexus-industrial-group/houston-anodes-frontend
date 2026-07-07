@@ -123,7 +123,7 @@ export default function WhatWeDo() {
         <div className="mt-10 flex justify-center">
           <button
             type="button"
-            onClick={(e) => downloadFile(e, "Full Catalog", "07 - Catalog.pdf")}
+            onClick={(e) => downloadFile(e, "Full Catalog", "00 - Catalog.pdf")}
             className="inline-flex items-center rounded-md bg-[#1963DF] px-6 py-3 text-sm font-semibold text-white shadow hover:bg-primary-blue/90 cursor-pointer"
           >
             <span>Download Full Catalog</span>

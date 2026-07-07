@@ -59,7 +59,7 @@ export default function ProductHighlightSection() {
             Our Company 
           </p>
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-electric-blue sm:text-5xl">
-            Zero Claims in 50 Years of Protecting Critical Infrastructure
+            50 Years of Protecting Critical Infrastructure
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-text-secondary">
             We design, manufacture, and deliver high-quality aluminum and zinc sacrificial anodes using electromagnetic induction technology — producing anodes that last 40% longer than conventional alternatives
@@ -80,12 +80,12 @@ export default function ProductHighlightSection() {
                 {description}
               </p>
               <ul className="mt-8 space-y-3">
-                {items.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-base text-gray-800">
-                    <CheckIcon />
-                    {item}
-                  </li>
-                ))}
+                 {items.map((item) => (
+                   <li key={item} className="flex items-center gap-3 text-base text-gray-800">
+                     <CheckIcon />
+                     <span className={item === "Custom weights" ? "font-extrabold text-electric-blue" : ""}>{item}</span>
+                   </li>
+                 ))}
               </ul>
             </div>
           ))}

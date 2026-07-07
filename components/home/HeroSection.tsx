@@ -3,8 +3,14 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative flex h-screen w-full items-center justify-center overflow-hidden">
-      {/* Video Background */}
-      <video src="/videos/hp.webm" autoPlay loop muted className="absolute inset-0 w-full h-full object-cover "></video>
+      {/* Image Background */}
+      <Image
+        src="/images/homepage/HA-HOME.webp"
+        alt="Hero Background"
+        layout="fill"
+        objectFit="cover"
+        className="absolute inset-0"
+      />
 
       {/* Content */}
       <div className="z-20 flex flex-col items-center w-full px-6">

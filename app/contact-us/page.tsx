@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Header from "../../components/Header";
 import ContactForm from "./ContactForm";
-import { Linkedin, Facebook, Instagram, Globe } from "lucide-react";
+import { Linkedin, Facebook, Instagram } from "lucide-react";
 
 export default function ContactUsPage() {
   return (
@@ -76,32 +76,51 @@ export default function ContactUsPage() {
               </div>
               <div className="mt-4 flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/houston-anodes/"
                   aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-gray-700 hover:text-black transition-colors"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/HoustonAnodes"
                   aria-label="Facebook"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-gray-700 hover:text-black transition-colors"
                 >
                   <Facebook size={20} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/houston_anodes"
                   aria-label="Instagram"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-gray-700 hover:text-black transition-colors"
                 >
                   <Instagram size={20} />
                 </a>
                 <a
-                  href="#"
-                  aria-label="Website"
+                  href="https://x.com/HoustonAnodes"
+                  aria-label="X"
+                  target="_blank"
+                  rel="noreferrer"
                   className="text-gray-700 hover:text-black transition-colors"
                 >
-                  <Globe size={20} />
+                  <svg
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <title>X</title>
+                    <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+                  </svg>
                 </a>
               </div>
             </div>

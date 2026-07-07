@@ -126,7 +126,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <a
               href="#"
-              onClick={(e) => downloadFile(e, "Catalog", "07 - Catalog.pdf")}
+              onClick={(e) => downloadFile(e, "Catalog", "00 - Catalog.pdf")}
               className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-3 py-2 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
             >
               Download Catalog
