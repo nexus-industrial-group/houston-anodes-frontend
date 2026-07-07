@@ -9,7 +9,7 @@ export default function ContactUsPage() {
     <div className="min-h-screen font-sans text-gray-800 bg-white">
       <Header />
 
-      <header className="relative flex items-center justify-center h-100 overflow-hidden">
+      <header className="relative flex items-center justify-center min-h-screen overflow-hidden">
         <img
           src="images/contact-us/contact-us.webp"
           alt="Houston Anodes contact"

@@ -515,6 +515,90 @@ export default function AnodesPage() {
                 </div>
               </div>
             </div>
+
+            {/* ── TITANIUM ALLOY ANODES ── */}
+            <div className="lg:col-span-2 rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col">
+              {/* Header */}
+              <div className="bg-charcoal px-8 py-7">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/60 mb-2">
+                  Material Type 03
+                </p>
+                <h3 className="text-3xl font-extrabold text-white">
+                  Titanium Alloy Anodes
+                </h3>
+              </div>
+
+              {/* Description */}
+              <div className="px-8 py-6 border-b border-gray-100">
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Titanium-based sacrificial anodes engineered for aggressive,
+                  high-temperature, and low-conductivity service. The controlled
+                  titanium content stabilizes the alloy microstructure for
+                  consistent activation and long-term protection in demanding
+                  offshore and saline environments.
+                </p>
+              </div>
+
+              {/* Photo */}
+              <div className="relative w-full h-56 bg-gray-50 flex flex-col items-center justify-center">
+                <Image
+                  src="/products/platform-no-bg.webp"
+                  alt="Titanium Anode"
+                  fill
+                  className="object-contain p-6"
+                />
+                <p className="absolute bottom-3 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                  Titanium Anode Photo
+                </p>
+              </div>
+
+
+              {/* Simple Anode Chemistry Table */}
+              <div className="px-8 py-6 border-t border-gray-100 space-y-3">
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary-blue">
+                  Anode chemistry
+                </p>
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="text-left py-2 font-bold uppercase tracking-wider text-gray-500">
+                        Element
+                      </th>
+                      <th className="text-right py-2 font-bold uppercase tracking-wider text-gray-500">
+                        Deep 7
+                      </th>
+                      <th className="text-right py-2 font-bold uppercase tracking-wider text-gray-500">
+                        Deep 10
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {[
+                      ["Iron (Fe)", "0.07 max", "0.10 max"],
+                      ["Silicon (Si)", "0.10 max", "0.10 max"],
+                      ["Copper (Cu)", "0.003 max", "0.006 max"],
+                      ["Zinc (Zn)", "4.75 - 5.25", "3.00 - 6.00"],
+                      ["Indium (In)", "0.015 - 0.025", "0.010 - 0.020"],
+                      ["Titanium (Ti)", "0.025 max", "0.025 max"],
+                      ["Cadmium (Cd)", "Part of others", "Part of others"],
+                      ["Others (each)", "0.02 max", "0.02 max"],
+                      ["Aluminum (Al)", "Remainder", "Remainder"],
+                    ].map(([el, t1, t2]) => (
+                      <tr key={el}>
+                        <td className="py-2 text-gray-600">{el}</td>
+                        <td className="py-2 text-right text-gray-700 font-medium tabular-nums">
+                          {t1}
+                        </td>
+                        <td className="py-2 text-right text-gray-700 font-medium tabular-nums">
+                          {t2}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
@@ -1051,6 +1135,9 @@ export default function AnodesPage() {
                   fill
                   className="object-contain p-5"
                 />
+                <p className="absolute bottom-3 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                  Hull Anode Photo
+                </p>
               </div>
               <div className="px-5 py-4 flex flex-col gap-4 flex-1">
                 <div>
