@@ -62,7 +62,7 @@ export default function SuccessStoriesSection() {
             <div className="mt-10 inline-flex items-center gap-4 rounded-xl border border-gray-200 bg-gray-50 px-6 py-4">
               <span className="text-3xl font-extrabold text-primary-blue">1,000+</span>
               <span className="text-sm leading-snug text-gray-700">
-                Projects completed worldwide<br />over a span of 5 years
+                Projects completed worldwide<br />over a span of 50 years
               </span>
             </div>
 
