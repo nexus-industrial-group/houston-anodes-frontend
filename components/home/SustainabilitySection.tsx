@@ -11,7 +11,7 @@ const CHANGES = [
   },
   {
     title: "Reduced Downtime Risk",
-    body: "No mid-life corrosion surprises. Your asset protects when it matters.",
+    body: "No mid-life corrosion surprises. Your asset is protected when it matters.",
   },
   {
     title: "Regulatory Confidence",
