@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Layers, Shield, Zap, Droplet, Ship, Factory } from "lucide-react";
 import Header from "../../components/Header";
 import CatalogCTA from "../../components/CatalogCTA";
+import ZincCarousel from "../../components/anodes/ZincCarousel";
 
 export const metadata = {
   title: "Anodes",
@@ -171,7 +172,7 @@ export default function AnodesPage() {
               {/* Photo */}
               <div className="relative w-full h-56 bg-gray-50 flex flex-col items-center justify-center">
                 <Image
-                  src="/products/heater-treater-no-bg.webp"
+                  src="/images/anodes/aluminum_main.webp"
                   alt="Aluminum Anode"
                   fill
                   className="object-contain p-6"
@@ -411,17 +412,7 @@ export default function AnodesPage() {
               </div>
 
               {/* Photo */}
-              <div className="relative w-full h-56 bg-gray-50 flex flex-col items-center justify-center">
-                <Image
-                  src="/products/platform-no-bg.webp"
-                  alt="Zinc Anode"
-                  fill
-                  className="object-contain p-6"
-                />
-                <p className="absolute bottom-3 text-[10px] font-bold uppercase tracking-widest text-gray-400">
-                  Zinc Anode Photo
-                </p>
-              </div>
+              <ZincCarousel />
 
               {/* Chemical Composition Table */}
               <div className="px-8 py-6 border-t border-gray-100 space-y-3">
