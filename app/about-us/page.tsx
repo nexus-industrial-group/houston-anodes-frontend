@@ -333,14 +333,8 @@ export default function AboutUsPage() {
       </section>
 
       {/* Manufacturing excellence section */}
-      <section className="relative overflow-hidden py-20 px-6 md:px-12 min-h-[500px] flex flex-col md:flex-row items-center bg-gradient-to-br from-navy to-navy-light">
-        
-        <img src="/products/bowling-ball-no-bg.webp" alt="Manufacturing excellence" className="hidden md:block absolute left-0 top-1/2 translate-x-[20%] -translate-y-1/2 w-[700px] h-auto object-cover"/>
-
-        {/* Mobile-only centered image */}
-        <img src="/products/bowling-ball-no-bg.webp" alt="Manufacturing excellence" className="md:hidden w-64 h-auto mx-auto mb-8 flex-shrink-0"/>
-
-        <div className="relative z-10 w-full md:ml-[50%] md:mr-12 max-w-lg text-center md:text-left">
+      <section className="relative overflow-hidden py-20 px-6 md:px-12 flex items-center justify-center bg-gradient-to-br from-navy to-navy-light">
+        <div className="relative z-10 w-full max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-4xl mb-6">
             Manufacturing Excellence
           </h2>
