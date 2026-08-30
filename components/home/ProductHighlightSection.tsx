@@ -1,7 +1,7 @@
 const SPEC_CARDS = [
   {
     title: "Right Specs",
-    description: "Electromagnetic induction melting (not gas furnaces)",
+    description: "Electromagnetic induction melting\n(not gas furnaces)",
     items: [
       "Proprietary aluminum alloys",
       "High-purity zinc",
@@ -55,13 +55,13 @@ export default function ProductHighlightSection() {
 
         {/* Section header */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-widest text-[#006ce9]">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#006ce9]">
             Our Company 
           </p>
-          <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-electric-blue sm:text-5xl">
+          <h2 className="mt-3 text-3xl font-extrabold uppercase tracking-tight text-electric-blue sm:text-4xl">
             50 Years of Protecting Critical Infrastructure
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-text-secondary">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray">
             We design, manufacture, and deliver high-quality aluminum and zinc sacrificial anodes using electromagnetic induction technology — producing anodes that last 40% longer than conventional alternatives
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function ProductHighlightSection() {
               <h3 className="text-base font-extrabold uppercase tracking-widest text-electric-blue">
                 {title}
               </h3>
-              <p className="mt-4 text-base leading-relaxed text-text-secondary">
+              <p className="mt-4 whitespace-pre-line text-base leading-relaxed text-text-secondary">
                 {description}
               </p>
               <ul className="mt-8 space-y-3">
