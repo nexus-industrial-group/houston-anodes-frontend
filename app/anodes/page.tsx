@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Layers, Shield, Zap, Droplet, Ship, Factory } from "lucide-react";
+import { Layers, Shield, Zap, Droplet, Ship, Factory, Star } from "lucide-react";
 import Header from "../../components/Header";
 import CatalogCTA from "../../components/CatalogCTA";
 import ZincCarousel from "../../components/anodes/ZincCarousel";
@@ -28,7 +28,7 @@ export default function AnodesPage() {
           <div className="flex justify-center mb-2 md:mb-4">
             <div className="h-0.5 bg-gray-400 w-4/5 rounded-full" aria-hidden="true" />
           </div>
-          <p className="font-bold tracking-tight text-sm md:text-3xl text-electric-blue uppercase">
+          <p className="font-bold tracking-tight text-sm md:text-3xl text-gray-300 uppercase">
             Engineered for Superior Protection
           </p>
         </div>
@@ -82,30 +82,43 @@ export default function AnodesPage() {
           {/* Left — copy */}
           <div className="flex-1 space-y-6">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary-blue">
-              Our Anodes
+              Our Premium Sacrificial Anodes
             </p>
             <h2 className="text-5xl md:text-6xl font-extrabold leading-tight">
-              <span className="text-white">Aluminum &amp; Zinc.</span>
+              <span className="text-white">Aluminum &amp; Zinc</span>
               <br />
-              <span className="text-primary-blue">Any Shape.</span>
+              <span className="text-primary-blue">Any Shape</span>
               <br />
-              <span className="text-primary-blue">Any Specification.</span>
+              <span className="text-primary-blue">Any Specification</span>
             </h2>
             <p className="text-text-on-dark text-base leading-relaxed max-w-md">
               Houston Anodes manufactures sacrificial anodes in aluminum and
               zinc alloys across six product families — from offshore platforms
-              to vessel interiors. Every anode is custom-engineered, tested, and
+              to vessel interiors. <br/>Every anode is custom-engineered, tested, and
               shipped with full traceability documentation.
             </p>
-            <div className="flex gap-3 pt-2">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white">
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a
+                href="#aluminum-details"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white"
+              >
                 <span className="w-2 h-2 rounded-full bg-primary-blue" />
                 Aluminum Alloy
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white">
+              </a>
+              <a
+                href="#zinc-details"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white"
+              >
                 <span className="w-2 h-2 rounded-full bg-electric-orange" />
                 Zinc Alloy
-              </span>
+              </a>
+              <a
+                href="#titanium-details"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white"
+              >
+                <span className="w-2 h-2 rounded-full bg-gray-300" />
+                Titanium
+              </a>
             </div>
           </div>
 
@@ -141,14 +154,14 @@ export default function AnodesPage() {
       </section>
 
       {/* Anode Materials & Applications — 2-column detail cards */}
-      <section
-        id="aluminum-details"
-        className="py-20 px-6 md:px-12 bg-gray-100"
-      >
+      <section className="py-20 px-6 md:px-12 bg-gray-100">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
             {/* ── ALUMINUM ALLOY ANODES ── */}
-            <div className="rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col">
+            <div
+              id="aluminum-details"
+              className="scroll-mt-20 md:scroll-mt-28 rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col"
+            >
               {/* Header */}
               <div className="bg-navy px-8 py-7">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent/70 mb-2">
@@ -389,7 +402,7 @@ export default function AnodesPage() {
             {/* ── ZINC ALLOY ANODES ── */}
             <div
               id="zinc-details"
-              className="rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col"
+              className="scroll-mt-20 md:scroll-mt-28 rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col"
             >
               {/* Header */}
               <div className="bg-primary-blue px-8 py-7">
@@ -508,14 +521,17 @@ export default function AnodesPage() {
             </div>
 
             {/* ── TITANIUM ALLOY ANODES ── */}
-            <div className="lg:col-span-2 rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col">
+            <div
+              id="titanium-details"
+              className="scroll-mt-20 md:scroll-mt-28 lg:col-span-2 rounded-2xl overflow-hidden shadow-lg bg-white flex flex-col"
+            >
               {/* Header */}
               <div className="bg-charcoal px-8 py-7">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/60 mb-2">
                   Material Type 03
                 </p>
                 <h3 className="text-3xl font-extrabold text-white">
-                  Titanium Alloy Anodes
+                  Aluminum Alloy Anodes with Titanium
                 </h3>
               </div>
 
@@ -702,19 +718,21 @@ export default function AnodesPage() {
       <section className="bg-gray-50 py-20 px-6 md:px-12">
         <div className="max-w-6xl mx-auto space-y-14">
           {/* Header */}
-          <div className="flex flex-col lg:flex-row items-start gap-10">
-            <div className="flex-1 space-y-4">
-              <span className="inline-flex items-center gap-2 rounded-full bg-primary-blue/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary-blue">
-                • Product Families
-              </span>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-                Six Product Families.
-                <br />
-                One Manufacturer.
+          <div className="space-y-4">
+            <span className="inline-flex items-center gap-2 rounded-full bg-primary-blue/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary-blue">
+              • Product Families
+            </span>
+            <div className="flex flex-col lg:flex-row gap-10">
+              <h2 className="flex-1 text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                <a
+                  href="#product-families"
+                  className="block hover:text-primary-blue transition-colors"
+                >
+                  Six Product Families
+                </a>
+                <span className="mt-2 block">One Manufacturer</span>
               </h2>
-            </div>
-            <div className="flex-1 flex items-center">
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <p className="flex-1 text-sm text-gray-500 leading-relaxed">
                 All standard configurations are shown in our catalog. Houston
                 Anodes also manufactures to exact customer specifications — any
                 weight, any cross-section, any core configuration. Contact our
@@ -724,7 +742,10 @@ export default function AnodesPage() {
           </div>
 
           {/* Grid — Row 1 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div
+            id="product-families"
+            className="scroll-mt-20 md:scroll-mt-28 grid grid-cols-1 md:grid-cols-3 gap-5"
+          >
             {/* Family 01 — Platform & Structural */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col">
               <div className="flex items-center justify-between px-5 pt-5">
@@ -1126,9 +1147,6 @@ export default function AnodesPage() {
                   fill
                   className="object-contain p-5"
                 />
-                <p className="absolute bottom-3 text-[10px] font-bold uppercase tracking-widest text-gray-400">
-                  Hull Anode Photo
-                </p>
               </div>
               <div className="px-5 py-4 flex flex-col gap-4 flex-1">
                 <div>
@@ -1138,7 +1156,7 @@ export default function AnodesPage() {
                   <p className="text-xs text-gray-500 leading-relaxed mt-1">
                     Manufactured in zinc alloy to MIL-A-18001-K specification.
                     Operates at 95% nominal efficiency in seawater. Resists
-                    formation of hard, dense corrosion byproducts.
+                    formation of hard, dense corrosion by products.
                   </p>
                 </div>
 
@@ -1446,7 +1464,7 @@ export default function AnodesPage() {
             Our Standards
           </p>
           <h2 className="text-2xl font-bold tracking-widest text-gray-400 uppercase mb-16">
-            The Houston Advantage
+            The Houston Advantage Anodes
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 text-3xl md:text-4xl lg:text-5xl font-black uppercase">
@@ -1495,9 +1513,9 @@ export default function AnodesPage() {
                 Custom Engineering
               </p>
               <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-                If You Can Draw It,
+                If You Can Draw It
                 <br />
-                We Can Cast It.
+                We Can Cast It
               </h2>
               <p className="text-sm text-text-on-dark/70 leading-relaxed max-w-sm">
                 Houston Anodes can manufacture anodes of almost any shape and
@@ -1506,10 +1524,18 @@ export default function AnodesPage() {
                 — we offer competitive prices on custom geometries that no
                 standard catalog supplier can match.
               </p>
+              <p className="flex items-start gap-2 max-w-sm text-sm font-semibold text-yellow-400 leading-relaxed">
+                <Star className="mt-0.5 h-5 w-5 flex-shrink-0 fill-yellow-400 text-yellow-400" />
+                We are the only ones in the market producing the largest
+                bracelet anode in the market
+              </p>
             </div>
 
             {/* Steps */}
             <div className="space-y-3">
+              <h3 className="text-lg font-bold text-white">
+                Follow the next steps: Step By Step
+              </h3>
               {[
                 {
                   icon: (
@@ -1566,7 +1592,7 @@ export default function AnodesPage() {
                     </svg>
                   ),
                   title: "Fast Lead Times",
-                  body: "2–4 week standard lead times. 650-ton monthly production capacity. In-house mold manufacturing eliminates supplier delays.",
+                  body: "2–4 week standard lead times with 650-ton production capacity. Our in-house mold manufacturing eliminates supplier delays.",
                 },
               ].map(({ icon, title, body }) => (
                 <div

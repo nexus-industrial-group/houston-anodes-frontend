@@ -22,12 +22,16 @@ export default function AboutUsPage() {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="relative z-10 max-w-4xl px-6 mx-auto text-center mt-12">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-lg leading-tight">
-            A Legacy of Purity.
-            <br />A Future of Protection.
+        <div className="relative z-10 mx-auto mt-12 max-w-5xl px-6 text-center">
+          <h1 className="text-2xl font-extrabold uppercase leading-tight tracking-tight text-white drop-shadow-lg sm:text-3xl md:text-4xl lg:text-5xl">
+            <span className="block text-balance">
+              A Legacy of Manufacturing High Quality Sacrificial Anodes
+            </span>
+            <span className="mt-3 block text-balance">
+              Protecting Offshore &amp; Onshore Assets Worldwide for Over 50 Years
+            </span>
           </h1>
-          <p className="mt-6 text-lg text-white/90 drop-shadow-md max-w-2xl mx-auto">
+          <p className="mx-auto mt-8 max-w-2xl text-pretty text-base leading-relaxed text-white/85 drop-shadow-md md:text-lg">
             Founded in 1977, Houston Anodes has been at the forefront of
             cathodic protection technology for nearly five decades.
           </p>
@@ -84,7 +88,7 @@ export default function AboutUsPage() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Ensures compliance with required specifications
+                    Ensure compliance with required specifications
                   </li>
                   <li className="flex items-center gap-3 text-base text-gray-800">
                     <svg
@@ -142,7 +146,7 @@ export default function AboutUsPage() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Confirms material composition accuracy
+                    Confirm material composition accuracy
                   </li>
                   <li className="flex items-center gap-3 text-base text-gray-800">
                     <svg
@@ -157,7 +161,7 @@ export default function AboutUsPage() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Maintains consistency across batches
+                    Maintain consistency across batches
                   </li>
                 </ul>
               </div>
@@ -200,7 +204,7 @@ export default function AboutUsPage() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Evaluates corrosion resistance
+                    Evaluate corrosion resistance
                   </li>
                   <li className="flex items-center gap-3 text-base text-gray-800">
                     <svg
@@ -215,7 +219,7 @@ export default function AboutUsPage() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Ensures performance in demanding environments
+                    Ensure performance in demanding environments
                   </li>
                 </ul>
               </div>
@@ -329,14 +333,8 @@ export default function AboutUsPage() {
       </section>
 
       {/* Manufacturing excellence section */}
-      <section className="relative overflow-hidden py-20 px-6 md:px-12 min-h-[500px] flex flex-col md:flex-row items-center bg-gradient-to-br from-navy to-navy-light">
-        
-        <img src="/products/bowling-ball-no-bg.webp" alt="Manufacturing excellence" className="hidden md:block absolute left-0 top-1/2 translate-x-[20%] -translate-y-1/2 w-[700px] h-auto object-cover"/>
-
-        {/* Mobile-only centered image */}
-        <img src="/products/bowling-ball-no-bg.webp" alt="Manufacturing excellence" className="md:hidden w-64 h-auto mx-auto mb-8 flex-shrink-0"/>
-
-        <div className="relative z-10 w-full md:ml-[50%] md:mr-12 max-w-lg text-center md:text-left">
+      <section className="relative overflow-hidden py-20 px-6 md:px-12 flex items-center justify-center bg-gradient-to-br from-navy to-navy-light">
+        <div className="relative z-10 w-full max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-white md:text-4xl mb-6">
             Manufacturing Excellence
           </h2>

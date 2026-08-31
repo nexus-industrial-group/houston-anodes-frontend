@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import DownloadForm from "../DownloadForm";
 import { downloadFile } from "../../utils/downloadFile";
 
 const CARDS = [
@@ -57,41 +56,17 @@ function Tag({ children }: { children: React.ReactNode }) {
 }
 
 export default function WhatWeDo() {
-  const [showDownloadForm, setShowDownloadForm] = useState(false);
-  const [downloadTitle, setDownloadTitle] = useState<string | undefined>(undefined);
-  const [downloadFileName, setDownloadFileName] = useState<string | undefined>(undefined);
-
-  const openForm = (e?: any, docTitle?: string, fileName?: string) => {
-    e?.preventDefault();
-    setDownloadTitle(docTitle);
-    setDownloadFileName(fileName);
-    setShowDownloadForm(true);
-  };
-
-  const closeForm = () => {
-    setShowDownloadForm(false);
-    setDownloadTitle(undefined);
-    setDownloadFileName(undefined);
-  };
-
   return (
     <section className="py-16 lg:py-20">
-      {showDownloadForm && (
-        <DownloadForm
-          onClose={closeForm}
-          title={downloadTitle ? `${downloadTitle} Download Form` : undefined}
-          fileName={downloadFileName}
-        />
-      )}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#006ce9]">
-            Product Portfolio
+            What We Do
           </p>
-          <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-electric-blue sm:text-5xl">
+          <h2 className="mt-3 text-3xl font-extrabold uppercase tracking-tight text-electric-blue sm:text-4xl">
             Product Portfolio
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-text-secondary">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray">
             Aluminum alloy anodes from 5 lbs to custom configurations. We also
             manufacture our own molds for complete production control.
           </p>

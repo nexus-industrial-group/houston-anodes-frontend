@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import DownloadForm from "./DownloadForm";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { downloadFile } from "@/utils/downloadFile";
@@ -15,10 +14,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isAnodes = pathname?.startsWith("/anodes");
-
-  const [showDownloadForm, setShowDownloadForm] = useState(false);
-  const [downloadTitle, setDownloadTitle] = useState<string | undefined>(undefined);
-  const [downloadFileName, setDownloadFileName] = useState<string | undefined>(undefined);
 
   const links = [
     { label: "Home", href: "/" },
@@ -53,19 +48,6 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileMenuOpen]);
 
-  const openForm = (e?: any, docTitle?: string, fileName?: string) => {
-    e?.preventDefault();
-    setDownloadTitle(docTitle);
-    setDownloadFileName(fileName);
-    setShowDownloadForm(true);
-  };
-
-  const closeForm = () => {
-    setShowDownloadForm(false);
-    setDownloadTitle(undefined);
-    setDownloadFileName(undefined);
-  };
-
   return (
     <>
       <nav
@@ -74,10 +56,6 @@ export default function Header() {
           isAnodes ? 'bg-navy' : scrolled ? 'bg-navy/90 shadow-xl' : 'bg-white/10'
         } backdrop-blur-lg transition-colors duration-300 text-white`}
       >
-        {showDownloadForm && (
-          <DownloadForm onClose={closeForm} title={downloadTitle ? `${downloadTitle} Download Form` : undefined} fileName={downloadFileName} />
-        )}
-
         {/* Logo — main logo always visible; ISO/INS only on desktop */}
         <Link href="/" className="flex items-center min-w-0">
           <Image
@@ -85,8 +63,8 @@ export default function Header() {
             alt="Houston Anodes"
             width={230}
             height={69}
-            sizes="(max-width: 768px) 130px, 230px"
-            className="h-[50px] md:h-[69px] w-auto object-contain flex-shrink-0"
+            sizes="(max-width: 768px) 100px, (max-width: 1280px) 150px, 230px"
+            className="h-[28px] md:h-[44px] xl:h-[89px] w-auto object-contain flex-shrink-0"
             priority
           />
           <Image
@@ -94,8 +72,8 @@ export default function Header() {
             alt="ISO Certification"
             width={250}
             height={89}
-            sizes="250px"
-            className="hidden md:block h-[89px] w-auto object-contain ml-6"
+            sizes="(max-width: 768px) 100px, (max-width: 1280px) 150px, 250px"
+            className="h-[28px] md:h-[44px] xl:h-[89px] w-auto object-contain flex-shrink-0 ml-2 md:ml-4 xl:ml-6"
             priority
           />
           <Image
@@ -103,14 +81,14 @@ export default function Header() {
             alt="INS Certification"
             width={230}
             height={69}
-            sizes="230px"
-            className="hidden md:block h-[69px] w-auto object-contain ml-6"
+            sizes="(max-width: 768px) 100px, (max-width: 1280px) 150px, 230px"
+            className="h-[28px] md:h-[44px] xl:h-[69px] w-auto object-contain flex-shrink-0 ml-2 md:ml-4 xl:ml-6"
             priority
           />
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden space-x-8 text-lg font-bold text-[#e7e7e7] md:flex items-center">
+        <div className="hidden space-x-8 text-lg font-bold text-[#e7e7e7] xl:flex items-center">
           {links.map((l) => {
             const isActive = pathname === l.href || (l.href !== "/" && pathname?.startsWith(l.href));
             return (
@@ -145,7 +123,7 @@ export default function Header() {
         <button
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
-          className="text-white md:hidden p-1"
+          className="text-white xl:hidden p-1"
           onClick={() => setMobileMenuOpen((prev) => !prev)}
         >
           {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -171,7 +149,7 @@ export default function Header() {
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 md:hidden"
+          className="fixed inset-0 z-40 bg-black/50 xl:hidden"
           onClick={() => setMobileMenuOpen(false)}
           aria-hidden="true"
         />
@@ -179,7 +157,7 @@ export default function Header() {
 
       {/* Mobile menu drawer */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-navy flex flex-col pt-20 pb-8 px-6 shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-navy flex flex-col pt-20 pb-8 px-6 shadow-2xl transition-transform duration-300 ease-in-out xl:hidden ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-hidden={!mobileMenuOpen}
@@ -207,7 +185,7 @@ export default function Header() {
         {/* Download Catalog */}
         <a
           href="#"
-          onClick={(e) => { downloadFile(e, "Catalog", "07 - Catalog.pdf"); setMobileMenuOpen(false); }}
+          onClick={(e) => { downloadFile(e, "Catalog", "00 - Catalog.pdf"); setMobileMenuOpen(false); }}
           className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-primary-blue px-4 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
         >
           Download Catalog

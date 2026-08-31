@@ -253,8 +253,11 @@ export default function ServicesPage() {
         </div>
         <div className="max-w-3xl mx-auto text-center mt-16">
           <p className="text-sm font-bold tracking-widest text-gray-400 uppercase">
-            The result: zero product failures in 40 years. Not luck.
-            Consistency.
+            The result:
+          </p>
+          <p className="mt-3 text-sm font-bold tracking-widest text-gray-400 uppercase">
+            Zero product failures in 50 years.
+            <br/>Not luck. Consistency.
           </p>
         </div>
       </section>
