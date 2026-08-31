@@ -211,7 +211,7 @@ export default function AnodesPage() {
                   ))}
                 </div>
                 <p className="text-xs text-gray-500 leading-relaxed pt-1">
-                  Primary aluminum at 99.9% purity. Traces of indium (99.9%
+                  Primary aluminum at 99.9% purity. Traces of indium (99.99%
                   pure), zinc, and silicon. Never melted from scrap or recycled
                   anodic material.
                 </p>
@@ -1156,7 +1156,7 @@ export default function AnodesPage() {
                   <p className="text-xs text-gray-500 leading-relaxed mt-1">
                     Manufactured in zinc alloy to MIL-A-18001-K specification.
                     Operates at 95% nominal efficiency in seawater. Resists
-                    formation of hard, dense corrosion by products.
+                    formation of hard, dense corrosion byproducts.
                   </p>
                 </div>
 
@@ -1464,7 +1464,7 @@ export default function AnodesPage() {
             Our Standards
           </p>
           <h2 className="text-2xl font-bold tracking-widest text-gray-400 uppercase mb-16">
-            The Houston Advantage Anodes
+            The Houston Anodes Advantage
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 text-3xl md:text-4xl lg:text-5xl font-black uppercase">
@@ -1534,7 +1534,7 @@ export default function AnodesPage() {
             {/* Steps */}
             <div className="space-y-3">
               <h3 className="text-lg font-bold text-white">
-                Follow the next steps: Step By Step
+                Follow the next steps
               </h3>
               {[
                 {
@@ -1553,7 +1553,7 @@ export default function AnodesPage() {
                       />
                     </svg>
                   ),
-                  title: "Submit a Drawing or Spec Sheet",
+                  title: "1. Submit a Drawing or Spec Sheet",
                   body: "Provide detailed drawing, anode dimensions, desired weight, and chemical composition specification.",
                 },
                 {
@@ -1572,7 +1572,7 @@ export default function AnodesPage() {
                       />
                     </svg>
                   ),
-                  title: "Specify Metal & Composition",
+                  title: "2. Specify Metal & Composition",
                   body: "Aluminum or zinc alloy. Any chemical composition. Our lab verifies conformance before production begins.",
                 },
                 {
@@ -1591,7 +1591,7 @@ export default function AnodesPage() {
                       />
                     </svg>
                   ),
-                  title: "Fast Lead Times",
+                  title: "3. Fast Lead Times",
                   body: "2–4 week standard lead times with 650-ton production capacity. Our in-house mold manufacturing eliminates supplier delays.",
                 },
               ].map(({ icon, title, body }) => (
