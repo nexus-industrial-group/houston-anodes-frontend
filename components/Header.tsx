@@ -104,7 +104,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <a
               href="#"
-              onClick={(e) => downloadFile(e, "Catalog", "00 - Catalog.pdf")}
+              onClick={(e) => downloadFile(e, "Catalog", "00 HA Catalog.pdf")}
               className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-3 py-2 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
             >
               Download Catalog
@@ -185,7 +185,7 @@ export default function Header() {
         {/* Download Catalog */}
         <a
           href="#"
-          onClick={(e) => { downloadFile(e, "Catalog", "00 - Catalog.pdf"); setMobileMenuOpen(false); }}
+          onClick={(e) => { downloadFile(e, "Catalog", "00 HA Catalog.pdf"); setMobileMenuOpen(false); }}
           className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-primary-blue px-4 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
         >
           Download Catalog

@@ -231,14 +231,14 @@ export default function AboutUsPage() {
       {/* Our Technology - Barrier Technology Section */}
       <section className="relative overflow-hidden bg-white">
         {/* Anode close-up — massive background piece, bleeds behind everything */}
-        <div className="pointer-events-none hidden md:flex absolute left-1/2 top-1/2 -translate-x-180 -translate-y-1/2 items-center justify-center w-[700px]">
+        <div className="pointer-events-none hidden md:flex absolute left-1/2 top-1/2 -translate-x-175 -translate-y-1/2 items-center justify-center w-[700px]">
           <Image
-            src="/images/about-us/platforms.png"
+            src="/images/services/g1.webp"
             alt="Houston Anode"
             width={0}
             height={0}
             sizes="1100px"
-            className="h-auto w-full"
+            className="h-auto w-full rounded-xl"
           />
         </div>
 
@@ -327,7 +327,7 @@ export default function AboutUsPage() {
             alt="Houston Anode"
             width={320}
             height={320}
-            className="w-full max-w-sm h-auto"
+            className="w-full max-w-sm h-auto rounded-xl"
           />
         </div>
       </section>
