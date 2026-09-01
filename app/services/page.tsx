@@ -223,7 +223,7 @@ export default function ServicesPage() {
             Our Standards
           </p>
           <h2 className="text-2xl font-bold tracking-widest text-gray-400 uppercase mb-16">
-            The Houston Commitment
+            The Houston Anodes Commitment
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 text-3xl md:text-4xl lg:text-5xl font-black uppercase">
