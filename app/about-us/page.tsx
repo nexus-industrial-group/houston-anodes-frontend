@@ -17,7 +17,13 @@ export default function AboutUsPage() {
       <header className="relative flex items-center justify-center h-screen overflow-hidden bg-gray-100">
         {/* Main Image */}
         <div className="absolute inset-0">
-          <video src="/videos/au.webm" autoPlay loop muted className="absolute inset-0 w-full h-full object-cover"></video>
+          <video
+            src="/videos/au.webm"
+            autoPlay
+            loop
+            muted
+            className="absolute inset-0 w-full h-full object-cover"
+          ></video>
         </div>
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -28,7 +34,8 @@ export default function AboutUsPage() {
               A Legacy of Manufacturing High Quality Sacrificial Anodes
             </span>
             <span className="mt-3 block text-balance">
-              Protecting Offshore &amp; Onshore Assets Worldwide for Over 50 Years
+              Protecting Offshore &amp; Onshore Assets Worldwide for Over 50
+              Years
             </span>
           </h1>
           <p className="mx-auto mt-8 max-w-2xl text-pretty text-base leading-relaxed text-white/85 drop-shadow-md md:text-lg">
@@ -230,93 +237,94 @@ export default function AboutUsPage() {
 
       {/* Our Technology - Barrier Technology Section */}
       <section className="relative overflow-hidden bg-white">
-        {/* Anode close-up — massive background piece, bleeds behind everything */}
-        <div className="pointer-events-none hidden md:flex absolute left-1/2 top-1/2 -translate-x-175 -translate-y-1/2 items-center justify-center w-[700px]">
-          <Image
-            src="/images/services/g1.webp"
-            alt="Houston Anode"
-            width={0}
-            height={0}
-            sizes="1100px"
-            className="h-auto w-full rounded-xl"
-          />
-        </div>
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 py-20 lg:py-28">
+          <div className="grid items-stretch gap-12 md:grid-cols-2 lg:gap-16">
+            {/* Anode close-up */}
+            <div className="pointer-events-none relative hidden min-h-[420px] w-full overflow-hidden rounded-xl md:block">
+              <Image
+                src="/images/services/g1.webp"
+                alt="Houston Anode"
+                fill
+                sizes="(min-width: 1024px) 50vw, 45vw"
+                className="object-cover"
+              />
+            </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-8">
-          <div className="ml-auto max-w-lg py-20 lg:py-28">
-            <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue mb-4">
-              Our Technology
-            </p>
-            <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-navy md:text-4xl lg:text-5xl mb-6">
-              Barrier Technology
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              Houston Anodes manufactures sacrificial anodes that protect
-              critical energy infrastructure from corrosion. We make aluminum,
-              zinc, and magnesium anodes for offshore platforms, subsea
-              pipelines, wind turbines, and marine vessels.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              We manufacture with electromagnetic induction furnaces—not gas
-              combustion. This is not a feature. It&apos;s a structural
-              advantage.
-            </p>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
-                  <svg
-                    className="h-4 w-4 text-electric-blue"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </span>
-                <span className="text-gray-700">
-                  Superior electrochemical performance
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
-                  <svg
-                    className="h-4 w-4 text-electric-blue"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </span>
-                <span className="text-gray-700">
-                  Extended operational lifespan
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
-                  <svg
-                    className="h-4 w-4 text-electric-blue"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </span>
-                <span className="text-gray-700">
-                  Cost-effective protection solutions
-                </span>
-              </li>
-            </ul>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-electric-blue mb-4">
+                Our Technology
+              </p>
+              <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight text-navy md:text-4xl lg:text-5xl mb-6">
+                Barrier Technology
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Houston Anodes manufactures sacrificial anodes that protect
+                critical energy infrastructure from corrosion. We make aluminum,
+                zinc, and magnesium anodes for offshore platforms, subsea
+                pipelines, wind turbines, and marine vessels.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                We manufacture with electromagnetic induction furnaces—not gas
+                combustion. This is not a feature. It&apos;s a structural
+                advantage.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
+                    <svg
+                      className="h-4 w-4 text-electric-blue"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">
+                    Superior electrochemical performance
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
+                    <svg
+                      className="h-4 w-4 text-electric-blue"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">
+                    Extended operational lifespan
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-electric-blue/10">
+                    <svg
+                      className="h-4 w-4 text-electric-blue"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">
+                    Cost-effective protection solutions
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
