@@ -6,6 +6,8 @@ import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { downloadFile } from "@/utils/downloadFile";
 
+type NavLink = { label: string; href: string; file?: string };
+
 export default function Header() {
   const pathname = usePathname();
   const navRef = useRef<HTMLElement | null>(null);
@@ -15,13 +17,18 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isAnodes = pathname?.startsWith("/anodes");
 
-  const links = [
+  const links: NavLink[] = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
+    { label: "Heater Treater", href: "#", file: "02 HA Heater Treater.pdf" },
+    { label: "Offshore", href: "#", file: "04 HA Offshore.pdf" },
     { label: "Anodes", href: "/anodes" },
     { label: "Gallery", href: "/services" },
     { label: "Contact Us", href: "/contact-us" },
   ];
+
+  // Document entries live in the hamburger menu only; the desktop nav skips them.
+  const navLinks = links.filter((l) => !l.file);
 
   useEffect(() => {
     function onScroll() {
@@ -89,11 +96,11 @@ export default function Header() {
 
         {/* Desktop nav */}
         <div className="hidden space-x-8 text-lg font-bold text-[#e7e7e7] xl:flex items-center">
-          {links.map((l) => {
+          {navLinks.map((l) => {
             const isActive = pathname === l.href || (l.href !== "/" && pathname?.startsWith(l.href));
             return (
               <a
-                key={l.href}
+                key={l.label}
                 href={l.href}
                 aria-current={isActive ? "page" : undefined}
                 className={`flex items-center transition-colors ${isActive ? "text-white font-extrabold" : "hover:text-white"}`}>
@@ -165,10 +172,22 @@ export default function Header() {
         {/* Nav links */}
         <nav className="flex flex-col gap-2">
           {links.map((l) => {
+            if (l.file) {
+              return (
+                <a
+                  key={l.label}
+                  href="#"
+                  onClick={(e) => { downloadFile(e, l.label, l.file); setMobileMenuOpen(false); }}
+                  className="text-lg py-3 border-b border-white/10 font-semibold transition-colors text-[#e7e7e7] hover:text-white"
+                >
+                  {l.label}
+                </a>
+              );
+            }
             const isActive = pathname === l.href || (l.href !== "/" && pathname?.startsWith(l.href));
             return (
               <a
-                key={l.href}
+                key={l.label}
                 href={l.href}
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive ? "page" : undefined}
