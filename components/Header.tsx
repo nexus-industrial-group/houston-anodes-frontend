@@ -162,10 +162,11 @@ export default function Header() {
         />
       )}
 
-      {/* Mobile menu drawer */}
+      {/* Mobile menu drawer — wrapper clips the off-screen drawer so it can't cause horizontal scroll */}
+      <div className="fixed inset-0 z-50 overflow-hidden pointer-events-none xl:hidden">
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-navy flex flex-col pt-20 pb-8 px-6 shadow-2xl transition-transform duration-300 ease-in-out xl:hidden ${
-          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`absolute top-0 right-0 h-full w-4/5 max-w-xs bg-navy flex flex-col pt-20 pb-8 px-6 shadow-2xl transition-transform duration-300 ease-in-out ${
+          mobileMenuOpen ? 'translate-x-0 pointer-events-auto' : 'translate-x-full'
         }`}
         aria-hidden={!mobileMenuOpen}
       >
@@ -227,6 +228,7 @@ export default function Header() {
             className="h-[56px] w-auto object-contain"
           />
         </div>
+      </div>
       </div>
     </>
   );
