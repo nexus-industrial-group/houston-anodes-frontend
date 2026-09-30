@@ -78,7 +78,7 @@ export default function Header() {
           <DownloadForm onClose={closeForm} title={downloadTitle ? `${downloadTitle} Download Form` : undefined} fileName={downloadFileName} />
         )}
 
-        {/* Logo — main logo always visible; ISO/INS only on desktop */}
+        {/* Logo — main logo always visible; ISO/INS only on xl+ (full nav needs ~1280px) */}
         <Link href="/" className="flex items-center min-w-0">
           <Image
             src="/images/ha.webp"
@@ -95,7 +95,7 @@ export default function Header() {
             width={250}
             height={89}
             sizes="250px"
-            className="hidden md:block h-[89px] w-auto object-contain ml-6"
+            className="hidden xl:block h-[89px] w-auto object-contain ml-6"
             priority
           />
           <Image
@@ -104,13 +104,13 @@ export default function Header() {
             width={230}
             height={69}
             sizes="230px"
-            className="hidden md:block h-[69px] w-auto object-contain ml-6"
+            className="hidden xl:block h-[69px] w-auto object-contain ml-6"
             priority
           />
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden space-x-8 text-lg font-bold text-[#e7e7e7] md:flex items-center">
+        <div className="hidden space-x-8 text-lg font-bold text-[#e7e7e7] xl:flex items-center">
           {links.map((l) => {
             const isActive = pathname === l.href || (l.href !== "/" && pathname?.startsWith(l.href));
             return (
@@ -145,7 +145,7 @@ export default function Header() {
         <button
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
-          className="text-white md:hidden p-1"
+          className="text-white xl:hidden p-1"
           onClick={() => setMobileMenuOpen((prev) => !prev)}
         >
           {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
@@ -171,14 +171,14 @@ export default function Header() {
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 md:hidden"
+          className="fixed inset-0 z-40 bg-black/50 xl:hidden"
           onClick={() => setMobileMenuOpen(false)}
           aria-hidden="true"
         />
       )}
 
       {/* Mobile menu drawer — wrapper clips the off-screen drawer so it can't cause horizontal scroll */}
-      <div className="fixed inset-0 z-50 overflow-hidden pointer-events-none md:hidden">
+      <div className="fixed inset-0 z-50 overflow-hidden pointer-events-none xl:hidden">
       <div
         className={`absolute top-0 right-0 h-full w-4/5 max-w-xs bg-navy flex flex-col pt-20 pb-8 px-6 shadow-2xl transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0 pointer-events-auto' : 'translate-x-full'
