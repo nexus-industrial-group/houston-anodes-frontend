@@ -2,10 +2,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import DownloadForm from "./DownloadForm";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { downloadFile } from "@/utils/downloadFile";
+
+type NavLink = { label: string; href: string; file?: string };
 
 export default function Header() {
   const pathname = usePathname();
@@ -16,17 +17,18 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isAnodes = pathname?.startsWith("/anodes");
 
-  const [showDownloadForm, setShowDownloadForm] = useState(false);
-  const [downloadTitle, setDownloadTitle] = useState<string | undefined>(undefined);
-  const [downloadFileName, setDownloadFileName] = useState<string | undefined>(undefined);
-
-  const links = [
+  const links: NavLink[] = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
+    { label: "Heater Treater", href: "#", file: "02 HA Heater Treater.pdf" },
+    { label: "Offshore", href: "#", file: "04 HA Offshore.pdf" },
     { label: "Anodes", href: "/anodes" },
     { label: "Gallery", href: "/services" },
     { label: "Contact Us", href: "/contact-us" },
   ];
+
+  // Document entries live in the hamburger menu only; the desktop nav skips them.
+  const navLinks = links.filter((l) => !l.file);
 
   useEffect(() => {
     function onScroll() {
@@ -53,19 +55,6 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [mobileMenuOpen]);
 
-  const openForm = (e?: any, docTitle?: string, fileName?: string) => {
-    e?.preventDefault();
-    setDownloadTitle(docTitle);
-    setDownloadFileName(fileName);
-    setShowDownloadForm(true);
-  };
-
-  const closeForm = () => {
-    setShowDownloadForm(false);
-    setDownloadTitle(undefined);
-    setDownloadFileName(undefined);
-  };
-
   return (
     <>
       <nav
@@ -74,19 +63,15 @@ export default function Header() {
           isAnodes ? 'bg-navy' : scrolled ? 'bg-navy/90 shadow-xl' : 'bg-white/10'
         } backdrop-blur-lg transition-colors duration-300 text-white`}
       >
-        {showDownloadForm && (
-          <DownloadForm onClose={closeForm} title={downloadTitle ? `${downloadTitle} Download Form` : undefined} fileName={downloadFileName} />
-        )}
-
-        {/* Logo — main logo always visible; ISO/INS only on xl+ (full nav needs ~1280px) */}
+        {/* Logo — main logo always visible; ISO/INS only on desktop */}
         <Link href="/" className="flex items-center min-w-0">
           <Image
             src="/images/ha.webp"
             alt="Houston Anodes"
             width={230}
             height={69}
-            sizes="(max-width: 768px) 130px, 230px"
-            className="h-[50px] md:h-[69px] w-auto object-contain flex-shrink-0"
+            sizes="(max-width: 768px) 100px, (max-width: 1280px) 150px, 230px"
+            className="h-[28px] md:h-[44px] xl:h-[89px] w-auto object-contain flex-shrink-0"
             priority
           />
           <Image
@@ -94,8 +79,8 @@ export default function Header() {
             alt="ISO Certification"
             width={250}
             height={89}
-            sizes="250px"
-            className="hidden xl:block h-[89px] w-auto object-contain ml-6"
+            sizes="(max-width: 768px) 100px, (max-width: 1280px) 150px, 250px"
+            className="h-[28px] md:h-[44px] xl:h-[89px] w-auto object-contain flex-shrink-0 ml-2 md:ml-4 xl:ml-6"
             priority
           />
           <Image
@@ -103,19 +88,19 @@ export default function Header() {
             alt="INS Certification"
             width={230}
             height={69}
-            sizes="230px"
-            className="hidden xl:block h-[69px] w-auto object-contain ml-6"
+            sizes="(max-width: 768px) 100px, (max-width: 1280px) 150px, 230px"
+            className="h-[28px] md:h-[44px] xl:h-[69px] w-auto object-contain flex-shrink-0 ml-2 md:ml-4 xl:ml-6"
             priority
           />
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden space-x-8 text-lg font-bold text-[#e7e7e7] xl:flex items-center">
-          {links.map((l) => {
+          {navLinks.map((l) => {
             const isActive = pathname === l.href || (l.href !== "/" && pathname?.startsWith(l.href));
             return (
               <a
-                key={l.href}
+                key={l.label}
                 href={l.href}
                 aria-current={isActive ? "page" : undefined}
                 className={`flex items-center transition-colors ${isActive ? "text-white font-extrabold" : "hover:text-white"}`}>
@@ -126,7 +111,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <a
               href="#"
-              onClick={(e) => downloadFile(e, "Catalog", "00 - Catalog.pdf")}
+              onClick={(e) => downloadFile(e, "Catalog", "00 HA Catalog.pdf")}
               className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-3 py-2 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
             >
               Download Catalog
@@ -188,10 +173,22 @@ export default function Header() {
         {/* Nav links */}
         <nav className="flex flex-col gap-2">
           {links.map((l) => {
+            if (l.file) {
+              return (
+                <a
+                  key={l.label}
+                  href="#"
+                  onClick={(e) => { downloadFile(e, l.label, l.file); setMobileMenuOpen(false); }}
+                  className="text-lg py-3 border-b border-white/10 font-semibold transition-colors text-[#e7e7e7] hover:text-white"
+                >
+                  {l.label}
+                </a>
+              );
+            }
             const isActive = pathname === l.href || (l.href !== "/" && pathname?.startsWith(l.href));
             return (
               <a
-                key={l.href}
+                key={l.label}
                 href={l.href}
                 onClick={() => setMobileMenuOpen(false)}
                 aria-current={isActive ? "page" : undefined}
@@ -208,7 +205,7 @@ export default function Header() {
         {/* Download Catalog */}
         <a
           href="#"
-          onClick={(e) => { downloadFile(e, "Catalog", "07 - Catalog.pdf"); setMobileMenuOpen(false); }}
+          onClick={(e) => { downloadFile(e, "Catalog", "00 HA Catalog.pdf"); setMobileMenuOpen(false); }}
           className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-primary-blue px-4 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors"
         >
           Download Catalog

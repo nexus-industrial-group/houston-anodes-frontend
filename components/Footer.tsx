@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Facebook, Instagram } from "lucide-react";
+import { downloadFile } from "@/utils/downloadFile";
 
 export default function Footer() {
   const [downloadablesList, setDownloadablesList] = useState<string[]>([]);
@@ -22,13 +23,7 @@ export default function Footer() {
   }, []);
 
   const handleDownload = (e?: React.MouseEvent, docTitle: string = "", fileName?: string) => {
-    e?.preventDefault();
-    const target = fileName ? `/downloadables/${fileName}` : undefined;
-    const displayName = docTitle || "this document";
-    alert(`Thank you — the download for ${displayName} will start shortly.`);
-    if (target && typeof window !== "undefined") {
-      window.open(target, "_blank", "noopener,noreferrer");
-    }
+    downloadFile(e, docTitle, fileName);
   };
   return (
     <footer className="bg-navy text-sm text-gray-300 relative">

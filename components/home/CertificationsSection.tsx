@@ -43,14 +43,13 @@ export default function CertificationsSection() {
           <h2 className="mt-3 text-4xl font-extrabold uppercase leading-tight tracking-tight sm:text-5xl text-electric-blue">
             Our Process
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-text-secondary">
+          <p className="mt-4 text-pretty text-lg leading-relaxed text-text-secondary">
+            The electromagnetic field creates a continuous motion in the molten alloy—
+            the only process capable of incorporating indium homogeneously at a molecular level.
+            <br />
             We use <strong className="font-semibold text-black">Electromagnetic Induction furnaces</strong>—not gas combustion.
             Instead of applying external heat, induction generates heat internally within the metal itself.
             No flame. No contamination. No manual stirring impurities.
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-text-secondary">
-            The electromagnetic field creates a continuous <em>'Figure 8'</em> motion in the molten alloy—
-            the only process capable of incorporating indium homogeneously at a molecular level.
           </p>
         </div>
 
@@ -159,7 +158,7 @@ export default function CertificationsSection() {
 
       <div className="relative mx-auto max-w-5xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-14">
-          <p className="font-extrabold text-sm uppercase tracking-widest text-electric-blue">
+          <p className="text-sm font-semibold uppercase tracking-widest text-gray-300">
             Why It Matters
           </p>
           <h2 className="mt-3 text-3xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-4xl">

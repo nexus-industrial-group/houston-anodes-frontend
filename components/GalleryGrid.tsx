@@ -4,11 +4,19 @@ import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-const TOTAL = 16;
-const IMAGES = Array.from({ length: TOTAL }, (_, i) => ({
-  src: `/images/services/g${i + 1}.webp`,
-  alt: `Gallery image ${i + 1}`,
-}));
+const WEBP_COUNT = 16;
+const JPG_COUNT = 64;
+const IMAGES = [
+  ...Array.from({ length: WEBP_COUNT }, (_, i) => ({
+    src: `/images/services/g${i + 1}.webp`,
+    alt: `Gallery image ${i + 1}`,
+  })),
+  ...Array.from({ length: JPG_COUNT }, (_, i) => ({
+    src: `/images/services/g${i + 1 + WEBP_COUNT}.jpg`,
+    alt: `Gallery image ${i + 1 + WEBP_COUNT}`,
+  })),
+];
+const TOTAL = IMAGES.length;
 
 export default function GalleryGrid() {
   const [selected, setSelected] = useState<number | null>(null);

@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // Base para resolver URLs relativas (openGraph/twitter images).
+  // Si cambia el dominio, actualiza tambien siteUrl en next-sitemap.config.js
+  metadataBase: new URL("https://houston-anodes-frontend.vercel.app"),
   title: {
     default: "Houston Anodes",
     template: "Houston Anodes | %s ",

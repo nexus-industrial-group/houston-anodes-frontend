@@ -1,26 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import DownloadForm from "./DownloadForm";
 import { downloadFile } from "@/utils/downloadFile";
 
 export default function CatalogCTA() {
-  const [showDownloadForm, setShowDownloadForm] = useState(false);
-
-
-  const closeForm = () => {
-    setShowDownloadForm(false);
-  };
-
   return (
     <>
-      {showDownloadForm && (
-        <DownloadForm onClose={closeForm} title={"Catalog Download Form"} fileName={"07 - Catalog.pdf"} />
-      )}
-
       <div className="flex gap-3 shrink-0 items-center">
         <button
-          onClick={(e) => downloadFile(e, "Catalog", "00 - Catalog.pdf")}
+          onClick={(e) => downloadFile(e, "Catalog", "00 HA Catalog.pdf")}
           className="inline-flex items-center gap-2 rounded-lg bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-blue/90 transition-colors cursor-pointer"
         >
           Download Catalog
