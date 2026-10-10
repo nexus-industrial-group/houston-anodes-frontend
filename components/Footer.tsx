@@ -179,7 +179,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-gray-700 text-xs text-gray-500 grid grid-cols-1 md:grid-cols-3 items-center gap-4">
           <div className="text-center md:text-left text-[#b8b8b8]">
-            <p>© 2026 Houston Anodes, Inc.</p>
+            <p>© 2026 Houston Anodes, Inc · Designed by Nexus Industrial Group.</p>
           </div>
 
           <div />
